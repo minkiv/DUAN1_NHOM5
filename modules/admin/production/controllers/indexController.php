@@ -18,6 +18,8 @@ function createAction() {
 function createPostAction() {
     $name = $_POST['name'];
     $description = $_POST['description'];
+    $price = $_POST['price'];
+    $name = $_POST['name'];
     if (empty($name)) {
         push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
         header('Location: ?role=admin&mod=category&action=create');
@@ -29,40 +31,41 @@ function createPostAction() {
 }
 
 function deleteAction() {
-    $id = $_GET['id_cate'];
-    delete_category($id);
-    push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    $id = $_GET['id_prod'];
+    delete_production($id);
+    push_notification('success', ['Xoá sản phẩm thành công']);
+    header('Location: ?role=admin&mod=production');
 }
 
-function updateAction()
-{
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    $data['category'] = $cate;
-    if ($cate) {
-        load_view('update', $data);
+function updateAction(){
+    $id = $_GET['id_prod'];
+    $prod = get_one_production($id);
+    $production['production'] = $prod;
+    if ($production) {
+        load_view('update', $production);
     } else {
-        header('Location: ?role=admin&mod=category');
+        header('Location: ?role=admin&mod=production');
     }
 }
 
 function updatePostAction() {
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    if (!$cate) {
-        header('Location: ?role=admin&mod=category');
+    $id = $_GET['id_prod'];
+    $production = get_one_production($id);
+    if (!$production) {
+        header('Location: ?role=admin&mod=production');
         die();
     }
     $name = $_POST['name'];
     $description = $_POST['description'];
+    $price = $_POST['price'];
+    $status = $_POST['status'];
     if (empty($name)) {
         push_notification('errors', [
-            'name' => 'Vui lòng nhập vào tên danh mục'
+            'name' => 'Vui lòng nhập vào tên sản phẩm'
         ]);
-        header('Location: ?role=admin&mod=category&action=update&id_cate='.$id);
+        header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    update_category($id, $name, $description);
+    update_production($id, $name, $description,price,tatus);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=production');
 }

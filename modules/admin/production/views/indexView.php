@@ -66,12 +66,13 @@
                     <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                         <thead>
                             <tr>
-                                <th title="Field #1">ID Danh mục</th>
-                                <th title="Field #2">Tên danh mục</th>
-                                <th title="Field #3">Ngày tạo</th>
-                                <th title="Field #4">Người tạo</th>
-                                <th title="Field #5">Hành động</th>
-                                <th title="Field #5">Mô tả</th>
+                                <th title="Field #1">ID sản phẩm</th>
+                                <th title="Field #2">Tên sản phẩm</th>
+                                <th title="Field #3">Gía sản phẩm</th>
+                                <th title="Field #4">Mô tả</th>
+                                <th title="Field #5"></th>
+                                <th title="Field #5">Thời gian đăng</th>
+                                <th title="Field #5">Trạng thái</th>
                             </tr>
                         </thead>
                         <tbody>

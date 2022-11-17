@@ -20,10 +20,12 @@ function create_production($name, $description) {
     return $id;
 }
 
-function update_production($id, $name, $description) {
+function update_production($id, $name, $description,price,tatus) {
     db_update('productions', [
         'name' => $name,
-        'description' => $description
+        'description' => $description,
+        'price' => $price,
+        'status' => $status
     ], "id = $id");
     return true;
 }
@@ -33,7 +35,7 @@ function delete_production($id) {
     return true;
 }
 
-function get_list_categories() {
-    $result = db_fetch_array("SELECT * FROM `categories`");
+function get_list_production() {
+    $result = db_fetch_array("SELECT * FROM `production`");
     return $result;
 }

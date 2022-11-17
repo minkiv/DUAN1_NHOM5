@@ -21,19 +21,27 @@
             <!--begin::Card-->
             <div class="card card-custom gutter-b example example-compact">
                 <div class="card-header">
-                    <h3 class="card-title">Form thông tin sản phẩm mới</h3>
+                    <h3 class="card-title">Form thông tin sản phẩm</h3>
                 </div>
                 <!--begin::Form-->
                 <form method="POST" action="">
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Tên danh mục</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên danh mục" value="<?php echo $category['name'] ?>" />
+                            <label>Tên sản phẩm</label>
+                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $ ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
-                            <label for="descriptionCategoryInput">Mô tả danh mục</label>
-                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $category['description'] ?></textarea>
+                            <label for="descriptionCategoryInput">Mô tả sản phẩm</label>
+                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $ ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Giá sp</label>
+                            <textarea name="price" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $ ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Trạng thái</label>
+                            <textarea name="status" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $ ?></textarea>
                         </div>
                     </div>
                     <div class="card-footer">
