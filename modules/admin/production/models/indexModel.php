@@ -12,7 +12,7 @@ function get_one_production($id) {
 function create_production($name,$description,$category_id,$price,$count,$status,$thumb) {
     $user = get_auth();
     $id = db_insert('productions', [
-        'name' => $name,
+        'title' => $name,
         'description' => $description,
         'category_id'=>$category_id,
         'price' => $price,
