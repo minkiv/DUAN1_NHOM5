@@ -18,7 +18,7 @@ function create_production($name,$description,$category_id,$price,$count,$status
         'price' => $price,
         'count'=>$count,
         'status'=>$status,
-        'thumb'=> $thumb;
+        'thumb'=> $thumb,
         'create_id' => $user['id'],
         'created_at' => date('Y-m-d H:i:s')
     ]);
