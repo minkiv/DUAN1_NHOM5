@@ -68,10 +68,11 @@
                             <tr>
                                 <th title="Field #1">ID sản phẩm</th>
                                 <th title="Field #2">Tên sản phẩm</th>
-                                <th title="Field #3">Gía sản phẩm</th>
-                                <th title="Field #4">Mô tả</th>
-                                <th title="Field #5">Thời gian đăng</th>
-                                <th title="Field #5">Trạng thái</th>
+                                <th title="Field #3">Giá sản phẩm</th>
+                                <th title="Field #4">Chi tiết sản phẩm</th>
+                                <th title="Field #5">Hình ảnh sản phẩm</th>
+                                <th title="Field #4">Số lượng trong kho</th>
+                                <th title="Field #5">Trạng thái sản phẩm</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -26,21 +26,37 @@
                 <!--begin::Form-->
                 <form method="POST" action="">
                     <div class="card-body">
+                    <div class="form-group">
+                                <label>Danh mục sản phẩm</label>
+                                <select class="form-control select2" name="category_id">
+                                    <?php foreach ($categories as $category) : ?>
+                                        <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
                         <div class="form-group">
                             <label>Tên sản phẩm</label>
                             <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['name'] ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
-                            <label for="descriptionCategoryInput">Mô tả sản phẩm</label>
+                            <label for="descriptionCategoryInput">Chi tiết sản phẩm</label>
                             <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['description'] ?></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="descriptionCategoryInput">Giá sp</label>
+                            <label for="descriptionCategoryInput">Giá sản phẩm</label>
                             <textarea name="price" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['price'] ?></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="descriptionCategoryInput">Trạng thái</label>
+                            <label for="descriptionCategoryInput">Hình sản phẩm</label>
+                            <textarea name="imge" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['price'] ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Số lượng sản phẩm</label>
+                            <textarea name="count" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['count'] ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Trạng thái sản phẩm</label>
                             <textarea name="status" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['status'] ?></textarea>
                         </div>
                     </div>
