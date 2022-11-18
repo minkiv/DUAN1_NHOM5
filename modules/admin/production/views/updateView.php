@@ -28,25 +28,25 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>Tên sản phẩm</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $ ?>" />
+                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['name'] ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
                             <label for="descriptionCategoryInput">Mô tả sản phẩm</label>
-                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $ ?></textarea>
+                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['description'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Giá sp</label>
-                            <textarea name="price" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $ ?></textarea>
+                            <textarea name="price" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['price'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Trạng thái</label>
-                            <textarea name="status" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $ ?></textarea>
+                            <textarea name="status" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['status'] ?></textarea>
                         </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
-                        <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                        <a href="?role=admin&mod=production" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->
