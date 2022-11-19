@@ -38,7 +38,7 @@ function createPostAction() {
     }
     create_production($name, $description,$category_id,$price,$count,$status,$thumb);
     push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=production');
+    // header('Location: ?role=admin&mod=production');
 }
 
 function deleteAction() {
