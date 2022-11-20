@@ -5,7 +5,7 @@ function get_list_productions() {
 }
 
 function get_one_production($id) {
-    $result = db_fetch_row("SELECT * FROM `productions` WHERE p.id = $id");
+    $result = db_fetch_row("SELECT * FROM `productions` WHERE `productions`.`id` = $id");
     return $result;
 }
 

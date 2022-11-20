@@ -36,7 +36,7 @@
                             </div>
                         <div class="form-group">
                             <label>Tên sản phẩm</label>
-                            <input type="text" name="title" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['title'] ?>" />
+                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['title'] ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
@@ -49,7 +49,7 @@
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Hình sản phẩm</label>
-                            <textarea name="imge" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['price'] ?></textarea>
+                            <textarea name="thumb" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['thumb'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Số lượng sản phẩm</label>
