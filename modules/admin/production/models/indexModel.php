@@ -9,10 +9,10 @@ function get_one_production($id) {
     return $result;
 }
 
-function create_production($name,$description,$category_id,$price,$count,$status,$thumb) {
+function create_production($title,$description,$category_id,$price,$count,$status,$thumb) {
     $user = get_auth();
     $id = db_insert('productions', [
-        'title' => $name,
+        'title' => $title,
         'description' => $description,
         'category_id'=>$category_id,
         'price' => $price,
