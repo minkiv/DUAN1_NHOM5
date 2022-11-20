@@ -66,21 +66,27 @@
                     <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                         <thead>
                             <tr>
-                                <th title="Field #1">ID Danh mục</th>
-                                <th title="Field #2">Tên danh mục</th>
-                                <th title="Field #3">Ngày tạo</th>
-                                <th title="Field #4">Người tạo</th>
-                                <th title="Field #5">Hành động</th>
-                                <th title="Field #5">Mô tả</th>
+                                <th title="Field #1">ID Sản phẩm</th>
+                                <th title="Field #2">Tên sản phẩm</th>
+                                <th title="Field #3">Danh mục </th>
+                                <th title="Field #4">Giá</th>
+                                <th title="Field #5">Số lượng</th>
+                                <th title="Field #6">Ngày tạo</th>
+                                <th title="Field #7">Hình ảnh</th>
+                                <th title="Field #8">Hành động</th>
+                                <th title="Field #9">Mô tả</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($productions as $production) : ?>
                                 <tr>
                                     <td><?php echo ($production['id']) ?></td>
-                                    <td><?php echo ($production['name']) ?></td>
+                                    <td><?php echo ($production['title']) ?></td>
+                                    <td><?php echo ($production['category_id']) ?></td>
+                                    <td><?php echo ($production['price']) ?></td>
+                                    <td><?php echo ($production['count']) ?></td>
                                     <td><?php echo ($production['created_at']) ?></td>
-                                    <td><?php echo ($production['full_name']) ?></td>
+                                    <td><?php echo ("<img src='".$production['thumb']."'height='100'>") ?></td>
                                     <td>
                                         <span style="overflow: visible; position: relative; width: 125px;">
                                             <a href="?role=admin&mod=production&action=update&id_prod=<?php echo $production['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
