@@ -23,7 +23,7 @@ function createPostAction() {
     $count = $_POST['count'];
     $status=$_POST['status'];
     $thumb = $_FILES['thumb']['name'];
-    $target_dir = "./upload/";
+    $target_dir = "../upload/";
     $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
         if (move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file)) {
                     //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
