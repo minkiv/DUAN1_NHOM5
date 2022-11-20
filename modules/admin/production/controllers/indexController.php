@@ -16,7 +16,7 @@ function createAction() {
 }
 
 function createPostAction() {
-    $name = $_POST['name'];
+    $title = $_POST['name'];
     $description = $_POST['description'];
     $category_id = $_POST['category_id'];
     $price = $_POST['price'];
@@ -31,7 +31,7 @@ function createPostAction() {
                     // echo "Sorry, there was an error uploading your file.";
                 }
 
-    if (empty($name)) {
+    if (empty($title)) {
         push_notification('danger', ['Vui lòng nhập vào tên sản phẩm']);
         header('Location: ?role=admin&mod=production&action=create');
         die();
