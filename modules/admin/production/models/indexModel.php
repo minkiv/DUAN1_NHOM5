@@ -5,20 +5,15 @@ function get_list_productions() {
 }
 
 function get_one_production($id) {
-    $result = db_fetch_row("SELECT * FROM `productions` WHERE p.id = $id");
+    $result = db_fetch_row("SELECT * FROM `productions` WHERE c.id = $id");
     return $result;
 }
 
-function create_production($title,$description,$category_id,$price,$count,$status,$thumb) {
+function create_production($name, $description) {
     $user = get_auth();
     $id = db_insert('productions', [
-        'title' => $title,
+        'name' => $name,
         'description' => $description,
-        'category_id'=>$category_id,
-        'price' => $price,
-        'count'=>$count,
-        'status'=>$status,
-        'thumb'=> $thumb,
         'create_id' => $user['id'],
         'created_at' => date('Y-m-d H:i:s')
     ]);

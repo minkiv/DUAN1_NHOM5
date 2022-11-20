@@ -24,7 +24,7 @@
                 <h3 class="card-title">Form thông tin sản phẩm mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form method="POST" action="">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
@@ -77,7 +77,7 @@
 
                                     <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Thay đổi">
                                         <i class="fa fa-pen icon-sm text-muted"></i>
-                                        <input type="file" name="thumb1" accept=".png, .jpg, .jpeg" />
+                                        <input type="file" name="thumb" accept=".png, .jpg, .jpeg" />
                                         <input type="hidden" name="thumb_remove" />
                                     </label>
 
@@ -87,22 +87,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-9" id="testDiv">
+                        <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
-                            <input type="file" name="thumb" accept=".png, .jpg, .jpeg" />
-                            <!-- <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
+                            <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
                                 <div class="dropzone-msg dz-message needsclick">
                                     <h3 class="dropzone-msg-title">Kéo thả hình ảnh cần upload</h3>
                                     <span class="dropzone-msg-desc">Chỉ chấp nhận tải lên file hình ảnh</span>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" id="subBtn" class="btn btn-primary mr-2">Tạo mới</button>
+                    <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
                     <button type="reset" class="btn btn-secondary">Làm lại</button>
-                    <a href="?role=admin&mod=production" class="btn btn-default">Quay về</a>
+                    <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
                 </div>
             </form>
             <!--end::Form-->
