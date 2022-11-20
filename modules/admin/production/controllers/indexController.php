@@ -22,18 +22,18 @@ function createPostAction() {
     $price = $_POST['price'];
     $count = $_POST['count'];
     $status=$_POST['status'];
-    $thumb = $_FILES['thumb']['name'];
-    $target_dir = "../upload/";
+    // $thumb = $_FILES['thumb']['name'];
+    $target_dir = "./public/uploads/";
     $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
         if (move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file)) {
-                    //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
 
     if (empty($title)) {
         push_notification('danger', ['Vui lòng nhập vào tên sản phẩm']);
-        header('Location: ?role=admin&mod=production&action=create');
+        // header('Location: ?role=admin&mod=production&action=create');
         die();
     }
     create_production($title, $description,$category_id,$price,$count,$status,$thumb);
