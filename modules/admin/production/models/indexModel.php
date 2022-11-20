@@ -5,7 +5,7 @@ function get_list_productions() {
 }
 
 function get_one_production($id) {
-    $result = db_fetch_row("SELECT * FROM `productions` WHERE c.id = $id");
+    $result = db_fetch_row("SELECT * FROM `productions` WHERE p.id = $id");
     return $result;
 }
 
@@ -20,12 +20,14 @@ function create_production($name, $description) {
     return $id;
 }
 
-function update_production($id, $name, $description,price,tatus) {
+function update_production($id, $title, $description,$price,$tatus,$thumb,$category_id) {
     db_update('productions', [
-        'name' => $name,
+        'title' => $title,
         'description' => $description,
         'price' => $price,
-        'status' => $status
+        'status' => $status,
+        'thumb' => $thumb,
+        'category_id' => $category_id
     ], "id = $id");
     return true;
 }

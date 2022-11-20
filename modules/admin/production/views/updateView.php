@@ -36,7 +36,7 @@
                             </div>
                         <div class="form-group">
                             <label>Tên sản phẩm</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['name'] ?>" />
+                            <input type="text" name="title" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['title'] ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">

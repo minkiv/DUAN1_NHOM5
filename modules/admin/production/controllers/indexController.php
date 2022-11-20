@@ -16,7 +16,7 @@ function createAction() {
 }
 
 function createPostAction() {
-    $name = $_POST['name'];
+    $til = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
     $name = $_POST['name'];
@@ -40,9 +40,9 @@ function deleteAction() {
 function updateAction(){
     $id = $_GET['id_prod'];
     $prod = get_one_production($id);
-    $production['production'] = $prod;
-    if ($production) {
-        load_view('update', $production);
+    $data['production'] = $prod;
+    if ($prod) {
+        load_view('update', $data);
     } else {
         header('Location: ?role=admin&mod=production');
     }
@@ -55,17 +55,19 @@ function updatePostAction() {
         header('Location: ?role=admin&mod=production');
         die();
     }
-    $name = $_POST['name'];
+    $title = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
     $status = $_POST['status'];
-    if (empty($name)) {
+    $thumb = $_POST['thumb'];
+    $category_id = $_POST['category_id'];
+    if (empty($title)) {
         push_notification('errors', [
             'name' => 'Vui lòng nhập vào tên sản phẩm'
         ]);
         header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    update_production($id, $name, $description,price,tatus);
+    update_production($id, $title, $description,$price,$status,$thumb,$category_id);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }
