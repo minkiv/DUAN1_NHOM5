@@ -74,6 +74,7 @@
                                 <th title="Field #4">Hình sp</th>
                                 <th title="Field #5">chọn</th>
                                 <th title="Field #5">Ngày tạo</th>
+                                <th title="Field #5">Số lượng sản phẩm</th>
                                 <th title="Field #5">Trạng thái sản phẩm</th>
                             </tr>
                         </thead>
@@ -108,6 +109,7 @@
                                     </td>
                                     <td><?php echo ($production['created_at']) ?></td>
                                     <td><?php echo ($production['count']) ?></td>
+                                    <td><?php echo ($production['status']) ?></td>
                                     
                                     
                                 </tr>

@@ -21,7 +21,7 @@ function createPostAction() {
     $price = $_POST['price'];
     $count = $_POST['count'];
     $status=$_POST['status'];
-    // $thumb = $_FILES['thumb']['name'];
+    $thumb = $_FILES['thumb']['name'];
     $target_dir = "./public/uploads/";
     $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
         if (move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file)) {
@@ -72,6 +72,7 @@ function updatePostAction() {
     $price = $_POST['price'];
     $status = $_POST['status'];
     $thumb = $_POST['thumb'];
+    $count = $_POST['count'];
     $category_id = $_POST['category_id'];
     if (empty($title)) {
         push_notification('errors', [
@@ -79,7 +80,7 @@ function updatePostAction() {
         ]);
         header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    update_production($id, $title, $description,$price,$status,$thumb,$category_id);
+    update_production($id, $title, $description,$price,$status,$thumb,$count,$category_id);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }

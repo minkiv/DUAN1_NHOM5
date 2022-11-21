@@ -25,13 +25,14 @@ function create_production($name, $description) {
     return $id;
 }
 
-function update_production($id, $title, $description,$price,$status,$thumb,$category_id) {
+function update_production($id, $title, $description,$price,$status,$thumb,$count,$category_id) {
     db_update('productions', [
         'title' => $title,
         'description' => $description,
         'price' => $price,
         'status' => $status,
         'thumb' => $thumb,
+        'count' => $count,
         'category_id' => $category_id
     ], "id = $id");
     return true;
