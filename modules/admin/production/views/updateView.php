@@ -1,5 +1,5 @@
 <?php get_header('', 'Chỉnh sửa sản phẩm') ?>
-
+    
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
         <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -24,7 +24,7 @@
                     <h3 class="card-title">Form thông tin sản phẩm</h3>
                 </div>
                 <!--begin::Form-->
-                <form method="POST" action="">
+                <form method="POST" action="" enctype="multipart/form-data">
                     <div class="card-body">
                     <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
@@ -49,7 +49,9 @@
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Hình sản phẩm</label>
-                            <textarea name="thumb" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['thumb'] ?></textarea>
+                            <input type="file" name="thumb" >
+                            <img src='./public/uploads/<?php echo$production['thumb']?>'height='100'>
+
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Số lượng sản phẩm</label>
