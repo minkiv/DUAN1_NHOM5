@@ -80,10 +80,12 @@
                             <?php foreach ($productions as $production) : ?>
                                 <tr>
                                     <td><?php echo ($production['id']) ?></td>
-                                    <td><?php echo ($production['category_id']) ?></td>
                                     <td><?php echo ($production['title']) ?></td>
-                                    <td><?php echo ($production['description']) ?></td>
+                                    <td><?php echo ($production['category_id']) ?></td>
                                     <td><?php echo ($production['price']) ?></td>
+                                    <td><?php echo ($production['count']) ?></td>
+                                    <td><?php echo ($production['created_at']) ?></td>
+                                    <td><?php echo ("<img src='./public/uploads/".$production['thumb']."'height='100'>") ?></td>
                                     <td>
                                         <span style="overflow: visible; position: relative; width: 125px;">
                                             <a href="?role=admin&mod=production&action=update&id_prod=<?php echo $production['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -104,9 +106,7 @@
                                             </svg> </span> </a>
                                         </span>
                                     </td>
-                                    <td><?php echo ($production['thumb']) ?></td>
-                                    <td><?php echo ($production['status']) ?></td>
-                                    <td><?php echo ($production['count']) ?></td>
+                                    <td><?php echo $production['description'] ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
