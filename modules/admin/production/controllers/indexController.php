@@ -22,7 +22,7 @@ function createPostAction() {
     $price = $_POST['price'];
     $count = $_POST['count'];
     $status=$_POST['status'];
-    // $thumb = $_FILES['thumb']['name'];
+    $thumb = $_FILES['thumb']['name'];
     $target_dir = "./public/uploads/";
     $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
         if (move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file)) {
