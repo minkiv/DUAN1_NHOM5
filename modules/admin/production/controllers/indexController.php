@@ -18,64 +18,68 @@ function createAction() {
 function createPostAction() {
     $title = $_POST['name'];
     $description = $_POST['description'];
-    $category_id = $_POST['category_id'];
     $price = $_POST['price'];
     $count = $_POST['count'];
     $status=$_POST['status'];
-    $thumb = $_FILES['thumb']['name'];
-    $target_dir = "../upload/";
+    // $thumb = $_FILES['thumb']['name'];
+    $target_dir = "./public/uploads/";
     $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
         if (move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file)) {
-                    //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
 
     if (empty($title)) {
         push_notification('danger', ['Vui lòng nhập vào tên sản phẩm']);
-        header('Location: ?role=admin&mod=production&action=create');
+        // header('Location: ?role=admin&mod=production&action=create');
         die();
     }
     create_production($title, $description,$category_id,$price,$count,$status,$thumb);
-    push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
+    push_notification('success', ['Thêm mới sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }
 
 function deleteAction() {
-    $id = $_GET['id_cate'];
-    delete_category($id);
-    push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    $id = $_GET['id_prod'];
+    delete_production($id);
+    push_notification('success', ['Xoá sản phẩm thành công']);
+    header('Location: ?role=admin&mod=production');
 }
 
-function updateAction()
-{
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    $data['category'] = $cate;
-    if ($cate) {
+function updateAction(){
+    $id = $_GET['id_prod'];
+    $prod = get_one_production($id);
+    $categories=get_list_categories();
+    $data['production'] = $prod;
+    $data['categories'] = $categories;
+    if ($prod) {
         load_view('update', $data);
     } else {
-        header('Location: ?role=admin&mod=category');
+        header('Location: ?role=admin&mod=production');
     }
 }
 
 function updatePostAction() {
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    if (!$cate) {
-        header('Location: ?role=admin&mod=category');
+    $id = $_GET['id_prod'];
+    $production = get_one_production($id);
+    if (!$production) {
+        header('Location: ?role=admin&mod=production');
         die();
     }
-    $name = $_POST['name'];
+    $title = $_POST['name'];
     $description = $_POST['description'];
-    if (empty($name)) {
+    $price = $_POST['price'];
+    $status = $_POST['status'];
+    $thumb = $_POST['thumb'];
+    $category_id = $_POST['category_id'];
+    if (empty($title)) {
         push_notification('errors', [
-            'name' => 'Vui lòng nhập vào tên danh mục'
+            'name' => 'Vui lòng nhập vào tên sản phẩm'
         ]);
-        header('Location: ?role=admin&mod=category&action=update&id_cate='.$id);
+        header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    update_category($id, $name, $description);
+    update_production($id, $title, $description,$price,$status,$thumb,$category_id);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=production');
 }

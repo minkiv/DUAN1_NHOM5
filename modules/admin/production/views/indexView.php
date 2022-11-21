@@ -66,15 +66,14 @@
                     <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                         <thead>
                             <tr>
-                                <th title="Field #1">ID Sản phẩm</th>
+                                <th title="Field #1">ID sản phẩm</th>
+                                <th title="Field #1">danh mục sản phẩm</th>
                                 <th title="Field #2">Tên sản phẩm</th>
-                                <th title="Field #3">Danh mục </th>
-                                <th title="Field #4">Giá</th>
-                                <th title="Field #5">Số lượng</th>
-                                <th title="Field #6">Ngày tạo</th>
-                                <th title="Field #7">Hình ảnh</th>
-                                <th title="Field #8">Hành động</th>
-                                <th title="Field #9">Mô tả</th>
+                                <th title="Field #4">Mô tả sản phẩm</th>
+                                <th title="Field #3">Giá sản phẩm</th>
+                                <th title="Field #5">chọn</th>
+                                <th title="Field #4">hình sp</th>
+                                <th title="Field #5">Trạng thái sản phẩm</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -86,7 +85,7 @@
                                     <td><?php echo ($production['price']) ?></td>
                                     <td><?php echo ($production['count']) ?></td>
                                     <td><?php echo ($production['created_at']) ?></td>
-                                    <td><?php echo ("<img src='".$production['thumb']."'height='100'>") ?></td>
+                                    <td><?php echo ("<img src='./public/uploads/".$production['thumb']."'height='100'>") ?></td>
                                     <td>
                                         <span style="overflow: visible; position: relative; width: 125px;">
                                             <a href="?role=admin&mod=production&action=update&id_prod=<?php echo $production['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
