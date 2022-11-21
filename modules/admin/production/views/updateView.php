@@ -21,24 +21,48 @@
             <!--begin::Card-->
             <div class="card card-custom gutter-b example example-compact">
                 <div class="card-header">
-                    <h3 class="card-title">Form thông tin sản phẩm mới</h3>
+                    <h3 class="card-title">Form thông tin sản phẩm</h3>
                 </div>
                 <!--begin::Form-->
                 <form method="POST" action="">
                     <div class="card-body">
+                    <div class="form-group">
+                                <label>Danh mục sản phẩm</label>
+                                <select class="form-control select2" name="category_id">
+                                    <?php foreach ($categories as $category) : ?>
+                                        <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
                         <div class="form-group">
-                            <label>Tên danh mục</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên danh mục" value="<?php echo $category['name'] ?>" />
+                            <label>Tên sản phẩm</label>
+                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['title'] ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
-                            <label for="descriptionCategoryInput">Mô tả danh mục</label>
-                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $category['description'] ?></textarea>
+                            <label for="descriptionCategoryInput">Mô tả sản phẩm</label>
+                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['description'] ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Giá sản phẩm</label>
+                            <textarea name="price" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['price'] ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Hình sản phẩm</label>
+                            <textarea name="thumb" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['thumb'] ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Số lượng sản phẩm</label>
+                            <textarea name="count" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['count'] ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionCategoryInput">Trạng thái sản phẩm</label>
+                            <textarea name="status" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['status'] ?></textarea>
                         </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
-                        <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                        <a href="?role=admin&mod=production" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->

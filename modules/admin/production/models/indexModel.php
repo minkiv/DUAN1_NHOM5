@@ -4,31 +4,35 @@ function get_list_productions() {
     return $result;
 }
 
-function get_one_production($id) {
-    $result = db_fetch_row("SELECT * FROM `productions` WHERE p.id = $id");
+function get_list_categories() {
+    $result = db_fetch_array("SELECT c.id, c.name, c.description, c.create_id, c.created_at, u.full_name, u.id as `uid` FROM `categories` c JOIN `users` u ON c.create_id = u.id");
     return $result;
 }
 
-function create_production($title,$description,$category_id,$price,$count,$status,$thumb) {
+function get_one_production($id) {
+    $result = db_fetch_row("SELECT * FROM `productions` WHERE `productions`.`id` = $id");
+    return $result;
+}
+
+function create_production($name, $description) {
     $user = get_auth();
     $id = db_insert('productions', [
-        'title' => $title,
+        'name' => $name,
         'description' => $description,
-        'category_id'=>$category_id,
-        'price' => $price,
-        'count'=>$count,
-        'status'=>$status,
-        'thumb'=> $thumb,
         'create_id' => $user['id'],
         'created_at' => date('Y-m-d H:i:s')
     ]);
     return $id;
 }
 
-function update_production($id, $name, $description) {
+function update_production($id, $title, $description,$price,$status,$thumb,$category_id) {
     db_update('productions', [
-        'name' => $name,
-        'description' => $description
+        'title' => $title,
+        'description' => $description,
+        'price' => $price,
+        'status' => $status,
+        'thumb' => $thumb,
+        'category_id' => $category_id
     ], "id = $id");
     return true;
 }
@@ -38,7 +42,7 @@ function delete_production($id) {
     return true;
 }
 
-function get_list_categories() {
-    $result = db_fetch_array("SELECT * FROM `categories`");
+function get_list_production() {
+    $result = db_fetch_array("SELECT * FROM `production`");
     return $result;
 }
