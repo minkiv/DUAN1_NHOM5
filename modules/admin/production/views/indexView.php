@@ -67,13 +67,13 @@
                         <thead>
                             <tr>
                                 <th title="Field #1">ID sản phẩm</th>
-                                <th title="Field #1">danh mục sản phẩm</th>
                                 <th title="Field #2">Tên sản phẩm</th>
-                                <th title="Field #4">Mô tả sản phẩm</th>
-                                <th title="Field #3">Giá sản phẩm</th>
-                                <th title="Field #5">chọn</th>
-                                <th title="Field #4">hình sp</th>
-                                <th title="Field #5">Trạng thái sản phẩm</th>
+                                <th title="Field #3">Danh mục</th>
+                                <th title="Field #4">Giá sản phẩm</th>
+                                <th title="Field #5">Số lượng</th>
+                                <th title="Field #7">Hình ảnh</th>
+                                <th title="Field #8">Hành động</th>
+                                <th title="Field #6">Ngày Tạo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -84,7 +84,6 @@
                                     <td><?php echo ($production['category_id']) ?></td>
                                     <td><?php echo ($production['price']) ?></td>
                                     <td><?php echo ($production['count']) ?></td>
-                                    <td><?php echo ($production['created_at']) ?></td>
                                     <td><?php echo ("<img src='./public/uploads/".$production['thumb']."'height='100'>") ?></td>
                                     <td>
                                         <span style="overflow: visible; position: relative; width: 125px;">
@@ -106,6 +105,7 @@
                                             </svg> </span> </a>
                                         </span>
                                     </td>
+                                    <td><?php echo ($production['created_at']) ?></td>
                                     <td><?php echo $production['description'] ?></td>
                                 </tr>
                             <?php endforeach; ?>
