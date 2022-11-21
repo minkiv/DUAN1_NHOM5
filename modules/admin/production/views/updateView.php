@@ -40,7 +40,7 @@
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
-                            <label for="descriptionCategoryInput">Chi tiết sản phẩm</label>
+                            <label for="descriptionCategoryInput">Mô tả sản phẩm</label>
                             <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['description'] ?></textarea>
                         </div>
                         <div class="form-group">

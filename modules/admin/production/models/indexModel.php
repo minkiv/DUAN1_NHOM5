@@ -4,6 +4,11 @@ function get_list_productions() {
     return $result;
 }
 
+function get_list_categories() {
+    $result = db_fetch_array("SELECT c.id, c.name, c.description, c.create_id, c.created_at, u.full_name, u.id as `uid` FROM `categories` c JOIN `users` u ON c.create_id = u.id");
+    return $result;
+}
+
 function get_one_production($id) {
     $result = db_fetch_row("SELECT * FROM `productions` WHERE `productions`.`id` = $id");
     return $result;
@@ -20,7 +25,7 @@ function create_production($name, $description) {
     return $id;
 }
 
-function update_production($id, $title, $description,$price,$tatus,$thumb,$category_id) {
+function update_production($id, $title, $description,$price,$status,$thumb,$category_id) {
     db_update('productions', [
         'title' => $title,
         'description' => $description,

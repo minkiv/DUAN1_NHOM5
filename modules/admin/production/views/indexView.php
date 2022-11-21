@@ -67,10 +67,11 @@
                         <thead>
                             <tr>
                                 <th title="Field #1">ID sản phẩm</th>
+                                <th title="Field #1">danh mục sản phẩm</th>
                                 <th title="Field #2">Tên sản phẩm</th>
+                                <th title="Field #4">Mô tả sản phẩm</th>
                                 <th title="Field #3">Giá sản phẩm</th>
-                                <th title="Field #4">Chi tiết sản phẩm</th>
-                                <th title="Field #5">Hình ảnh sản phẩm</th>
+                                <th title="Field #5">chọn</th>
                                 <th title="Field #4">Số lượng trong kho</th>
                                 <th title="Field #5">Trạng thái sản phẩm</th>
                             </tr>
@@ -79,6 +80,7 @@
                             <?php foreach ($productions as $production) : ?>
                                 <tr>
                                     <td><?php echo ($production['id']) ?></td>
+                                    <td><?php echo ($production['category_id']) ?></td>
                                     <td><?php echo ($production['title']) ?></td>
                                     <td><?php echo ($production['description']) ?></td>
                                     <td><?php echo ($production['price']) ?></td>

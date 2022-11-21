@@ -40,7 +40,9 @@ function deleteAction() {
 function updateAction(){
     $id = $_GET['id_prod'];
     $prod = get_one_production($id);
+    $categories=get_list_categories();
     $data['production'] = $prod;
+    $data['categories'] = $categories;
     if ($prod) {
         load_view('update', $data);
     } else {
@@ -67,7 +69,7 @@ function updatePostAction() {
         ]);
         header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    update_production($id, $title, $description,$price,$status,$thumb,$category_id);
+    update_production($id, $title, $description,$price,$status,$status,$category_id);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }
