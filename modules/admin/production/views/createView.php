@@ -24,7 +24,7 @@
                 <h3 class="card-title">Form thông tin sản phẩm mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="">
+            <form method="POST" action="" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
@@ -77,7 +77,7 @@
 
                                     <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Thay đổi">
                                         <i class="fa fa-pen icon-sm text-muted"></i>
-                                        <input type="file" name="thumb" accept=".png, .jpg, .jpeg" />
+                                        <input type="file" name="thumb1" accept=".png, .jpg, .jpeg" />
                                         <input type="hidden" name="thumb_remove" />
                                     </label>
 
@@ -89,12 +89,7 @@
                         </div>
                         <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
-                            <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
-                                <div class="dropzone-msg dz-message needsclick">
-                                    <h3 class="dropzone-msg-title">Kéo thả hình ảnh cần upload</h3>
-                                    <span class="dropzone-msg-desc">Chỉ chấp nhận tải lên file hình ảnh</span>
-                                </div>
-                            </div>
+                            <input type="file" name="thumb" accept=".png, .jpg, .jpeg" />
                         </div>
                     </div>
                 </div>

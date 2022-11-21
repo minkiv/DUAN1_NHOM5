@@ -19,7 +19,7 @@ $db = array(
     'hostname' => 'localhost',
     'username' => 'root',
     'password' => '',
-    'database' => 'duan1_outtest',
+    'database' => 'duan1_shop_db',
 );
 
 

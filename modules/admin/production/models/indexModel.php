@@ -14,11 +14,15 @@ function get_one_production($id) {
     return $result;
 }
 
-function create_production($name, $description) {
+function create_production($title, $description,$category_id,$price,$count,$status,$thumb) {
     $user = get_auth();
     $id = db_insert('productions', [
-        'name' => $name,
+        'title' => $title,
         'description' => $description,
+        'category_id'=>$category_id,
+        'price'=>$price,
+        'count'=>$count,
+        'status'=>$status,
         'create_id' => $user['id'],
         'created_at' => date('Y-m-d H:i:s')
     ]);

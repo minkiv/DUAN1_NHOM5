@@ -18,6 +18,7 @@ function createAction() {
 function createPostAction() {
     $title = $_POST['name'];
     $description = $_POST['description'];
+    $category_id = $_POST['category_id'];
     $price = $_POST['price'];
     $count = $_POST['count'];
     $status=$_POST['status'];
