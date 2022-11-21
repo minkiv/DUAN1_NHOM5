@@ -72,7 +72,7 @@
                                 <th title="Field #4">Mô tả sản phẩm</th>
                                 <th title="Field #3">Giá sản phẩm</th>
                                 <th title="Field #5">chọn</th>
-                                <th title="Field #4">Số lượng trong kho</th>
+                                <th title="Field #4">hình sp</th>
                                 <th title="Field #5">Trạng thái sản phẩm</th>
                             </tr>
                         </thead>
@@ -104,10 +104,9 @@
                                             </svg> </span> </a>
                                         </span>
                                     </td>
+                                    <td><?php echo ($production['thumb']) ?></td>
                                     <td><?php echo ($production['status']) ?></td>
-                                    <td><?php echo ($production['status']) ?></td>
-                                    <td><?php echo ($production['category_id']) ?></td>
-                                    <td><?php echo $production['description'] ?></td>
+                                    <td><?php echo ($production['count']) ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

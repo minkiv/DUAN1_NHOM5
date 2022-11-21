@@ -69,7 +69,7 @@ function updatePostAction() {
         ]);
         header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    update_production($id, $title, $description,$price,$status,$status,$category_id);
+    update_production($id, $title, $description,$price,$status,$thumb,$category_id);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }
