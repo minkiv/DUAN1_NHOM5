@@ -23,6 +23,7 @@ function create_production($title, $description,$category_id,$price,$count,$stat
         'price'=>$price,
         'count'=>$count,
         'status'=>$status,
+        'thumb'=>$thumb,
         'create_id' => $user['id'],
         'created_at' => date('Y-m-d H:i:s')
     ]);
@@ -30,14 +31,16 @@ function create_production($title, $description,$category_id,$price,$count,$stat
 }
 
 
-function update_production($id, $title, $description,$price,$status,$thumb,$category_id) {
+function update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb) {
+
     db_update('productions', [
         'title' => $title,
         'description' => $description,
+        'category_id' => $category_id,
         'price' => $price,
+        'count'=>$count,
         'status' => $status,
-        'thumb' => $thumb,
-        'category_id' => $category_id
+        'thumb' => $thumb
     ], "id = $id");
     return true;
 }
