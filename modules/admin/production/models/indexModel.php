@@ -23,6 +23,7 @@ function create_production($title, $description,$category_id,$price,$count,$stat
         'price'=>$price,
         'count'=>$count,
         'status'=>$status,
+        'thumb'=>$thumb,
         'create_id' => $user['id'],
         'created_at' => date('Y-m-d H:i:s')
     ]);

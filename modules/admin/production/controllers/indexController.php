@@ -70,17 +70,26 @@ function updatePostAction() {
     }
     $title = $_POST['name'];
     $description = $_POST['description'];
-    $price = $_POST['price'];
-    $status = $_POST['status'];
-    $thumb = $_POST['thumb'];
     $category_id = $_POST['category_id'];
+    $price = $_POST['price'];
+    $count = $_POST['count'];
+    $status=$_POST['status'];
+    $thumb = $_FILES['thumb']['name'];
+    $target_dir = "./public/uploads/";
+    $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
+        if (move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file)) {
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                }
+
     if (empty($title)) {
         push_notification('errors', [
-            'name' => 'Vui lòng nhập vào tên sản phẩm'
+            'title' => 'Vui lòng nhập vào tên sản phẩm'
         ]);
         header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    update_production($id, $title, $description,$price,$status,$thumb,$category_id);
+    update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }
