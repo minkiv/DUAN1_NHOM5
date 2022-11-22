@@ -13,10 +13,10 @@
     <div class="formdang">
         <div class="formdangki">
             <img src="img/logo.png" alt="">
-            <form action="dangki.html" method="post">
-                <input type="email" name="" id="" placeholder="Nhập email của bạn "> <br>
-                <input type="text" name="" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
-                <input type="password" name="" id="" placeholder="Nhập mật khẩu của bạn "> <br>
+            <form action="" method="post">
+                <input type="email" name="email" id="" placeholder="Nhập email của bạn "> <br>
+                <input type="text" name="full_name" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
+                <input type="password" name="password" id="" placeholder="Nhập mật khẩu của bạn "> <br>
                 <input type="submit" value="Đăng kí" name="">
             </form>
             <p>Bạn đã có tài khoản? <a href="#">Đăng nhập</a></p>

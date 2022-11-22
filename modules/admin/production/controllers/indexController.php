@@ -84,7 +84,7 @@ function updatePostAction() {
     $category_id = $_POST['category_id'];
     if (empty($title)) {
         push_notification('errors', [
-            'name' => 'Vui lòng nhập vào tên sản phẩm'
+            'title' => 'Vui lòng nhập vào tên sản phẩm'
         ]);
         header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }

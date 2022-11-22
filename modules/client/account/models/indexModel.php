@@ -5,4 +5,15 @@ function get_list_account() {
     return $result;
 }
 
+function create_account($name, $description) {
+    $user = get_auth();
+    $id = db_insert('productions', [
+        'email' => $email,
+        'description' => $description,
+        'create_id' => $user['id'],
+        'created_at' => date('Y-m-d H:i:s')
+    ]);
+    return $id;
+}
+
 ?>
