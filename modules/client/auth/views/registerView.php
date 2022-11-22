@@ -17,7 +17,7 @@
             <img src="img/logo.png" alt="">
             <form action="" method="post">
                 <input type="email" name="email" id="" placeholder="Nhập email của bạn "> <br>
-                <input type="text" name="username" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
+                <input type="text" name="full_name" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
                 <input type="password" name="password" id="" placeholder="Nhập mật khẩu của bạn "> <br>
                 <input type="submit" value="Đăng kí" name="">
             </form>
