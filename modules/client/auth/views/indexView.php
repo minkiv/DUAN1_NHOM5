@@ -2,7 +2,7 @@
     <div class="formdang">
         <div class="formdangnhap">
             <img src="img/logo.png" alt="">
-            <form action="#" method="post">
+            <form action="" method="post">
                 <input type="text" name="username" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
                 <input type="password" name="password" id="" placeholder="Nhập mật khẩu của bạn "> <br>
                 <div class="quenpass"><a href="#">Quên mật khẩu</a></div><br>

@@ -20,6 +20,7 @@
                 <input type="text" name="full_name" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
                 <input type="password" name="password" id="" placeholder="Nhập mật khẩu của bạn "> <br>
                 <input type="submit" value="Đăng kí" name="">
+                
             </form>
             <p>Bạn đã có tài khoản? <a href="?role=client&mod=auth">Đăng nhập</a></p>
         </div>

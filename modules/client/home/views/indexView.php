@@ -1,5 +1,4 @@
 <?php get_header('', 'Trang chủ') ?>
-                    <div class="panel login">
                         <div class="panel-heading">Thông tin tài khoản</div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -27,5 +26,4 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
 <?php get_footer() ?>
