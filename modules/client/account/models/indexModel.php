@@ -1,19 +1,21 @@
 <?php
-
-function get_list_account() {
-    $result = db_fetch_array("SELECT * FROM `users`");
+function create_client_user($full_name, $email, $password) {
+    $result = db_insert('users', [
+        "full_name" => $full_name,
+        "email" => $email,
+        "password" => $password,
+        "role" => 1  ,
+        "created_at" => date('Y-m-d H:i:s')
+    ]);
     return $result;
 }
 
-function create_account($name, $description) {
-    $user = get_auth();
-    $id = db_insert('productions', [
-        'email' => $email,
-        'description' => $description,
-        'create_id' => $user['id'],
-        'created_at' => date('Y-m-d H:i:s')
-    ]);
-    return $id;
+function get_client_with_id($id)
+{
+    return db_fetch_row("select * from users where id = {$id}");
 }
 
-?>
+function get_auth_user($username, $pass) {
+    $result = db_fetch_row("SELECT * FROM `users` WHERE `email` = '$username' AND `password` = '$pass' AND `role` = 1");
+    return $result;
+}
