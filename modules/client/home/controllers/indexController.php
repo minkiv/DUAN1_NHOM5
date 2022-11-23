@@ -5,5 +5,6 @@ function construct() {
 }
 
 function indexAction() {
-    load_view('index');
+    $data['products']=get_list_productions();
+    load_view('index',$data);
 }

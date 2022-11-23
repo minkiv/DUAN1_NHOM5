@@ -1,3 +1,8 @@
+<?php
+//  echo "<pre>";
+//  print_r($products);
+//  echo "</pre>";
+?>
 
 <!DOCTYPE html>
 <html lang="">
@@ -66,70 +71,17 @@
                 <H2>SẢN PHẨM NỔI BẬT</H2>
                 <img class="logo2" src="" alt="">
                 <div class="list-item">
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
+                <?php foreach ($products as $sp) {
+                    echo '<div class="item">
+                    <img src="./public/uploads/'.$sp['thumb'].'" alt="">
+                    <div class="item-desc">
+                        <h5>'.$sp['title'].'</h5>
+                        <p class="price">'.$sp['price'].'.000 đ</p>
+                        <button>Đặt hàng</button>
                     </div>
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./public/images/sua-chua-man-hat-sen-.png" alt="">
-                        <div class="item-desc">
-                            <h5>Sữa chua mận hạt sen</h5>
-                            <p class="price">31,000 đ</p>
-                            <button>Đặt hàng</button>
-                        </div>
-                    </div>
+                </div>';
+                }
+                ?>
                 </div>
                 <div class="xemthem">
                     <button class="btn-moresp">Xem Thêm</button>
