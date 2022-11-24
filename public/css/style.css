@@ -106,11 +106,23 @@ h2{
     font-weight: 700;
     font-size: 36;
 }
+@keyframes example{
+    from {top: 0px}
+    to {top: -40px; background-color: #F5F5F5;}
+}
 .item{
     width: 240px;
+    height: 343px;
     border: 1px solid rgb(204, 202, 202);
-    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px  rgb(116, 115, 115);
     text-align: center;
+    overflow: hidden;
+}
+.item:hover div{
+    position: relative;
+    animation-name: example;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 .item img{
     width: 240px;
@@ -136,7 +148,9 @@ h2{
     margin-bottom: 10px;
 }
 .item-desc{
+    margin-top: 40px;
     background-color: #F5F5F5;
+    width: 240px;
 }
 .list-item{
     width: 1220px;
