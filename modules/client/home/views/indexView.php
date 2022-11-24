@@ -1,7 +1,7 @@
 <?php
-//  echo "<pre>";
-//  print_r($products);
-//  echo "</pre>";
+ echo "<pre>";
+ print_r($products);
+ echo "</pre>";
 ?>
 
 <!DOCTYPE html>
