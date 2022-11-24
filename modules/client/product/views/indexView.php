@@ -1,3 +1,10 @@
+<?php
+ echo "<pre>";
+  print_r($products);
+ echo "</pre>";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=".public/css/style_production.css">
+    <link rel="stylesheet" href=".public/css/stylepro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
@@ -24,14 +31,18 @@
         </div>
         <div class="content">
             <div class="box-left">
+                
                 <h5>Danh mục</h5>
                 <br>
                 <ul>
-                    <li><a href="#">Món nổi bật</a></li>
-                    <li><a href="#">Trà sữa</a></li>
-                    <li><a href="#">Fresh Fruit Tea</a></li>
-                    <li><a href="#">Matcchiato Cream Cheese</a></li>
-                    <li><a href="#">Sữa chua dẻo</a></li>
+
+                    <?php
+                    
+                    foreach ($categories as $cat ) {
+                        echo '<li><a href="#">'.$cat['name'].'</a></li>';
+                    }
+                    ?>
+                
                 </ul>
             </div>
             <div class="box">
