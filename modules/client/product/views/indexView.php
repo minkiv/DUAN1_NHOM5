@@ -42,91 +42,33 @@
                 </ul>
             </div>
             <div class="box">
-                <h5>Món nổi bật</h5>
-                <div class="product">
+               
+          
+                     <?php   echo '<h5>'.$cat['name'].'</h5>'; ?>
                     
+                
+                <div class="product">  
+                    
+                  
+
+                        
+                       
+                        
+                   
+                <?php
+                        foreach ($products as $product) { ?>
                     <div class="product-item">
-                        <img src=".public/images/logo-2.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
+                        <img src="./public/images/tra-man-hat-sen.png" alt="Sản phẩm 1">
+                    <h5> 
+                           
+                            <?php echo  $product['title'] ; ?>
+                         </h5>
+                    <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
                     <input type="submit"  value="+">
                     </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                </div>
-                <h5>Trà sữa</h5>
-                <div class="product">
-                    
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                </div>
-                <div class="product">
-                    
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                </div>
-                <div class="product">
-                    
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
-                    <div class="product-item">
-                        <img src=".public/images/logo.png" alt="Sản phẩm 1">
-                    <h5>Sữa chua mận hạt sen</h5>
-                    <p>31,000 đ <del>48,000 đ</del></p>
-                    <input type="submit" value="+">
-                    </div>
+                      <?php  }?>
+                     
+                   
                 </div>
             </div>
             <div class="box-right">

@@ -9,3 +9,8 @@ function indexAction() {
     $data['categories'] = get_list_categories();
     load_view('index',$data);
 }
+function indexView() {
+    $data['products']=get_list_productions();
+    $data['categories'] = get_list_categories();
+    load_view('index',$data);
+}
