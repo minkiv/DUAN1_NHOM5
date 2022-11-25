@@ -5,5 +5,10 @@ function construct() {
 }
 
 function indexAction() {
-    load_view('index');
+    $data['products']=get_list_productions();
+    $data['categories'] = get_list_categories();
+    load_view('index',$data);
+}
+function gioithieuAction(){
+    load_view('gioithieu');
 }
