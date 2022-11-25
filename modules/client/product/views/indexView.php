@@ -19,7 +19,7 @@
             </div>
 
             <div class="search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm" >
+                <input type="text" placeholder="Tìm kiếm sản phẩm ..." >
             </div>
             <div class="sign-in">
                 <input type="submit" value="Đăng nhập">
@@ -58,7 +58,7 @@
                 <?php
                         foreach ($products as $product) { ?>
                     <div class="product-item">
-                        <img src="./public/images/tra-man-hat-sen.png" alt="Sản phẩm 1">
+                        <img src="./public/images/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5> 
                            
                             <?php echo  $product['title'] ; ?>
