@@ -1,8 +1,3 @@
-<?php
-//  echo "<pre>";
-//  print_r($products);
-//  echo "</pre>";
-?>
 
 <!DOCTYPE html>
 <html lang="">
@@ -24,9 +19,8 @@
 
 </head>
     <body>
-
         <div class="container">
-            <div class="header" style="background-image: url(./public/images/Slide_banner-1-1.jpg);">
+            <div class="header-gioithieu" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(public/images/breadcrumb_bg5.png) no-repeat center;">
                 <div class="header-ct" id="navbar">
                     <img src="./public/images/mainlogo.png" alt="" class="logo">
                     <div class="menu">
@@ -41,10 +35,9 @@
                                     expand_more
                                     </span></a>
                                 <div class="dropdown-content">
-                                <?php foreach ($categories as $cat) {
-                                    echo '<a href="#">'.$cat['name'].'</a>';
-                                }
-                                  ?>
+                                  <a href="#">Trà sữa</a>
+                                  <a href="#">Fresh Fruit Tea</a>
+                                  <a href="#">Sữa chua dẻo</a>
                                 </div>
                             </li>
                             <li class="dropdown">
@@ -66,93 +59,19 @@
                         </span>
                     </div> 
                 </div>
+                <h1>GIỚI THIỆU</h1>
             </div>
             <div class="body">
-                <h3>Bốn non nước Menu</h3>
-                <H2>SẢN PHẨM NỔI BẬT</H2>
-                <img class="logo2" src="" alt="">
-                <div class="list-item">
-                <?php foreach ($products as $sp) {
-                    echo '<div class="item">
-                    <img src="./public/uploads/'.$sp['thumb'].'" alt="">
-                    <div class="item-desc">
-                        <h5>'.$sp['title'].'</h5>
-                        <p class="price">'.$sp['price'].'.000 đ</p>
-                        <button>Đặt hàng</button>
-                    </div>
-                </div>';
-                }
-                ?>
-                </div>
-                <div class="xemthem">
-                    <a href="?role=client&mod=product"><button class="btn-moresp">Xem Thêm</button></a>
-                </div>
-                <div class="banner2" style="background-image: url(./public/images/banner_about_us.png);">
-                    <div class="nt">
-
-                    </div>
-                    <div class="banner-ct">
-                        <h3>Bốn lon nước Story</h3>
-                        <h2>Về chúng tôi</h2>
-                        <img src="./public/images/home_line.webp" alt="">
-                        <p>Bên cạnh niềm tự hào về những ly trà sữa ngon-sạch-tươi, chúng tôi luôn tự tin mang đến khách hàng những trải nghiệm tốt nhất về dịch vụ và không gian</p>
-                        <div class="button-story">
-                            <a href="gioithieu.html">XEM THÊM</a>
+                <div class="gioithieu-ct">
+                    <h1>Giới thiệu</h1>
+                    <p>Luôn tâm huyết với việc khai thác nguồn nông sản Việt Nam để tạo ra những ly thức uống tươi ngon, an toàn và giàu giá trị dinh dưỡng, ToCoToCo mở cửa hàng đầu tiên vào năm 2013, mang trong mình lòng đam mê và khát vọng xây dựng một thương hiệu trà sữa thuần Việt, mang đậm hương vị quê hương.ToCoToCo tin rằng thưởng thức một ly trà sữa được pha chế từ trà Mộc Châu, trân châu từ sắn dây Nghệ An hay mứt dâu tằm từ Đà Lạt sẽ là những trải nghiệm hoàn toàn khác biệt và tuyệt vời nhất cho những khách hàng của mình.
+</p><p>
+                        Cũng chính từ sự khác biệt đó, thương hiệu ToCoToCo đã có những bước phát triển thần tốc và dần chiếm lĩnh thị trường trà sữa với hơn 200 cửa hàng trải dài trên toàn quốc. Cột mốc năm 2018 đánh dấu ước mơ vươn xa biển lớn của thương hiệu khi ToCoToCo chính thức đặt chân lên nước Mỹ và tiếp nối thành công tại Úc, Nhật Bản, Hàn Quốc, Singapore,…
+                    </p><p>             
+                        Hành trình đầy đam mê và tâm huyết này sẽ tiếp tục nhân rộng để lan tỏa những ly trà thuần khiết nông sản Việt đến mọi miền trên Việt Nam và thế giới.</p>
+                        <div class="gioithieu-img">
+                            <img src="./public/images/1.webp" alt="">
                         </div>
-                    </div>
-                </div>
-                <div class="third-ct">
-                    <div class="thirdct-title">
-                        <h3>Tin Tức và Khuyến Mãi</h3>
-                        <h2>KHÁM PHÁ BỐN LON NƯỚC NHẬN NGAY KHUYẾN MÃI</h2>
-                        <img class="logo2" src="./public/images/home_line.webp" alt="">
-                    </div>
-                    <div class="third-ctmain">
-                        <div class="thirdct-left">
-                            <a class="first-blocka" href="">
-                                <div class="first-block">
-                                    <img src="./public/images/Hinh-thumb-2-scaled.jpg" alt="" class="first-blockimg">
-                                    <h5>BỐN LON NƯỚC "CHÁY" CÙNG HÀNG TRĂM HỌC SINH AMSTERDAM VÀ CHUYÊN NGOẠI NGỮ TRONG CHƯƠNG TRÌNH CAMP ALETHEIA</h5>
-                                    <P>Tiếp nối các chương trình hướng đến cộng đồng và tài trợ sân chơi bổ ích cho các bạn học sinh, sinh viên, Bốn non nước tự hào khi đồng hành cùng[...]</P>
-                                    <a href="tintuc.html" ><button class="btn-block">XEM THÊM</button></a>
-                                </div>
-                            </a>
-                            
-                            <div class="second-block">
-                                <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
-                                </div>
-                                <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
-                                </div>
-                                <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
-                                </div>
-                                <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thirdct-right">
-                            <div class="block1-right">
-                                <img src="./public/images/Slide_banner-3.jpg" alt="">
-                            </div>
-                            <div class="block2-right">
-                                <div class="block2-item">
-                                    <img src="./public/images/thumbnail-3.jpg" alt="">
-                                    <h5>Bốn Lon Nước đạt top 10 thương hiệu Châu Á Thái Bình Dương 2021</h5>
-                                </div>
-                                <div class="block2-item">
-                                    <img src="./public/images/thumbnail-3.jpg" alt="">
-                                    <h5>Bốn Lon Nước đạt top 10 thương hiệu Châu Á Thái Bình Dương 2021</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="footer">

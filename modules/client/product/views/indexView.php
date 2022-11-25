@@ -46,7 +46,7 @@
                 <?php
                         foreach ($products as $product) { ?>
                     <div class="product-item">
-                        <img src="./public/images/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
+                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5> 
                            
                             <?php echo  $product['title'] ; ?>
