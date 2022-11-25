@@ -42,19 +42,8 @@
                 </ul>
             </div>
             <div class="box">
-               
-          
-                     <?php   echo '<h5>'.$cat['name'].'</h5>'; ?>
-                    
-                
+                     <h5>Món nổi bật</h5>
                 <div class="product">  
-                    
-                  
-
-                        
-                       
-                        
-                   
                 <?php
                         foreach ($products as $product) { ?>
                     <div class="product-item">
@@ -66,9 +55,7 @@
                     <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
                     <input type="submit"  value="+">
                     </div>
-                      <?php  }?>
-                     
-                   
+                      <?php  } ?>
                 </div>
             </div>
             <div class="box-right">
