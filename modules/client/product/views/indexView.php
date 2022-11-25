@@ -32,12 +32,10 @@
                 <ul>
 
                     <?php
-                    
                     foreach ($categories as $cat ) {
                         echo '<li><a href="#">'.$cat['name'].'</a></li>';
                     }
                     ?>
-                
                 </ul>
             </div>
             <div class="box">
