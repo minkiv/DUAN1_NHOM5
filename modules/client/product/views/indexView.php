@@ -27,7 +27,7 @@
         </div>
         <div class="content">
             <div class="box-left">
-                
+                 
                 <h5>Danh mục</h5>
                 <br>
                 <ul>
@@ -42,18 +42,19 @@
                 </ul>
             </div>
             <div class="box">
-                     <h5>Món nổi bật</h5>
+                     <h5>Danh sách sản phẩm</h5>
                 <div class="product">  
                 <?php
                         foreach ($products as $product) { ?>
                     <div class="product-item">
-                        <img src="./public/images/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5> 
-                           
+                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
+                    <h5>     
                             <?php echo  $product['title'] ; ?>
                          </h5>
                     <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
-                    <input type="submit"  value="+">
+                    <!-- <input type="submit"  value="+"  > -->
+                    <a href="http://localhost/duan1_nhom5/?role=client&mod=detail">+</a>
+                    
                     </div>
                       <?php  } ?>
                 </div>
