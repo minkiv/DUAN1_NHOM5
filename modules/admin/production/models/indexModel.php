@@ -30,15 +30,16 @@ function create_production($title, $description,$category_id,$price,$count,$stat
     return $id;
 }
 
-function update_production($id, $title, $description,$price,$status,$thumb,$count,$category_id) {
+
+function update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb) {
     db_update('productions', [
         'title' => $title,
         'description' => $description,
+        'category_id' => $category_id,
         'price' => $price,
+        'count'=>$count,
         'status' => $status,
-        'thumb' => $thumb,
-        'count' => $count,
-        'category_id' => $category_id
+        'thumb' => $thumb
     ], "id = $id");
     return true;
 }
