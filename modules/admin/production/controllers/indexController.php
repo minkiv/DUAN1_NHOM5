@@ -72,6 +72,7 @@ function updatePostAction() {
     $description = $_POST['description'];
     $price = $_POST['price'];
     $status = $_POST['status'];
+    if(isset($_FILES["thumb"]["name"])){
     $thumb = $_FILES['thumb']['name'];
     $target_dir = "./public/uploads/";
     $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
@@ -80,6 +81,9 @@ function updatePostAction() {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
+            }else{
+                $thumb=$production['thumb'];
+            }
     $count = $_POST['count'];
     $category_id = $_POST['category_id'];
     if (empty($title)) {
