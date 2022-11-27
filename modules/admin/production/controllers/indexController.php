@@ -17,8 +17,8 @@ function createAction() {
 
 function createPostAction() {
     $title = $_POST['name'];
-    $category_id=$_POST['category_id'];
     $description = $_POST['description'];
+    $category_id = $_POST['category_id'];
     $price = $_POST['price'];
     $count = $_POST['count'];
     $status=$_POST['status'];
@@ -70,26 +70,26 @@ function updatePostAction() {
     }
     $title = $_POST['name'];
     $description = $_POST['description'];
+    $category_id = $_POST['category_id'];
     $price = $_POST['price'];
-    $status = $_POST['status'];
+    $count = $_POST['count'];
+    $status=$_POST['status'];
+    $thumb = $_FILES['thumb']['name'];
     $target_dir = "./public/uploads/";
     $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
-    move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file);
-    if(isset($_FILES["thumb"]["name"])){
-        $thumb = $_FILES['thumb']['name'];
-    }else{
-        $thumb=$production['thumb'];
-    }
-    $count = $_POST['count'];
-    $category_id = $_POST['category_id'];
+        if (move_uploaded_file($_FILES["thumb"]["tmp_name"], $target_file)) {
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                }
+
     if (empty($title)) {
         push_notification('errors', [
             'title' => 'Vui lòng nhập vào tên sản phẩm'
         ]);
         header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
     }
-    // update_production($id, $title, $description,$price,$status,$thumb,$count,$category_id);
-    echo $thumb;
+    update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }
