@@ -59,11 +59,11 @@
                 <h5>Giỏ hàng của tôi</h5> 
                 <p>Chưa có sản phẩm nào</p>
                     <table border="1">
-                        <tr>    
-                            <td> 1 cốc </td>
-                            <td> x 1</td>
-                            <td> Thành tiền</td>
-                        </tr>
+                      <tr>    
+                        <td> 1 cốc </td>
+                        <td> x 1</td>
+                        <td> Thành tiền</td>
+                      </tr>
                     </table>
                 <input type="submit" value="Xóa tất cả">
                 <input type="submit" value="Thanh toán">
