@@ -32,15 +32,27 @@ function create_production($title, $description,$category_id,$price,$count,$stat
 
 
 function update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb) {
-    db_update('productions', [
-        'title' => $title,
-        'description' => $description,
-        'category_id' => $category_id,
-        'price' => $price,
-        'count'=>$count,
-        'status' => $status,
-        'thumb' => $thumb
-    ], "id = $id");
+    if($thumb!=""){
+        db_update('productions', [
+            'title' => $title,
+            'description' => $description,
+            'category_id' => $category_id,
+            'price' => $price,
+            'count'=>$count,
+            'status' => $status,
+            'thumb' => $thumb
+        ], "id = $id");
+    }else{
+        db_update('productions', [
+            'title' => $title,
+            'description' => $description,
+            'category_id' => $category_id,
+            'price' => $price,
+            'count'=>$count,
+            'status' => $status,
+        ], "id = $id");
+    }
+    
     return true;
 }
 
