@@ -50,7 +50,7 @@
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Hình sản phẩm</label>
                             <input type="file" name="thumb" >
-                            <img src='./public/uploads/<?php echo$production['thumb']?>'height='100'>
+                            <img src='./public/uploads/<?php echo $production['thumb']?>'height='100'>
 
                         </div>
                         <div class="form-group">
