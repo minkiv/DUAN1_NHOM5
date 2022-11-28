@@ -53,7 +53,7 @@
                          </h5>
                     <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
                     <!-- <input type="submit"  value="+"  > -->
-                    <a href="?role=client&mod=detail">+</a>
+                    <a href="?role=client&mod=product&action=detail">+</a>
                     
                     </div>
                       <?php  } ?>
