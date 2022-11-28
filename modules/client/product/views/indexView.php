@@ -43,15 +43,14 @@
                 <div class="product">  
                 <?php
                         foreach ($products as $product) { ?>
-                    <div class="product-item">
+                        <a href="?role=client&mod=">
+                        <div class="product-item">
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5> 
-                           
-                            <?php echo  $product['title'] ; ?>
-                         </h5>
+                    <h5><?php echo  $product['title'] ; ?></h5>
                     <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
                     <input type="submit"  value="+">
                     </div>
+                        </a>
                       <?php  } ?>
                 </div>
             </div>
