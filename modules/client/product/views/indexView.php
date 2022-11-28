@@ -21,7 +21,7 @@
                 <input type="text" placeholder="Tìm kiếm sản phẩm ..." >
             </div>
             <div class="sign-in">
-                <input type="submit" value="Đăng nhập">
+                <a href="?role=client&mod=auth&action=index"><input type="submit" value="Đăng nhập"></a>
             </div>
         </div>
         <div class="content">

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formdang {
+    height: 100vh;
+    /* background-image: url(img/north_background_login_desktop.png); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/north_background_login_desktop.png) no-repeat center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    font-family: Barlow;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.formdangnhap,
+.formdangki {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 5px;
+    padding: 24px 120px;
+}
+
+.formdangnhap img,
+.formdangki img {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+}
+
+.formdangnhap input[type="text"],
+.formdangnhap input[type="password"],
+.formdangki input[type="text"],
+.formdangki input[type="email"],
+.formdangki input[type="password"] {
+    background: 0 0;
+    border: none;
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #d6cdbc;
+    width: 100%;
+    outline: 0 !important;
+    box-shadow: none;
+}
+
+.formdangnhap input[type="submit"],
+.formdangki input[type="submit"] {
+    background: #d8b979;
+    box-shadow: 0 3px 25px 0 rgb(0 0 0 / 20%);
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 14px;
+    overflow: visible;
+    min-height: 42px;
+    height: auto;
+    display: flex;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid white;
+}
+
+.formdangnhap a,
+.formdangki a {
+    color: #d8b979;
+    font-weight: bold;
+    margin: 0 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.quenpass a {
+    color: #d8b979;
+    font-weight: bold;
+    /* margin: 0 12px; */
+    /* cursor: pointer; */
+    padding-left: 92px;
+    text-decoration: none;
+}
+
+.quenpass a:hover {
+    text-decoration: underline;
+}
+
+.formdangnhap a:hover,
+.formdangki a:hover {
+    text-decoration: underline;
+}
