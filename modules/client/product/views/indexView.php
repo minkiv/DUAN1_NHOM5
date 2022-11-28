@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,12 +52,12 @@
                             <?php echo  $product['title'] ; ?>
                          </h5>
                     <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
+                   
                     <!-- <input type="submit"  value="+"  > -->
-<<<<<<< HEAD
-=======
+
                     <a href="?role=client&mod=product&action=detail">+</a>
-                    
->>>>>>> 4bbc46e98f297c257df547f6ee584477e2d31b65
+
+
                     </div>
                     </a>
                       <?php  } ?>
