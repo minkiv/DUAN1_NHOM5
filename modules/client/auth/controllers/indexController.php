@@ -5,7 +5,7 @@ function construct() {
 }
 
 function indexAction() {
-    request_auth(false);
+    // request_auth(false);
     load_view('index');
 }
 
@@ -30,12 +30,15 @@ function indexPostAction()
 }
 
 function registerAction() {
-    request_auth(false);
+    // request_auth(false);
     load_view('register');
 }
 
 function registerPostAction() {
-    request_auth(false);
+    // request_auth(false);
+    $full_name = $_POST['full_name'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
     $errs = [];
     if (empty($_POST['full_name'])) {
         $errs[] = 'Không được bỏ trống họ và tên';
@@ -48,13 +51,13 @@ function registerPostAction() {
     }
     if (count($errs) > 0) {
         push_notification('danger', $errs);
-        header('Location: /?role=client&mod=auth&action=register');
+        header('Location: /?role=client&mod=auth');
     } else {
         // process register
-        $auth_id = create_client_user($_POST['full_name'], $_POST['email'], $_POST['password']);
+        $auth_id = create_client_user($full_name, $email, $password);
         $auth = get_client_with_id($auth_id);
         push_auth($auth);
-        header('Location: /?role=client');
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
     }
 }
 

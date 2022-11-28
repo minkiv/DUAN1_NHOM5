@@ -1,6 +1,6 @@
 <?php
 function create_client_user($full_name, $email, $password) {
-    $result = db_insert('users', [
+    $result = db_insert("users", [
         "full_name" => $full_name,
         "email" => $email,
         "password" => $password,
