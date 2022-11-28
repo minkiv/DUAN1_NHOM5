@@ -42,8 +42,8 @@
                      <h5>Món nổi bật</h5>
                 <div class="product">  
                 <?php
-                        foreach ($products as $product) { ?>
-                        <a href="?role=client&mod=">
+                        foreach ($production as $product) { ?>
+                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
                         <div class="product-item">
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5><?php echo  $product['title'] ; ?></h5>
