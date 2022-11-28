@@ -46,6 +46,7 @@
                 <div class="product">  
                 <?php
                         foreach ($products as $product) { ?>
+                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id'] ?>">
                     <div class="product-item">
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5>     
@@ -53,9 +54,8 @@
                          </h5>
                     <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
                     <!-- <input type="submit"  value="+"  > -->
-                    <a href="http://localhost/duan1_nhom5/?role=client&mod=detail">+</a>
-                    
                     </div>
+                    </a>
                       <?php  } ?>
                 </div>
             </div>
