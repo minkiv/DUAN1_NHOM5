@@ -1,5 +1,8 @@
-
-
+<?php
+ echo "<pre>";
+ print_r($production);
+ echo "</pre>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +34,7 @@
                 <br>
                 <ul>
 
-                <?php
+                    <?php
                     foreach ($categories as $cat ) {
                         echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
                     }
@@ -39,19 +42,20 @@
                 </ul>
             </div>
             <div class="box">
-                     <h5>Tất cả sản phẩm</h5>
+                     <h5><?php echo $category['name']; ?></h5>
                 <div class="product">  
                 <?php
-                        foreach ($production as $product) { ?>
-                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
+                        // foreach ($production as $product) { ?>
+                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $production['id']?>">
                         <div class="product-item">
-                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5><?php echo  $product['title'] ; ?></h5>
-                    <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
+                        <img src="./public/uploads/<?php echo $production['thumb'];?>" alt="Sản phẩm 1">
+                    <h5><?php echo  $production['title'] ; ?></h5>
+                    <p><?php echo  $production['price'] ; ?> <del>48,000 đ</del></p>
                     <input type="submit"  value="+">
                     </div>
                         </a>
-                      <?php  } ?>
+                      <?php  
+                    // } ?>
                 </div>
             </div>
             <div class="box-right">

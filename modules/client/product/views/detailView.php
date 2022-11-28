@@ -32,7 +32,7 @@
 
                     <?php
                     foreach ($categories as $cat ) {
-                        echo '<li><a href="#">'.$cat['name'].'</a></li>';
+                        echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
                     }
                     ?>
                 
