@@ -65,5 +65,5 @@ function logoutAction()
 {
     request_auth(true);
     remove_auth();
-    header('Location: /?role=client');
+    header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
 }
