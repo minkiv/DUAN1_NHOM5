@@ -21,7 +21,7 @@
                 <input type="text" placeholder="Tìm kiếm sản phẩm" >
             </div>
             <div class="sign-in">
-                <input type="submit" value="Đăng nhập">
+                <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
             </div>
         </div>
         <div class="content">
@@ -32,7 +32,7 @@
 
                     <?php
                     foreach ($categories as $cat ) {
-                        echo '<li><a href="#">'.$cat['name'].'</a></li>';
+                        echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
                     }
                     ?>
                 
@@ -46,13 +46,8 @@
               <h5>     
                       <?php echo $production['title'] ; ?>
                    </h5>
-                   <p><?php echo  $production['price'] ; ?> <del>48,000 đ</del></p>
-                  <!-- <input type="submit" value="-">
-                  <input type="text" value="0">
-
-                  <input type="submit" value="+"onclick=tongdonhang()>
-                  <br>
-                  <input type="submit" value="+31,000đ" > -->
+                   <p><?php echo  $production['price'] ; ?>,000 đ <del>48,000 đ</del></p>
+                  
               </div>
              
                     <div class="option-topping">

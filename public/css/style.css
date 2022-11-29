@@ -159,6 +159,9 @@ h2{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 30px;
 }
+.list-item a{
+    text-decoration: none;
+}
 .xemthem{
     text-align: center;
 }

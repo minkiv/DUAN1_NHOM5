@@ -1,5 +1,8 @@
-
-
+<?php
+ echo "<pre>";
+ print_r($production);
+ echo "</pre>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/stylepro.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="container">
@@ -24,27 +24,7 @@
                 <input type="text" placeholder="Tìm kiếm sản phẩm ..." >
             </div>
             <div class="sign-in">
-            <?php if (is_auth()) : ?>
-                                <label>He sờ lô hê sờ mi: </label>
-                                <strong><?php echo get_auth()['full_name'] ?></strong>
-                                    <?php if (is_admin()): ?>
-                                    <li>
-                                        <a href="?role=admin">Trang quản trị</a>
-                                    </li>
-                                    <?php endif; ?>
-                                    <div class="logout">
-                                    <li>
-                                        <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
-                                    </li>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php else: ?>
-                        <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
-                    <?php endif; ?>
-                
+                <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
             </div>
         </div>
         <div class="content">
@@ -54,7 +34,7 @@
                 <br>
                 <ul>
 
-                <?php
+                    <?php
                     foreach ($categories as $cat ) {
                         echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
                     }
@@ -62,19 +42,20 @@
                 </ul>
             </div>
             <div class="box">
-                     <h5>Tất cả sản phẩm</h5>
+                     <h5><?php echo $category['name']; ?></h5>
                 <div class="product">  
                 <?php
-                        foreach ($production as $product) { ?>
-                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
+                        // foreach ($production as $product) { ?>
+                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $production['id']?>">
                         <div class="product-item">
-                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5><?php echo  $product['title'] ; ?></h5>
-                    <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
+                        <img src="./public/uploads/<?php echo $production['thumb'];?>" alt="Sản phẩm 1">
+                    <h5><?php echo  $production['title'] ; ?></h5>
+                    <p><?php echo  $production['price'] ; ?> <del>48,000 đ</del></p>
                     <input type="submit"  value="+">
                     </div>
                         </a>
-                      <?php  } ?>
+                      <?php  
+                    // } ?>
                 </div>
             </div>
             <div class="box-right">

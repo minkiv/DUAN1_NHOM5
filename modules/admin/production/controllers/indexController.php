@@ -92,4 +92,5 @@ function updatePostAction() {
     update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
+}    
 }

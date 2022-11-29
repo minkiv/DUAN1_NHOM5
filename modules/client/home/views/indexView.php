@@ -73,14 +73,14 @@
                 <img class="logo2" src="" alt="">
                 <div class="list-item">
                 <?php foreach ($products as $sp) {
-                    echo '<div class="item">
+                    echo '<a href="?role=client&mod=product&action=detail&id_prod='.$sp['id'].'"><div class="item">
                     <img src="./public/uploads/'.$sp['thumb'].'" alt="">
                     <div class="item-desc">
                         <h5>'.$sp['title'].'</h5>
                         <p class="price">'.$sp['price'].'.000 đ</p>
                         <button>Đặt hàng</button>
                     </div>
-                </div>';
+                </div> </a>';
                 }
                 ?>
                 </div>
@@ -97,7 +97,7 @@
                         <img src="./public/images/home_line.webp" alt="">
                         <p>Bên cạnh niềm tự hào về những ly trà sữa ngon-sạch-tươi, chúng tôi luôn tự tin mang đến khách hàng những trải nghiệm tốt nhất về dịch vụ và không gian</p>
                         <div class="button-story">
-                            <a href="gioithieu.html">XEM THÊM</a>
+                            <a href="?role=client&mod=home&action=gioithieu">XEM THÊM</a>
                         </div>
                     </div>
                 </div>
