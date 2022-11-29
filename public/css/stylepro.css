@@ -4,6 +4,7 @@ body {
     background-color: #fbfbfb;
     font-size: 14px;
     font-family: Verdana;
+    font-family:'Baloo 2', cursive ;
 }
 
 .container {
@@ -49,18 +50,21 @@ body {
 }
 
 .sign-in a {
+    color: white;
+    text-decoration: none;
+}
+
+.sign-in {
+    text-align: center;
+    box-sizing: border-box;
     margin-left: -300px;
+    padding-top: 8px;
     height: 38px;
     width: 124px;
     border-radius: 20px;
     cursor: pointer;
-    color: white;
     background-color: #D3B673;
     border: none;
-}
-
-.sign-in {
-    line-height: 60px;
 }
 
 .content {
@@ -143,10 +147,6 @@ body {
     width: 700px;
 }
 
-.box h5 {
-    margin-left: 30px;
-}
-
 .product {
     margin: 20px 30px;
     display: grid;
@@ -159,6 +159,7 @@ body {
 }
 
 .product-item img {
+    text-align: center;
     width: 200px;
     height: 200px;
 }

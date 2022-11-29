@@ -21,7 +21,7 @@
                 <input type="text" placeholder="Tìm kiếm sản phẩm" >
             </div>
             <div class="sign-in">
-                <input type="submit" value="Đăng nhập">
+                <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
             </div>
         </div>
         <div class="content">
@@ -46,7 +46,7 @@
               <h5>     
                       <?php echo $production['title'] ; ?>
                    </h5>
-                   <p><?php echo  $production['price'] ; ?> <del>48,000 đ</del></p>
+                   <p><?php echo  $production['price'] ; ?>,000 đ <del>48,000 đ</del></p>
                   <!-- <input type="submit" value="-">
                   <input type="text" value="0">
 
