@@ -43,10 +43,12 @@
             <div class="box">
                      <h5>Danh sách sản phẩm</h5>
                 <div class="product">  
-                <?php
+                
+                    
+                    <?php
                         foreach ($products as $product) { ?>
                         <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id'] ?>">
-                    <div class="product-item">
+                        <div class="profuct-item">
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5>     
                             <?php echo  $product['title'] ; ?>
@@ -55,12 +57,12 @@
                    
                     <!-- <input type="submit"  value="+"  > -->
 
-                    <a href="?role=client&mod=product&action=detail">+</a>
-
+                    <a href="?role=client&mod=product&action=detail"></a>
+                    <?php  } ?>
 
                     </div>
                     </a>
-                      <?php  } ?>
+                      
                 </div>
             </div>
             <div class="box-right">
