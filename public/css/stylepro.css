@@ -166,6 +166,7 @@ body
 }
 .product-view h5{
   text-align: center;
+  font-size: 60px;
   
 }
 .product-item-view{
@@ -173,7 +174,7 @@ body
 }
 .product-item-view h5{
   text-align: center;
-  font-size: 60px;
+  
 }
 .product-view img{
  width: 100%;
