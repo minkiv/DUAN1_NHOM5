@@ -12,6 +12,8 @@ function indexAction() {
     ]);
 }
 
+
+
 function indexPostAction()
 {
     // validation
@@ -33,8 +35,10 @@ function indexPostAction()
 }
 
 function registerAction() {
-    // request_auth(false);
-    load_view('register');
+    $notifications = get_notification();
+    load_view('register', [
+        "notifications" => $notifications
+    ]);
 }
 
 function registerPostAction() {
@@ -60,7 +64,7 @@ function registerPostAction() {
         $auth_id = create_client_user($full_name, $email, $password);
         $auth = get_client_with_id($auth_id);
         push_auth($auth);
-        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=register');
     }
 }
 

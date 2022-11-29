@@ -93,4 +93,3 @@ function updatePostAction() {
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=production');
 }    
-}
