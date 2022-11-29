@@ -42,28 +42,30 @@
             </div>
             <div class="box">
                      <h5>Danh sách sản phẩm</h5>
-                <div class="product">  
-                
-                    
-                    <?php
+                     <div class="product">  
+                     <?php
                         foreach ($products as $product) { ?>
+                
+                        <div class="product-item">
                         <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id'] ?>">
-                        <div class="profuct-item">
+                        
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5>     
                             <?php echo  $product['title'] ; ?>
                          </h5>
                     <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
+                    <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id'] ?>">
+                    <input type="submit"  value="+"  >
+
+                    </a>
                    
-                    <!-- <input type="submit"  value="+"  > -->
-
-                    <a href="?role=client&mod=product&action=detail"></a>
-                    <?php  } ?>
-
                     </div>
                     </a>
+                    <?php  } ?>
                       
                 </div>
+                
+
             </div>
             <div class="box-right">
                 <h5>Giỏ hàng của tôi</h5> 

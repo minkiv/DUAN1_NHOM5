@@ -23,6 +23,6 @@ function detailAction(){
     if ($prod) {
         load_view('detail', $data);
     } else {
-        header('Location: ?role=admin&mod=product');
+        header('Location:?role=admin&mod=product');
     }
 }
