@@ -40,12 +40,19 @@
             </div>
             <div class="box">
                 <h5>Chi tiết sản phẩm</h5>
+<<<<<<< Updated upstream
                 <div class="product-view"> 
+=======
+                <div class="product-view">
+               
+              
+>>>>>>> Stashed changes
               <div class="product-item-view">
               <img src="./public/uploads/<?php echo $production['thumb'];?>" alt="Sản phẩm 1">
               <h5>     
                       <?php echo $production['title'] ; ?>
                    </h5>
+<<<<<<< Updated upstream
                    <p><?php echo  $production['price'] ; ?> <del>48,000 đ</del></p>
                   <!-- <input type="submit" value="-">
                   <input type="text" value="0">
@@ -53,6 +60,10 @@
                   <input type="submit" value="+"onclick=tongdonhang()>
                   <br>
                   <input type="submit" value="+31,000đ" > -->
+=======
+                   <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
+                
+>>>>>>> Stashed changes
               </div>
              
                     <div class="option-topping">
