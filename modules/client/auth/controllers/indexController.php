@@ -4,9 +4,12 @@ function construct() {
     load_model('index');
 }
 
+
 function indexAction() {
-    // request_auth(false);
-    load_view('index');
+    $notifications = get_notification();
+    load_view('index', [
+        "notifications" => $notifications
+    ]);
 }
 
 function indexPostAction()
@@ -16,16 +19,16 @@ function indexPostAction()
     $password = $_POST['password'];
     if (empty($username) || empty($password)) {
         push_notification('danger', ['Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu']);
-        header('Location: /?role=client&mod=auth');
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
     }
     // xử lý đăng nhập
     $auth = get_auth_user($username, $password);
-    if ($auth && $auth['role'] == 1) {
+    if (isset($auth)) {
         push_auth($auth);
-        header('Location: /?role=client');
+        header('Location: ?role=client&mod=product');
     } else {
         push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
-        header('Location: /?role=client&mod=auth');
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
     }
 }
 
@@ -36,7 +39,7 @@ function registerAction() {
 
 function registerPostAction() {
     // request_auth(false);
-    $full_name = $_POST['full_name'];
+    $full_name = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
     $errs = [];
@@ -65,5 +68,5 @@ function logoutAction()
 {
     request_auth(true);
     remove_auth();
-    header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
+    header('Location: ?role=client&mod=product');
 }

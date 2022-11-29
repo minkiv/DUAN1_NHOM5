@@ -48,6 +48,16 @@ body {
     line-height: 60px;
 }
 
+.logout a {
+    height: 38px;
+    width: 124px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: #D3B673;
+    border: none;
+}
+
 .sign-in a {
     margin-left: -300px;
     height: 38px;

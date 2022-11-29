@@ -14,8 +14,13 @@
     <div class="formdang">
         <div class="formdangnhap">
             <img src="img/logo.png" alt="">
+            <?php foreach ($notifications as $notification) : ?>
+                        <?php foreach ($notification['msgs'] as $msg): ?>
+                            <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
             <form action="" method="post">
-                <input type="text" name="full_name" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
+                <input type="text" name="username" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
                 <input type="password" name="password" id="" placeholder="Nhập mật khẩu của bạn "> <br>
                 <div class="quenpass"><a href="#">Quên mật khẩu</a></div><br>
                 <input type="submit" value="Đăng Nhập" name="">

@@ -11,6 +11,11 @@
 
 <body style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./public/images/north_background_login_desktop.png) no-repeat center;">
     <div class="formdang" >
+    <?php foreach ($notifications as $notification) : ?>
+                        <?php foreach ($notification['msgs'] as $msg): ?>
+                            <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
         <div class="formdangki">
             <img src="img/logo.png" alt="">
             <form action="http://localhost/DUAN1_NHOM5/?role=client&mod=auth&action=register" method="post">
