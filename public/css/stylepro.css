@@ -163,20 +163,23 @@ body
   margin: 0  auto;
   padding: 20px;
   margin: 0 50px;
-
-
+}
+.product-view h5{
+  text-align: center;
+  
 }
 .product-item-view{
   text-align: center;
+}
+.product-item-view h5{
+  text-align: center;
+  font-size: 60px;
 }
 .product-view img{
  width: 100%;
  margin-left: 20px;
 }
-.product-view h5{
-  text-align: center;
-  font-size: 100px;
-}
+
 .product-item-cart img{
   width: 100%;
   padding: 20px;
