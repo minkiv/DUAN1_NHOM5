@@ -47,12 +47,7 @@
                       <?php echo $production['title'] ; ?>
                    </h5>
                    <p><?php echo  $production['price'] ; ?>,000 đ <del>48,000 đ</del></p>
-                  <!-- <input type="submit" value="-">
-                  <input type="text" value="0">
-
-                  <input type="submit" value="+"onclick=tongdonhang()>
-                  <br>
-                  <input type="submit" value="+31,000đ" > -->
+                  
               </div>
              
                     <div class="option-topping">

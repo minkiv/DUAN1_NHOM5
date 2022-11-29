@@ -17,3 +17,7 @@ function get_one_production($id) {
     $result = db_fetch_row("SELECT * FROM `productions` WHERE `productions`.`id` = $id");
     return $result;
 }
+function get_top8_production(){
+    $result = db_fetch_array("SELECT * FROM `productions`where 1 order by `view` desc limit 0,8");
+    return $result;
+}

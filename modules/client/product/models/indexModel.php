@@ -25,4 +25,3 @@ function get_one_category($iddm) {
     $result = db_fetch_row("SELECT * FROM `categories` WHERE `categories`.`id` = $iddm");
     return $result;
 }
-
