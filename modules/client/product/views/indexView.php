@@ -25,20 +25,19 @@
             </div>
             <div class="sign-in">
             <?php if (is_auth()) : ?>
-                                <label>He sờ lô hê sờ mi: </label>
-                                <strong><?php echo get_auth()['full_name'] ?></strong>
-                                    <?php if (is_admin()): ?>
-                                    <li>
-                                        <a href="?role=admin">Trang quản trị</a>
-                                    </li>
-                                    <?php endif; ?>
-                                    <div class="logout">
-                                    <li>
-                                        <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
-                                    </li>
-                                    </div>
-                                </ul>
-                            </div>
+                <strong><?php echo get_auth()['full_name'] ?></strong>
+                    <?php if (is_admin()): ?>
+                        <li>
+                            <a href="?role=admin">Trang quản trị</a>
+                        </li>
+                    <?php endif; ?>
+                        <div class="logout">
+                            <li>
+                                <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
                         </div>
                     </div>
                     <?php else: ?>
