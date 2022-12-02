@@ -25,7 +25,9 @@
             </div>
 
             <div class="search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm ..." >
+                <form action="" method="post">
+                <input type="text" placeholder="Tìm kiếm sản phẩm ..." name="kyw" >
+                </form>
             </div>
             <div class="dropdown" style="float:right;">
                 <?php if (is_auth()) : ?>
