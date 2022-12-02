@@ -1,4 +1,8 @@
-
+<?php
+//  echo "<pre>";
+//  print_r($production);
+//  echo "</pre>";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,27 +27,24 @@
             <div class="search">
                 <input type="text" placeholder="Tìm kiếm sản phẩm ..." >
             </div>
-            <div class="sign-in">
-            <?php if (is_auth()) : ?>
-                <strong><?php echo get_auth()['full_name'] ?></strong>
+            <div class="dropdown" style="float:right;">
+                <?php if (is_auth()) : ?>
+                    <button class="dropbtn"><?php echo get_auth()['full_name'] ?></button>
+                    <div class="dropdown-content">
                     <?php if (is_admin()): ?>
-                        <li>
+                        <div class="sign-in">
                             <a href="?role=admin">Trang quản trị</a>
-                        </li>
+                        </div>
                     <?php endif; ?>
-                        <div class="logout">
-                            <li>
+                        <div class="sign-in">
                                 <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
-                            </li>
                         </div>
-                    </ul>
-                </div>
-                        </div>
-                    </div>
                     <?php else: ?>
-                        <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
+                        <div class="sign-in">
+                            <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
+                        </div>
                     <?php endif; ?>
-                
+                    </div>
             </div>
         </div>
         <div class="content">
@@ -70,22 +71,37 @@
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5><?php echo  $product['title'] ; ?></h5>
                     <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
-                    <input type="submit"  value="+">
-                    </div>
+                    <a href="?mod=cart&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
+                        </div>
                         </a>
                       <?php  } ?>
                 </div>
             </div>
             <div class="box-right">
                 <h5>Giỏ hàng của tôi</h5> 
-                <p>Chưa có sản phẩm nào</p>
+                <?php
+                    if(isset($cart)){
+                        foreach($cart['buy'] as $item){
+                ?>
+                
                     <table border="1">
-                        <tr>    
-                            <td> 1 cốc </td>
-                            <td> x 1</td>
-                            <td> Thành tiền</td>
-                        </tr>
+                    <tr>
+                    <td><?php echo $item['id']?></td>
+                    <td><?php echo $item['title']?></td>
+                    <td><?php echo $item['price']?></td>
+                    <td><input type="number" min="1" max="30"name="qty[<?php echo $item['id']?>]"value="<?php echo $item['qty']?>"></td>
+                    <td><?php echo $item['sub_total']?></td>
+                    <td><a href="?mod=cart&action=delete&id=<?php echo $item['id']?>">Xóa</a></td>
+                    </tr>
                     </table>
+                    <?php
+            } 
+        ?>
+        <?php
+        }else{ 
+            echo "<p>Chưa có sản phẩm nào</p>";
+        }
+    ?>
                 <input type="submit" value="Xóa tất cả">
                 <input type="submit" value="Thanh toán">
             </div>

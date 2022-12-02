@@ -20,26 +20,24 @@
             <div class="search">
                 <input type="text" placeholder="Tìm kiếm sản phẩm" >
             </div>
-            <div class="sign-in">
-            <?php if (is_auth()) : ?>
-                <strong><?php echo get_auth()['full_name'] ?></strong>
+            <div class="dropdown" style="float:right;">
+                <?php if (is_auth()) : ?>
+                    <button class="dropbtn"><?php echo get_auth()['full_name'] ?></button>
+                    <div class="dropdown-content">
                     <?php if (is_admin()): ?>
-                        <li>
+                        <div class="sign-in">
                             <a href="?role=admin">Trang quản trị</a>
-                        </li>
+                        </div>
                     <?php endif; ?>
-                        <div class="logout">
-                            <li>
+                        <div class="sign-in">
                                 <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
-                            </li>
                         </div>
-                    </ul>
-                </div>
-                        </div>
-                    </div>
                     <?php else: ?>
-                        <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
+                        <div class="sign-in">
+                            <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
+                        </div>
                     <?php endif; ?>
+                    </div>
             </div>
         </div>
         <div class="content">

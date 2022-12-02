@@ -49,9 +49,8 @@ body {
 }
 
 .sign-in a {
-    margin-left: -300px;
-    height: 38px;
-    width: 124px;
+    height: 28px;
+    width: 104px;
     border-radius: 20px;
     cursor: pointer;
     color: white;
@@ -63,7 +62,7 @@ body {
     line-height: 60px;
 }
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #D3B673;
     color: white;
     padding: 16px;
     font-size: 16px;
