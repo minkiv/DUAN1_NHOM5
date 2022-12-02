@@ -28,3 +28,9 @@ function testAction() {
     $data['title'] = "Nguyễn Văn A";
     load_view('test', $data);
 }
+function deleteAction() {
+    $id = $_GET['id_user'];
+    delete_user($id);
+    push_notification('success', ['Xoá khách hàng thành công']);
+    header('Location: ?role=admin&mod=users');
+}
