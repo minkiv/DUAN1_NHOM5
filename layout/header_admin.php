@@ -156,7 +156,7 @@
 									</a>
 								</li>
 								<li class="menu-item menu-item-submenu" data-menu-toggle="click" aria-haspopup="true">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="?role=client&mod=home" class="menu-link menu-toggle">
 										<span class="menu-text">Trang khách hàng</span>
 										<i class="menu-arrow"></i>
 									</a>
