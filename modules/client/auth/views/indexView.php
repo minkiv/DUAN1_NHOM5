@@ -18,10 +18,8 @@
                             <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
                         <?php endforeach; ?>
                     <?php endforeach; ?>
-        <div class="formdangnhap">
-        
-<img src="./public/images/mainlogo.png" alt="">
-            
+        <div class="formdangnhap">   
+<img src="./public/images/mainlogo.png" alt="">           
             <form action="" method="post">
                 <input type="text" name="username" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
                 <input type="password" name="password" id="" placeholder="Nhập mật khẩu của bạn "> <br>
