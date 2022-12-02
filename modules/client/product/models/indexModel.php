@@ -13,6 +13,7 @@ function get_list_categories() {
     return $result;
 }
 
+
 function get_one_production($id) {
     $result = db_fetch_row("SELECT * FROM `productions` WHERE `productions`.`id` = $id");
     return $result;

@@ -26,3 +26,15 @@ function detailAction(){
         header('Location:?role=admin&mod=product');
     }
 }
+function categoryViewAction(){
+    $id = $_GET['categories'];
+    $prod = get_one_production($id);
+    $categories=get_list_categories();
+    $data['production'] = $category_id;
+    $data['categories'] = $categories;
+    if ($category_id) {
+        load_view('detail', $data);
+    } else {
+        header('Location:?role=admin&mod=product');
+    }
+}

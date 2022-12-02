@@ -29,20 +29,18 @@
                  
                 <h5>Danh mục</h5>
                 <br>
-               
-                    <ul>
+                <ul>
 
                     <?php
                     
                     foreach ($categories as $cat ) {
-                        echo '<li><a href="?role=client&mod=product&action=categoryView&categories=">'.$cat['name'].'</a></li>';
+                        echo '<li><a href="">'.$cat['name'].'</a></li>';
                     }
                     ?>
                 
                 </ul>
-                </a>
             </div>
-        
+            <div class="box">
                      <h5>Danh sách sản phẩm</h5>
                      <div class="product">  
                      <?php
