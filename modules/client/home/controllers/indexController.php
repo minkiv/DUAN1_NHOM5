@@ -10,5 +10,6 @@ function indexAction() {
     load_view('index',$data);
 }
 function gioithieuAction(){
-    load_view('gioithieu');
+    $data['categories'] = get_list_categories();
+    load_view('gioithieu',$data);
 }

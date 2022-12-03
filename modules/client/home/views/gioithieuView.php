@@ -30,14 +30,15 @@
                             <!-- <li><a href="sanpham.html">Sản phẩm<span class="material-symbols-outlined">
                                 expand_more
                                 </span></a></li> -->
-                            <li class="dropdown">
+                                <li class="dropdown">
                                 <a href="?role=client&mod=product" class="dropbtn">Sản phẩm<span class="material-symbols-outlined">
                                     expand_more
                                     </span></a>
                                 <div class="dropdown-content">
-                                  <a href="#">Trà sữa</a>
-                                  <a href="#">Fresh Fruit Tea</a>
-                                  <a href="#">Sữa chua dẻo</a>
+                                <?php foreach ($categories as $cat) {
+                                    echo '<a href="#">'.$cat['name'].'</a>';
+                                }
+                                  ?>
                                 </div>
                             </li>
                             <li class="dropdown">

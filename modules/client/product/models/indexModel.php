@@ -18,7 +18,7 @@ function get_one_production($id) {
     return $result;
 }
 function get_same_productions($iddm) {
-    $result = db_fetch_row("SELECT * FROM `productions` WHERE `productions`.`category_id` = $iddm");
+    $result = db_fetch_array("SELECT * FROM `productions` WHERE `productions`.`category_id` = $iddm");
     return $result;
 }
 function get_one_category($iddm) {
