@@ -4,6 +4,29 @@ function construct() {
     load_model('index');
 }
 
+function passwordAction(){
+    $notifications = get_notification();
+    load_view('password', [
+        "notifications" => $notifications
+    ]);
+}
+
+function passwordPostAction(){
+    $username = $_POST['username'];
+    if (empty($username)) {
+        push_notification('danger', ['Vui lòng nhập đầy đủ thông tin tài khoản']);
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=password');
+    }
+    $password=checkpass($username);
+    if (is_array($password)) {
+        push_notification('danger', ['Mật khẩu của bạn là:'.$password["password"]]);
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=password');
+    } else {
+        push_notification('danger', ['Tài khoản không chính xác']);
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=password');
+    }
+}
+
 
 function indexAction() {
     $notifications = get_notification();

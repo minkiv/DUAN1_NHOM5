@@ -19,3 +19,8 @@ function get_auth_user($username, $pass) {
     $result = db_fetch_row("SELECT * FROM `users` WHERE `email` = '$username' AND `password` = '$pass'");
     return $result;
 }
+
+function checkpass($username) {
+    $result = db_fetch_row("SELECT * FROM `users` WHERE `email` = '$username'");
+    return $result;
+}
