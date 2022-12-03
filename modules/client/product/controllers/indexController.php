@@ -7,6 +7,7 @@ function construct() {
 function indexAction() {
     $data['production']=get_list_productions();
     $data['categories'] = get_list_categories();
+    $data['users'] = get_list_users();
     load_view('index',$data);
 }
 function indexView() {

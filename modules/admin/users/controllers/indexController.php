@@ -23,11 +23,6 @@ function editAction() {
     show_array($item);
 }
 
-function testAction() {
-    $data = [];
-    $data['title'] = "Nguyễn Văn A";
-    load_view('test', $data);
-}
 function deleteAction() {
     $id = $_GET['id_user'];
     delete_user($id);

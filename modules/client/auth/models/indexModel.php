@@ -1,4 +1,15 @@
 <?php
+
+function get_list_users() {
+    $result = db_fetch_array("SELECT * FROM `users`");
+    return $result;
+}
+
+function get_one_users($id) {
+    $result = db_fetch_row("SELECT * FROM `users` WHERE `users`.`id` = $id");
+    return $result;
+}
+
 function create_client_user($full_name, $email, $password) {
     $result = db_insert("users", [
         "full_name" => $full_name,
@@ -10,8 +21,7 @@ function create_client_user($full_name, $email, $password) {
     return $result;
 }
 
-function get_client_with_id($id)
-{
+function get_client_with_id($id){
     return db_fetch_row("select * from users where id = {$id}");
 }
 
@@ -25,12 +35,5 @@ function checkpass($username) {
     return $result;
 }
 
-function get_list_users() {
-    $result = db_fetch_array("SELECT * FROM `users`");
-    return $result;
-}
 
-function get_user_by_id($id) {
-    $item = db_fetch_row("SELECT * FROM `users` WHERE `user_id` = {$id}");
-    return $item;
-}
+
