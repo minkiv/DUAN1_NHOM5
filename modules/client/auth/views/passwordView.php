@@ -24,6 +24,7 @@
                 <input type="text" name="username" id="" placeholder="Nhập tên tài khoản của bạn"> <br>
                 <input type="submit" value="Gửi" name="">
             </form>
+            <p><a href="?role=client&mod=auth&action=index">Đăng nhập</a></p>
         </div>
     </div>
 </body>
