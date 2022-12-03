@@ -5,5 +5,11 @@ function construct() {
 }
 
 function indexAction() {
-    load_view('index');
+    $data['products']=get_top8_production();
+    $data['categories'] = get_list_categories();
+    load_view('index',$data);
+}
+function gioithieuAction(){
+    $data['categories'] = get_list_categories();
+    load_view('gioithieu',$data);
 }

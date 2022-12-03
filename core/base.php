@@ -225,4 +225,15 @@ function request_auth($isLogin = true)
     }
 }
 
+function is_admin()
+{
+    return is_auth() && get_auth()['role'] == 2;
+}
+
+function remove_auth()
+{
+    unset($_SESSION["auth"]);
+    return true;
+}
+
 ?>

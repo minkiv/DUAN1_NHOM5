@@ -17,7 +17,11 @@ function get_one_production($id) {
     $result = db_fetch_row("SELECT * FROM `productions` WHERE `productions`.`id` = $id");
     return $result;
 }
-function get_top8_production(){
-    $result = db_fetch_array("SELECT * FROM `productions`where 1 order by `view` desc limit 0,8");
+function get_same_productions($iddm) {
+    $result = db_fetch_array("SELECT * FROM `productions` WHERE `productions`.`category_id` = $iddm");
+    return $result;
+}
+function get_one_category($iddm) {
+    $result = db_fetch_row("SELECT * FROM `categories` WHERE `categories`.`id` = $iddm");
     return $result;
 }
