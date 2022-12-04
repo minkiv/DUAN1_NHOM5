@@ -49,17 +49,18 @@
         </div>
         <div class="content">
         <div class="information">
+        <form action="" method="post">
         <div class="information-users">
             <div class="information-user">
                 <h3>Thông tin giao hàng</h3>
                 <div class="form_user">
-                    <input type="text" name="" id="" placeholder="Tên người nhận"> <br>
-                    <input type="text" name="" id="" placeholder="Số điện thoại người nhận">
+                    <input type="text" name="name" id="" placeholder="Tên người nhận"> <br>
+                    <input type="text" name="phone" id="" placeholder="Số điện thoại người nhận">
                 </div>
                 <div class="form_user">
                     <h4>Giao đến</h4>
-                    <input type="text" name="" id="" placeholder="Địa chỉ người nhận"> <br>
-                    <input type="text" name="" id="" placeholder="Ghi chú">
+                    <input type="text" name="address" id="" placeholder="Địa chỉ người nhận"> <br>
+                    <input type="text" name="clientNote" id="" placeholder="Ghi chú">
                 </div>
                 <div>
                     <p>Thời gian : </p>
@@ -74,6 +75,9 @@
         <div class="information-row">
             <h3>Thông tin đơn hàng</h3>
             <?php
+        if(isset($cart)){
+    ?>
+            <?php
             foreach($cart['buy'] as $item){
         ?>
             <div class="row-1">
@@ -82,14 +86,18 @@
                 </div>
                 <div>
                     <h5><?php echo $item['title']?></h5> Giá: <?php echo $item['price']?>
-                    <p><input type="number" min="1" max="30"name="qty[<?php echo $item['id']?>]"value="<?php echo $item['qty']?>"></p>
+                    <p>Số lượng:<?php echo $item['qty']?></p>
                     <p>Giá tiền : <b><?php echo $item['sub_total']?></b>đ</p>
                 </div>
             </div>
+            <?php
+            } 
+        ?>
+            
             <div class="row-2">
                 <div class="">
                     <p>Số lượng :
-                        <b>##</b>cốc</p>
+                        <b><?php echo $num_order;?></b>cốc</p>
                 </div>
                 <div class="row_tong">
                     <p>Tổng : <b><?php echo currency_format($total); ?></b> đ</p>
@@ -98,8 +106,13 @@
                     <p><b>Tổng cộng :<?php echo currency_format($total); ?> </b></p>
                 </div>
             </div>
+            <?php
+        }else{ 
+            echo "Không co phan tu nao trong gio hang";
+        }
+    ?>
             <div class="note">
-                <textarea name="" id="" cols="30" rows="3" placeholder="Ghi chú"></textarea>
+                <textarea name="adminNote" id="" cols="30" rows="3" placeholder="Ghi chú"></textarea>
             </div>
             <div class="order">
                 <input type="submit" value="Đặt hàng">
@@ -108,6 +121,11 @@
                 <a href="?mod=product">Tiếp tục mua hàng</a>
             </div>
         </div>
-    
+        </form>
+    </div>
+</div>
+</div>
+
+
 </body>
 </html>

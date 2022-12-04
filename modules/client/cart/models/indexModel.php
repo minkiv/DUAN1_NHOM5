@@ -9,6 +9,12 @@
       }
       return FALSE;
   }
+  function get_total_cup(){
+   if(isset($_SESSION['cart'])){
+      return $_SESSION['cart']['infor']['num_order'];
+   }
+   return FALSE;
+}
   function update_info_cart(){
          $num_order=0;
          $total=0;
@@ -28,4 +34,36 @@
       }
       update_info_cart();
   }
+  
+  function luudonhangnhe($idDH, $name, $email,$phone){            
+   if ($idDH==-1){
+      $id = db_insert('bills', [
+         'TenNguoiNhan' => $name,
+         'EmailNguoiNhan' => $email,
+         'DienThoai'=>$phone,
+         'thoiDiemDatHang' => date('Y-m-d H:i:s')
+     ]);
+   } else {
+      db_update('bills', [
+         'TenNguoiNhan' => $name,
+         'EmailNguoiNhan' => $email,
+         'DienThoai'=>$phone,
+         'thoiDiemDatHang' => date('Y-m-d H:i:s')
+     ], "idDH = $idDH");
+              
+     
+          return $idDH;
+      }
+}//function luudonhangnh
+function luugiohangnhe($idDH, $giohang){
+      $sql = "DELETE FROM donhangchitiet WHERE idDH='$idDH'";
+      $this->query($sql);
+      foreach ($giohang as $idDT=>$dt){
+           $tenDT = $dt['TenDT'];
+           $gia= $dt['Gia'];
+           $Amount= $dt['Amount'];
+           $sql = "INSERT INTO donhangchitiet SET idDH='$idDH', idDT= '$idDT', "           . "TenDT='{$tenDT}', Gia='{$gia}', SoLuong='$Amount'";
+           $kq= $this->query($sql);
+      }//foreach
+}
 ?>

@@ -16,6 +16,7 @@
           'id'=>$pro['id'],
           'title'=>$pro['title'],
           'price'=>$pro['price'],
+          'thumb'=>$pro['thumb'],
           'qty'=>$qty,
           'sub_total'=>$pro['price']*$qty
      );
@@ -24,7 +25,9 @@
    if(!empty($_SESSION['cart'])){
      $data['cart']=$_SESSION['cart'];
      $total=get_total_cart();
-     $data['total']=$total;   
+     $data['total']=$total;
+     $num_order=get_total_cup();
+     $data['num_order']=$num_order;     
      load_view('index',$data);
    }
   
@@ -53,4 +56,18 @@
      update_cart($_POST['qty']);
      header ("Location:?mod=cart");
   }
+
+  function luudonhang(){
+    $name = trim(strip_tags($_POST['name']));
+    $email = trim(strip_tags($_POST['email']));
+    $phone = trim(strip_tags($_POST['phone']));
+    if (isset($_SESSION['idDH'])) $idDH= $_SESSION['idDH']; else $idDH="-1";
+    $idDH = $this->model->luudonhangnhe($idDH, $hoten, $email);
+    if ($idDH){
+       $_SESSION['idDH'] = $idDH;     
+       $giohang = $_SESSION['giohang'];
+       $this->model->luugiohangnhe($idDH, $giohang);
+       header("location:" . SITE_URL."/act=camon");
+    }//if ($idDH)
+ }//function luudonhang
 ?>

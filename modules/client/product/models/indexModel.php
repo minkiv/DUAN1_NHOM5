@@ -66,4 +66,6 @@ function get_one_category($iddm) {
       }
       update_info_cart();
   }
+
+  
 ?>
