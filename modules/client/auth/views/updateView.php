@@ -12,10 +12,10 @@
     <div class="formdang" >
         <div class="formdangki">
             <img src="./public/images/mainlogo.png" alt="">
-            <form action="http://localhost/DUAN1_NHOM5/?role=client&mod=auth&action=register" method="post">
-                <input type="email" name="email" id="" placeholder="email" value="<?php echo $user['email'] ?>"> <br>
-                <input type="text" name="full_name" id="" placeholder="tài khoản" value="<?php echo $user['full_name'] ?>"> <br>
-                <input type="password" name="password" id="" placeholder="password " value="<?php echo $user['password'] ?>"> <br>
+            <form action="" method="post">
+                <input type="email" name="email" id="" placeholder="email" value="<?php echo $_SESSION['auth']['email'] ?>"> <br>
+                <input type="text" name="full_name" id="" placeholder="tài khoản" value="<?php echo $_SESSION['auth']['full_name'] ?>"> <br>
+                <input type="text" name="password" id="" placeholder="password " value="<?php echo $_SESSION['auth']['password'] ?>"> <br>
                 <input type="text" name="address" id="" placeholder="Địa chỉ "> <br>
                 <input type="text" name="numberphone" id="" placeholder="Điện thoại "> <br>
                 <input type="submit" value="Cập nhật" name="">

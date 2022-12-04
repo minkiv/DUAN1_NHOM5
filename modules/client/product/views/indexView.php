@@ -39,7 +39,7 @@
                         </div>
                     <?php endif; ?>
                     <div class="sign-in">
-                                <a href="?role=client&mod=auth&action=update">Cập nhật tài khoản</a>
+                                <a href="?role=client&mod=auth&action=update&id=<?php echo $_SESSION['auth']['id'] ?>"> Cập nhật tài khoản</a>
                         </div>
                         <div class="sign-in">
                                 <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
@@ -66,9 +66,11 @@
                     ?>
                 </ul>
             </div>
-            <div class="box">
+            <viv class="box">
+                     <div>
                      <h5>Tất cả sản phẩm</h5>
-                <div class="product">  
+                     </div>
+                     <div class="product">  
                 <?php
                         foreach ($production as $product) { ?>
                         <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
@@ -81,7 +83,7 @@
                         </a>
                       <?php  } ?>
                 </div>
-            </div>
+            </viv>
             <div class="box-right">
             <div class="box-right-hen">
                     <h5>Giỏ hàng của tôi</h5>

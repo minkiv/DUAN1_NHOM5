@@ -6,7 +6,7 @@ function get_list_users() {
 }
 
 function get_one_users($id) {
-    $result = db_fetch_row("SELECT * FROM `users` WHERE `users`.`id` = $id");
+    $result = db_fetch_row("SELECT * FROM `users` WHERE `users`.`id` = {$id}");
     return $result;
 }
 
@@ -35,5 +35,14 @@ function checkpass($username) {
     return $result;
 }
 
-
+function update_users($id,$email,$full_name,$password,$address,$numberphone) {
+        db_update('users', [
+            'email' => $email,
+            'full_name' => $full_name,
+            'password' => $password,
+            'address' => $address,
+            'numberphone'=>$numberphone,
+        ], "id = $id");
+    return true;
+}
 
