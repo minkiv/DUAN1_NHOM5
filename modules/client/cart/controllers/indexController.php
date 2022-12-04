@@ -42,6 +42,11 @@
      header('Location:?mod=cart');
 
   }
+  function deleteAllAction(){
+    unset($_SESSION['cart']['buy']);   
+    header('Location:?mod=cart');
+
+ }
   function indexPostAction(){
     show_array($_POST['qty']);
     die;
