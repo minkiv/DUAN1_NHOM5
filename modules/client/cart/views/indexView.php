@@ -1,4 +1,7 @@
-
+<?php
+    // show_array($cart);
+    // die;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +85,7 @@
         ?>
             <div class="row-1">
                 <div class="">
-                    <img src="./public/images/<?php echo $item['thumb']?>" alt="">
+                    <img src="./public/images/<?php echo $item['image']?>" alt="">
                 </div>
                 <div>
                     <h5><?php echo $item['title']?></h5> Giá: <?php echo $item['price']?>

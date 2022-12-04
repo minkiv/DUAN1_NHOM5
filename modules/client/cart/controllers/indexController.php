@@ -4,7 +4,6 @@
     load('helper','format');
   }
   function indexAction(){
-     
    if(isset($_GET['id'])){
      $id=$_GET['id'];
      $pro=get_pro_by_id($id);
