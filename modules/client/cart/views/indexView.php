@@ -51,8 +51,8 @@
             </div>
         </div>
         <div class="content">
-        <div class="information">
         <form action="" method="post">
+        <div class="information">
         <div class="information-users">
             <div class="information-user">
                 <h3>Thông tin giao hàng</h3>
@@ -124,8 +124,9 @@
                 <a href="?mod=product">Tiếp tục mua hàng</a>
             </div>
         </div>
-        </form>
+        
     </div>
+    </form>
 </div>
 </div>
 
