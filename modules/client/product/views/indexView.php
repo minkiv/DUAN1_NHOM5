@@ -73,6 +73,7 @@
                      <div class="product">  
                 <?php
                         foreach ($production as $product) { ?>
+                        <div>
                         <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
                         <div class="product-item">
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
@@ -81,6 +82,7 @@
                     <a href="?mod=cart&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
                         </div>
                         </a>
+                        </div>
                       <?php  } ?>
                 </div>
             </viv>
