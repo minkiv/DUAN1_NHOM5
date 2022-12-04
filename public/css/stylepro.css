@@ -16,51 +16,55 @@ body {
 /* Product */
 
 .header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 500px;
-    width: 1500px;
-    height: 80px;
-    background-color: white;
-    margin-left: -10px;
-    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 6%);
+    height: 50px;
+    align-items: center;
+    padding: 0 16px;
+    background: #ffffff;
+    position: relative;
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
-    margin-left: 200px;
-    line-height: 60px;
+    width: 50px;
+    height: 40px;
 }
 
 .search input {
-    padding-left: 30px;
-    height: 38px;
-    width: 428px;
-    margin-left: -300px;
-    border-radius: 20px;
-    /* border-color: rgb(237, 234, 234); */
+    width: 500px;
+    border-radius: 30px;
     border: none;
-    background-color: #F9F8F8;
+    background: #fbfbfb;
+    height: 32px;
+    font-size: 14px;
+    padding: 0 20px 0 30px;
+    background-image: url(../images/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: 8px 10px;
+    background-size: 14px 14px;
 }
 
 .search {
-    line-height: 60px;
+    font-family: Barlow;
+    font-size: 14px;
 }
 
 .sign-in a {
-    height: 28px;
-    width: 104px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: white;
-    background-color: #D3B673;
-    border: none;
+    padding: 6px 15px;
+    background: #d8b979;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: normal;
+    border-radius: 25px;
+    white-space: nowrap;
 }
 
 .sign-in {
     line-height: 60px;
 }
+
 .dropbtn {
     background-color: #D3B673;
     color: white;
@@ -68,50 +72,53 @@ body {
     font-size: 16px;
     border: none;
     cursor: pointer;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     right: 0;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  .dropdown:hover .dropdown-content {
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
+}
+
+.dropdown:hover .dropbtn {
     background-color: #3e8e41;
-  }
+}
+
+
 /* .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 } */
 
 .content {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr 1fr;
-    grid-gap: 5px;
-    background-color: #fbfbfb;
-    margin: 5px 60px;
+    display: flex;
+    padding-top: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .content .box-left {
@@ -119,15 +126,21 @@ body {
 }
 
 .box-left {
-    height: 400px;
-    padding: 15px;
-    width: 250px;
+    width: 300px;
+    max-width: 25%;
+    margin: 0 16px;
+    color: #282828;
+    background: #ffffff;
+    height: fit-content;
+    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 5%);
+    border-radius: 4px;
+    padding-bottom: 12px;
 }
 
 .box-left ul li a {
     text-decoration: none;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #282828;
 }
 
 .box-left ul li a:hover {
@@ -141,29 +154,64 @@ body {
 }
 
 .box-left ul {
-    padding: 0px;
+    padding: 0 16px;
 }
 
 .box-left h5 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.box-right h5 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 10px;
+.box-right .box-right-hen h5 {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.box-right-hen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dele a {
+    font-size: 12px;
+    color: #282828;
+    text-decoration: none;
+}
+
+.thantin {
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d8b979;
+    color: #ffffff;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.thantin a {
+    color: #f1f1f1;
+    text-decoration: none;
 }
 
 .box-right {
-    float: right;
-    background-color: white;
-    height: 300px;
-    padding: 15px;
-    width: 250px;
+    width: 300px;
+    max-width: 25%;
+    margin: 0 16px;
+    color: #282828;
+    background: #ffffff;
+    height: fit-content;
+    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 5%);
+    border-radius: 4px;
+    padding-bottom: 12px;
 }
 
 .box input {
@@ -184,17 +232,46 @@ body {
     background-color: white;
     padding: 10px;
     width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 5%);
+    border-radius: 4px;
+    padding-bottom: 12px;
 }
 
 .box h5 {
-    margin-left: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.product h5 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1rem;
+    padding: 5px 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.product p {
+    align-items: flex-end;
+    color: #8a733f;
+    font-weight: 600;
 }
 
 .product {
-    margin: 20px 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    padding: 15px;
+    border-bottom: 1px solid #f8f8f8;
+    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 5%);
+    position: relative;
+    cursor: pointer;
 }
 
 .product a {
@@ -202,8 +279,7 @@ body {
 }
 
 .product-item img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
 }
 
 .product-item-view {

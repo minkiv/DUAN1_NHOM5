@@ -5,19 +5,11 @@ function construct() {
 }
 
 function updateAction() {
-    $id = $_GET['id_user'];
-    $user = get_one_users($id);
-    $data['users'] = $user;
-    if ($user) {
-        load_view('update', $data);
-    } else {
-        header('Location: ?role=admin&mod=auth');
-    }
+    $notifications = get_notification();
+    load_view('update', [
+        "notifications" => $notifications
+    ]);
 }
-// function updateView() {
-//     $data['users'] = get_list_users();
-//     load_view('index',$data);
-// }
 
 function passwordAction(){
     $notifications = get_notification();
@@ -102,20 +94,6 @@ function registerPostAction() {
         push_auth($auth);
         header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
     }
-}
-
-
-function updatePostAction() {
-    // request_auth(false);
-    $id = $_POST['id'];
-    $full_name = $_POST['full_name'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
-    $address = $_POST['address'];
-    $numberphone = $_POST['numberphone'];
-    update_users($id,$full_name,$email,$password,$address,$numberphone);
-    push_notification('danger', ['Chỉnh sửa tài khoản thành công']);
-    header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=update ');
 }
 
 function logoutAction()

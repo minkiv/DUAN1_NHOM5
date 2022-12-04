@@ -83,7 +83,10 @@
                 </div>
             </div>
             <div class="box-right">
-                <h5>Giỏ hàng của tôi</h5> 
+            <div class="box-right-hen">
+                    <h5>Giỏ hàng của tôi</h5>
+                    <div class="dele"><a href="">Xóa tất cả</a></div>
+                </div>
                 <?php
                     if(isset($cart)){
                         foreach($cart['buy'] as $item){
@@ -107,8 +110,9 @@
             echo "<p>Chưa có sản phẩm nào</p>";
         }
     ?>
-                <input type="submit" value="Xóa tất cả">
-                <input type="submit" value="Thanh toán">
+                <div class="thantin">
+                    <a href="">thanh toán</a>
+                </div>
             </div>
         </div>
     </div>

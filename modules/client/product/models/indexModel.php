@@ -21,12 +21,3 @@ function get_one_category($iddm) {
     $result = db_fetch_row("SELECT * FROM `categories` WHERE `categories`.`id` = $iddm");
     return $result;
 }
-
-function get_list_users() {
-    $result = db_fetch_array("SELECT * FROM `users`");
-    return $result;
-}
-function get_one_users($id) {
-    $result = db_fetch_row("SELECT * FROM `users` WHERE `users`.`id` = $id");
-    return $result;
-}
