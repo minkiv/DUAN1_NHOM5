@@ -171,8 +171,11 @@
 										<i class="menu-arrow"></i>
 									</a>
 								</li>
+
 								<li class="menu-item menu-item-submenu"  aria-haspopup="true">
 									<a href="?role=client&mod=home" class="menu-link menu-toggl">
+
+								
 										<span class="menu-text">Trang khách hàng</span>
 										<i class="menu-arrow"></i>
 									</a>

@@ -12,8 +12,6 @@ function indexAction() {
     ]);
 }
 
-
-
 function indexPostAction()
 {
     // validation
@@ -58,13 +56,13 @@ function registerPostAction() {
     }
     if (count($errs) > 0) {
         push_notification('danger', $errs);
-        header('Location: /?role=client&mod=auth');
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=register');
     } else {
         // process register
         $auth_id = create_client_user($full_name, $email, $password);
         $auth = get_client_with_id($auth_id);
         push_auth($auth);
-        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=register');
+        header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=index');
     }
 }
 
