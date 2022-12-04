@@ -16,8 +16,8 @@
                 <input type="email" name="email" id="" placeholder="email" value="<?php echo $_SESSION['auth']['email'] ?>"> <br>
                 <input type="text" name="full_name" id="" placeholder="tài khoản" value="<?php echo $_SESSION['auth']['full_name'] ?>"> <br>
                 <input type="text" name="password" id="" placeholder="password " value="<?php echo $_SESSION['auth']['password'] ?>"> <br>
-                <input type="text" name="address" id="" placeholder="Địa chỉ "> <br>
-                <input type="text" name="numberphone" id="" placeholder="Điện thoại "> <br>
+                <input type="text" name="address" id="" placeholder="Địa chỉ " value="<?php echo $_SESSION['auth']['address'] ?>" > <br>
+                <input type="text" name="numberphone" id="" placeholder="Điện thoại " value="<?php echo $_SESSION['auth']['numberphone'] ?>"> <br>
                 <input type="submit" value="Cập nhật" name="">
             </form>
         </div>

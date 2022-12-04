@@ -66,14 +66,14 @@
                     ?>
                 </ul>
             </div>
-            <viv class="box">
+            <div class="box">
                      <div>
                      <h5>Tất cả sản phẩm</h5>
                      </div>
                      <div class="product">  
                 <?php
                         foreach ($production as $product) { ?>
-                        <div>
+                        <div class="css">
                         <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
                         <div class="product-item">
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
@@ -85,7 +85,7 @@
                         </div>
                       <?php  } ?>
                 </div>
-            </viv>
+            </div>
             <div class="box-right">
             <div class="box-right-hen">
                     <h5>Giỏ hàng của tôi</h5>

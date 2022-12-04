@@ -38,7 +38,6 @@ function indexAction() {
 
 function updateAction() {
     $id = $_GET['id'];
-    
     $user = get_one_users($id);
     $data['users'] = $user;
     if ($user) {
@@ -50,11 +49,6 @@ function updateAction() {
 
 function updatePostAction() {
     $id = $_GET['id'];
-    $user = get_one_users($id);
-    if (!$user) {
-        header('Location: ?role=client&mod=auth&action=update');
-        die();
-    }
     $email = $_POST['email'];
     $full_name = $_POST['full_name'];
     $password = $_POST['password'];
@@ -62,7 +56,7 @@ function updatePostAction() {
     $numberphone = $_POST['numberphone'];
     update_users($id,$email,$full_name,$password,$address,$numberphone);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
-    header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=update');
+    header('Location: /DUAN1_NHOM5/?role=client&mod=auth&action=update&id='.$id);
 }    
 
 function indexPostAction()

@@ -228,18 +228,39 @@ body {
     padding-bottom: 12px;
 }
 
-.box input {
-    background-color: aqua;
-    border-color: aqua;
-    border-radius: 50px;
-    border: 5px;
-    color: white;
-    font-size: 20px;
-    margin: 10px 90px;
+.show_connent textarea {
+    background: #ffffff;
+    border: none;
+    box-shadow: none;
+    width: 100% !important;
+    box-sizing: border-box;
+    height: 100%;
+    outline: 0;
+    transition: height 2s ease;
+    font-size: 14px;
+    padding: 10px 20px 4px;
+    border-top: 1px solid #f1f1f1;
+    box-shadow: 3px 3px 2px rgb(220, 222, 222);
+    margin-top: 20px;
 }
 
-.box input:hover {
-    background-color: #e2d6a3;
+.cmt input[type="submit"] {
+    width: 100px;
+    line-height: 20px;
+    color: beige;
+    background-color: tomato;
+    border: 1px solid;
+}
+
+.cmt input[type="text"] {
+    background: 0 0;
+    border: none;
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #d6cdbc;
+    width: 100%;
+    outline: 0 !important;
+    box-shadow: none;
 }
 
 .box {
@@ -270,12 +291,15 @@ body {
     text-align: center;
 }
 
+.css {
+    box-shadow: 3px 3px 2px rgb(220, 222, 222);
+    margin-top: 10px;
+}
+
 .product {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 32%;
     border-bottom: 1px solid #f8f8f8;
-    box-shadow: 0 2px 7px 0 rgb(0 0 0 / 5%);
     position: relative;
     cursor: pointer;
     text-align: center;
@@ -286,9 +310,16 @@ body {
     text-align: center;
 }
 
+.tonbao {
+    color: beige;
+    background-color: red;
+    width: 100%;
+}
+
 .product-item img {
     width: 50%;
     height: 100px;
+    margin-top: 10px;
 }
 
 .product-item-view {
@@ -297,14 +328,18 @@ body {
 
 .product-view {
     background-color: white;
-    /* text-align: center; */
+    box-shadow: 3px 3px 2px rgb(220, 222, 222);
     margin: 0 auto;
     padding: 20px;
     margin: 0 50px;
 }
 
+.show_connent {
+    box-shadow: 2px 3px 3px 2px rgb(220, 222, 222);
+}
+
 .product-view img {
-    width: 100%;
+    width: 70%;
     margin-left: 20px;
 }
 
@@ -340,6 +375,7 @@ table {
 
 .product-item h5 {
     text-align: center;
+    box-shadow: 3px 3px 2px rgb(220, 222, 222);
 }
 
 .center {

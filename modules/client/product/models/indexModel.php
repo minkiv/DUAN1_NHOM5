@@ -4,8 +4,18 @@ function get_list_productions() {
     return $result;
 }
 
+function get_list_comments() {
+    $result = db_fetch_array("SELECT * FROM `comments`");
+    return $result;
+}
+
 function get_list_categories() {
     $result = db_fetch_array("SELECT c.id, c.name, c.description, c.create_id, c.created_at, u.full_name, u.id as `uid` FROM `categories` c JOIN `users` u ON c.create_id = u.id");
+    return $result;
+}
+
+function get_one_comments($id) {
+    $result = db_fetch_array("SELECT * FROM `comments` WHERE `comments`.`id_pro` = $id");
     return $result;
 }
 
@@ -20,4 +30,8 @@ function get_same_productions($iddm) {
 function get_one_category($iddm) {
     $result = db_fetch_row("SELECT * FROM `categories` WHERE `categories`.`id` = $iddm");
     return $result;
+}
+
+function create_cmt($data) {
+    db_insert("comments",$data);
 }

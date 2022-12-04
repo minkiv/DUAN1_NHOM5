@@ -6,7 +6,7 @@ function get_list_users() {
 }
 
 function get_one_users($id) {
-    $result = db_fetch_row("SELECT * FROM `users` WHERE `users`.`id` = {$id}");
+    $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = {$id}");
     return $result;
 }
 
