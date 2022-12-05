@@ -3,6 +3,10 @@
 //  print_r($production);
 //  echo "</pre>";
 ?>
+<?php
+    // show_array($cart);
+    // die;
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,15 +17,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/stylepro.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo">
+            <a href="?role=client&mod=product">
                 <img src="./public/images/mainlogo.png" alt="Ảnh logo">
+                </a>
             </div>
 
             <div class="search">
@@ -71,41 +78,43 @@
                      <h5>Tất cả sản phẩm</h5>
                      </div>
                      <div class="product">  
-                <?php
+                        <?php
                         foreach ($production as $product) { ?>
-                        <div class="css">
-                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
-                        <div class="product-item">
-                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5><?php echo  $product['title'] ; ?></h5>
-                    <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
-                    <a href="?mod=cart&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
-                        </div>
-                        </a>
-                        </div>
-                      <?php  } ?>
-                </div>
+                              <div class="css">
+                              <div class="product-item">
+                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
+                              <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
+                              <h5><?php echo  $product['title'] ; ?></h5>
+                              <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
+                              <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
+                              </a>
+                              </div>
+                              </div>
+                        <?php  } ?>
+                    </div>
             </div>
             <div class="box-right">
-            <div class="box-right-hen">
-                    <h5>Giỏ hàng của tôi</h5>
-                    <div class="dele"><a href="">Xóa tất cả</a></div>
+                <div class="my-cart">
+                <h5>Giỏ hàng của tôi</h5> 
+                <a href="">Xóa tất cả</a>
                 </div>
+                
+                <hr>
                 <?php
-                    if(isset($cart)){
+                    if(isset($cart['buy'])){
                         foreach($cart['buy'] as $item){
                 ?>
-                
-                    <table border="1">
-                    <tr>
-                    <td><?php echo $item['id']?></td>
-                    <td><?php echo $item['title']?></td>
-                    <td><?php echo $item['price']?></td>
-                    <td><input type="number" min="1" max="30"name="qty[<?php echo $item['id']?>]"value="<?php echo $item['qty']?>"></td>
-                    <td><?php echo $item['sub_total']?></td>
-                    <td><a href="?mod=cart&action=delete&id=<?php echo $item['id']?>">Xóa</a></td>
-                    </tr>
-                    </table>
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-tt"><?php echo $item['title']?></div>
+                        <p><?php echo $item['price']?>,000 x <?php echo $item['qty']?> = <?php echo $item['sub_total']?>,000</p>
+                    </div>
+                    <div class="item-delete">
+                    <a href="?mod=product&action=delete&id=<?php echo $item['id']?>" class="btn btn-default ">
+                    <i class="bi bi-trash"></i>  
+                    </a>
+                    </div>
+                </div>
                     <?php
             } 
         ?>
@@ -114,10 +123,17 @@
             echo "<p>Chưa có sản phẩm nào</p>";
         }
     ?>
-                <div class="thantin">
-                    <a href="">thanh toán</a>
-                </div>
-            </div>
+    <hr>
+    <div class="num-cup">
+    <img src="./public/images/icon-glass-tea.png"  alt="">
+    <p >x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
+    </div>
+    <?php if($num_cup!=0){?>
+        <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }else{?>
+        <a href="?mod=product" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }?>
+    </div>
         </div>
     </div>
 </body>

@@ -1,21 +1,23 @@
 
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./public/css/stylepro.css">
-    
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <div class="logo">
-                    <img src="./public/images/logo.png" alt="Ảnh logo">
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/stylepro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+            <a href="?role=client&mod=product">
+                <img src="./public/images/mainlogo.png" alt="Ảnh logo">
+                </a>
+            </div>
 
                 <div class="search">
                     <input type="text" placeholder="Tìm kiếm sản phẩm" >
@@ -82,6 +84,8 @@
                             </tr>
                             <?php endforeach; ?>
                         </table>
+                        <a href="?mod=product&id=<?php echo $production['id']?>"><input type="submit" value="Đặt hàng" style="margin-left: 200px"></a>
+                   
                     </div>
                     
                         <?php if(is_auth()){?>
@@ -107,17 +111,17 @@
                     if(isset($cart)){
                         foreach($cart['buy'] as $item){
                 ?>
-                
-                    <table border="1">
-                    <tr>
-                    <td><?php echo $item['id']?></td>
-                    <td><?php echo $item['title']?></td>
-                    <td><?php echo $item['price']?></td>
-                    <td><input type="number" min="1" max="30"name="qty[<?php echo $item['id']?>]"value="<?php echo $item['qty']?>"></td>
-                    <td><?php echo $item['sub_total']?></td>
-                    <td><a href="?mod=cart&action=delete&id=<?php echo $item['id']?>">Xóa</a></td>
-                    </tr>
-                    </table>
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-tt"><?php echo $item['title']?></div>
+                        <p><?php echo $item['price']?>,000 x <?php echo $item['qty']?> = <?php echo $item['sub_total']?>,000</p>
+                    </div>
+                    <div class="item-delete">
+                    <a href="?mod=product&action=delete&id=<?php echo $item['id']?>" class="btn btn-default ">
+                    <i class="bi bi-trash"></i>  
+                    </a>
+                    </div>
+                </div>
                     <?php
             } 
         ?>
@@ -126,10 +130,14 @@
             echo "<p>Chưa có sản phẩm nào</p>";
         }
     ?>
-                <div class="thantin">
-                    <a href="">thanh toán</a>
-                </div>
-            </dv>
+    <hr>
+    <div class="num-cup">
+    <img src="./public/images/icon-glass-tea.png"  alt="">
+    <p style="">x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
+    </div>
+    
+    
+                <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
             </div>
         </div>
     </body>

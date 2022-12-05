@@ -36,7 +36,7 @@
                                     </span></a>
                                 <div class="dropdown-content">
                                 <?php foreach ($categories as $cat) {
-                                    echo '<a href="#">'.$cat['name'].'</a>';
+                                    echo '<a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a>';
                                 }
                                   ?>
                                 </div>

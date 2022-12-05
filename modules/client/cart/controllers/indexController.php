@@ -4,7 +4,10 @@
     load('helper','format');
   }
   function indexAction(){
-     
+    if(!isset($_SESSION['auth'])){
+      header('location:?role=client&mod=auth');
+      die;
+    }
    if(isset($_GET['id'])){
      $id=$_GET['id'];
      $pro=get_pro_by_id($id);
@@ -16,6 +19,7 @@
           'id'=>$pro['id'],
           'title'=>$pro['title'],
           'price'=>$pro['price'],
+          'thumb'=>$pro['thumb'],
           'qty'=>$qty,
           'sub_total'=>$pro['price']*$qty
      );
@@ -24,7 +28,9 @@
    if(!empty($_SESSION['cart'])){
      $data['cart']=$_SESSION['cart'];
      $total=get_total_cart();
-     $data['total']=$total;   
+     $data['total']=$total;
+     $num_order=get_total_cup();
+     $data['num_order']=$num_order;     
      load_view('index',$data);
    }
   
@@ -42,10 +48,40 @@
      header('Location:?mod=cart');
 
   }
+  function deleteAllAction(){
+    unset($_SESSION['cart']['buy']);   
+    header('Location:?mod=cart');
+
+ }
   function indexPostAction(){
     show_array($_POST['qty']);
     die;
      update_cart($_POST['qty']);
      header ("Location:?mod=cart");
+  }
+
+  function luudonhangPostAction(){
+    $name = trim(strip_tags($_POST['name']));
+    $email = trim(strip_tags($_POST['email']));
+    $phone = trim(strip_tags($_POST['phone']));
+    $address = trim(strip_tags($_POST['address']));
+    $clientNote = trim(strip_tags($_POST['clientNote']));
+    $adminNote = trim(strip_tags($_POST['adminNote']));
+    luudonhangnhe($name,$email,$phone,$address,$clientNote,$adminNote);
+    $donhang=laydonhang();
+    foreach($_SESSION['cart']['buy'] as $item){
+
+      $data=[
+        'idDH'=>$donhang['idDH'],
+        'idDT'=>$item['id'],
+        'soLuong'=>$item['qty'],
+        'price'=>$item['price'],
+        'sub_total'=>$item['sub_total']
+      ];
+      luugiohangnhe($data);
+    }
+    $_SESSION['cart']['buy']=[];
+    update_info_cart();
+    header('location:?mod=product');
   }
 ?>

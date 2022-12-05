@@ -9,6 +9,12 @@
       }
       return FALSE;
   }
+  function get_total_cup(){
+   if(isset($_SESSION['cart'])){
+      return $_SESSION['cart']['infor']['num_order'];
+   }
+   return FALSE;
+}
   function update_info_cart(){
          $num_order=0;
          $total=0;
@@ -28,4 +34,28 @@
       }
       update_info_cart();
   }
+  
+  function luudonhangnhe( $name,$email,$phone,$address,$clientNote,$adminNote){            
+   
+       db_insert('bills', [
+         'TenNguoiNhan' => $name,
+         'EmailNguoiNhan' => $email,
+         'idUser'=>$_SESSION['auth']['id'],
+         'DienThoai'=>$phone,
+         'Diachi'=>$address,
+         'ClientNote'=>$clientNote,
+         'AdminNote'=>$adminNote,
+         'thoiDiemDatHang' => date('Y-m-d H:i:s')
+     ]);
+   
+     
+      
+}//function luudonhangnh
+function luugiohangnhe($data){
+      db_insert('bill_productions',$data);
+}
+function laydonhang(){
+   $sql = "select * from bills order by idDH desc limit 0,1";
+   return db_fetch_row($sql);
+}
 ?>

@@ -1,6 +1,6 @@
 body {
     margin: 0 auto;
-    width: 1450px;
+    width: 1220px;
     background-color: #fbfbfb;
     font-size: 14px;
     font-family: Verdana;
@@ -369,10 +369,6 @@ body {
     margin: 5px;
 }
 
-table {
-    margin-left: 100px;
-}
-
 .product-item h5 {
     text-align: center;
     box-shadow: 3px 3px 2px rgb(220, 222, 222);
@@ -380,4 +376,55 @@ table {
 
 .center {
     margin-left: 260px;
+}
+
+
+.cart-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cart-items p{
+    color: #858784;
+}
+.cart-item-tt{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.my-cart{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.my-cart a{
+    padding-left: 40px;
+    text-decoration: none;
+    color: #858784;
+}
+.cart-item{
+    width: 180px;
+}
+.item-delete{
+    text-align: center;
+    color:black ;
+    font-size: 26px;
+}
+.bt-bill button{
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    background-color: #D3B673;
+    color: white;
+}
+.num-cup{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.num-cup p{
+    display: inline-block;
+     margin-top: 34px;
+}
+.num-cup img{
+    width:26px;
+    margin: 20px 0;
+    margin-left: 8px;
 }
