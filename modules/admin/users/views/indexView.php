@@ -27,11 +27,6 @@
                         $t ++;
                         ?>
                         <tr>
-                            <td><?php echo $t; ?></td>
-                            <td><?php echo $user['full_name'] ?></td>
-                            <td><?php echo $user['email'] ?></td>
-                            <td><?php echo $user['password'] ?></td>
-                            <td><?php echo $user['id'] ?></td>
                         </tr>
                         <?php
                     }

@@ -45,6 +45,9 @@
                             <a href="?role=admin">Trang quản trị</a>
                         </div>
                     <?php endif; ?>
+                    <div class="sign-in">
+                                <a href="?role=client&mod=auth&action=update&id=<?php echo $_SESSION['auth']['id'] ?>"> Cập nhật tài khoản</a>
+                        </div>
                         <div class="sign-in">
                                 <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
                         </div>
@@ -71,20 +74,24 @@
                 </ul>
             </div>
             <div class="box">
+                     <div>
                      <h5>Tất cả sản phẩm</h5>
-                <div class="product">  
-                <?php
+                     </div>
+                     <div class="product">  
+                        <?php
                         foreach ($production as $product) { ?>
-                        <div class="product-item">
-                            <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
-                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5><?php echo  $product['title'] ; ?></h5>
-                    <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
-                    <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
-                </a>
-            </div>
-                      <?php  } ?>
-                </div>
+                              <div class="css">
+                              <div class="product-item">
+                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
+                              <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
+                              <h5><?php echo  $product['title'] ; ?></h5>
+                              <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
+                              <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
+                              </a>
+                              </div>
+                              </div>
+                        <?php  } ?>
+                    </div>
             </div>
             <div class="box-right">
                 <div class="my-cart">
