@@ -75,14 +75,14 @@
                 <div class="product">  
                 <?php
                         foreach ($production as $product) { ?>
-                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
                         <div class="product-item">
+                            <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
                         <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                     <h5><?php echo  $product['title'] ; ?></h5>
                     <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
                     <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
-                        </div>
-                        </a>
+                </a>
+            </div>
                       <?php  } ?>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                 
                 <hr>
                 <?php
-                    if(isset($cart)){
+                    if(isset($cart['buy'])){
                         foreach($cart['buy'] as $item){
                 ?>
                 <div class="cart-items">
@@ -121,10 +121,12 @@
     <img src="./public/images/icon-glass-tea.png"  alt="">
     <p >x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
     </div>
-    
-    
-                <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
-            </div>
+    <?php if($num_cup!=0){?>
+        <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }else{?>
+        <a href="?mod=product" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }?>
+    </div>
         </div>
     </div>
 </body>

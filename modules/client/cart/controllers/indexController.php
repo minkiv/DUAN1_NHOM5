@@ -4,6 +4,10 @@
     load('helper','format');
   }
   function indexAction(){
+    if(!isset($_SESSION['auth'])){
+      header('location:?role=client&mod=auth');
+      die;
+    }
    if(isset($_GET['id'])){
      $id=$_GET['id'];
      $pro=get_pro_by_id($id);
@@ -77,6 +81,7 @@
       luugiohangnhe($data);
     }
     $_SESSION['cart']['buy']=[];
+    update_info_cart();
     header('location:?mod=product');
   }
 ?>

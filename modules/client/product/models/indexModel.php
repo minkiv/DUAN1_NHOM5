@@ -39,10 +39,10 @@ function get_one_category($iddm) {
       return FALSE;
   }
   function get_cup_cart(){
-    if(isset($_SESSION['cart'])){
+    if(isset($_SESSION['cart']['infor']['num_cup'])){
        return $_SESSION['cart']['infor']['num_cup'];
     }
-    return FALSE;
+    return $_SESSION['cart']['infor']['num_cup']=0;
  }
  function update_info_cart(){
     $num_order=0;
