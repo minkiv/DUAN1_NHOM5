@@ -18,6 +18,7 @@ function indexAction() {
              'id'=>$pro['id'],
              'title'=>$pro['title'],
              'price'=>$pro['price'],
+             'thumb'=>$pro['thumb'],
              'qty'=>$qty,
              'sub_total'=>$pro['price']*$qty
         );

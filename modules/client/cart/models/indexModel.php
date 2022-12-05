@@ -35,35 +35,27 @@
       update_info_cart();
   }
   
-  function luudonhangnhe($idDH, $name, $email,$phone){            
-   if ($idDH==-1){
-      $id = db_insert('bills', [
+  function luudonhangnhe( $name,$email,$phone,$address,$clientNote,$adminNote){            
+   
+       db_insert('bills', [
          'TenNguoiNhan' => $name,
          'EmailNguoiNhan' => $email,
+         'idUser'=>$_SESSION['auth']['id'],
          'DienThoai'=>$phone,
+         'Diachi'=>$address,
+         'ClientNote'=>$clientNote,
+         'AdminNote'=>$adminNote,
          'thoiDiemDatHang' => date('Y-m-d H:i:s')
      ]);
-   } else {
-      db_update('bills', [
-         'TenNguoiNhan' => $name,
-         'EmailNguoiNhan' => $email,
-         'DienThoai'=>$phone,
-         'thoiDiemDatHang' => date('Y-m-d H:i:s')
-     ], "idDH = $idDH");
-              
+   
      
-          return $idDH;
-      }
+      
 }//function luudonhangnh
-function luugiohangnhe($idDH, $giohang){
-      $sql = "DELETE FROM donhangchitiet WHERE idDH='$idDH'";
-      $this->query($sql);
-      foreach ($giohang as $idDT=>$dt){
-           $tenDT = $dt['TenDT'];
-           $gia= $dt['Gia'];
-           $Amount= $dt['Amount'];
-           $sql = "INSERT INTO donhangchitiet SET idDH='$idDH', idDT= '$idDT', "           . "TenDT='{$tenDT}', Gia='{$gia}', SoLuong='$Amount'";
-           $kq= $this->query($sql);
-      }//foreach
+function luugiohangnhe($data){
+      db_insert('bill_productions',$data);
+}
+function laydonhang(){
+   $sql = "select * from bills order by idDH desc limit 0,1";
+   return db_fetch_row($sql);
 }
 ?>

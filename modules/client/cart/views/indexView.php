@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="content">
-        <form action="" method="post">
+        <form action="?mod=cart&action=luudonhang" method="post">
         <div class="information">
         <div class="information-users">
             <div class="information-user">
@@ -64,6 +64,9 @@
                     <h4>Giao đến</h4>
                     <input type="text" name="address" id="" placeholder="Địa chỉ người nhận"> <br>
                     <input type="text" name="clientNote" id="" placeholder="Ghi chú">
+                </div>
+                <div class="form_user">
+                    <input type="text" name="email" id="" placeholder="Email"> <br>
                 </div>
                 <div>
                     <p>Thời gian : </p>
@@ -85,7 +88,7 @@
         ?>
             <div class="row-1">
                 <div class="">
-                    <img src="./public/images/<?php echo $item['image']?>" alt="">
+                    <img src="./public/images/<?php echo $item['thumb']?>" alt="">
                 </div>
                 <div>
                     <h5><?php echo $item['title']?></h5> Giá: <?php echo $item['price']?>
