@@ -7,8 +7,8 @@ function get_list_users() {
     $result = db_fetch_array("SELECT * FROM `users`");
     return $result;
 }
-function get_list_bproducts() {
-    $result = db_fetch_array("SELECT p.title, p.price,p.thumb, b.soLuong ,b.sub_total FROM 'bill_productions' b JOIN 'productions' p  ON b.idDH = p.id");
+function get_list_bproducts($id) {
+    $result = db_fetch_array(" SELECT * from bill_productions b inner join  productions p on b.idDT = p.id where b.idDH = $id");
     return $result;
 }
 

@@ -11,7 +11,7 @@ function indexAction() {
 }
 function detailAction() {
     $idDH = $_GET['idDH'];
-    $bpro = get_list_bproducts();
+    $bpro = get_list_bproducts($idDH);
     $data['bills'] = get_list_bills();
     $list_users = get_list_users();
     $data['list_users'] = $list_users;
