@@ -2,7 +2,6 @@ body {
     margin: 0 auto;
     width: 100%;
     background-color: #fbfbfb;
-    font-size: 14px;
     font-family: 'Baloo 2', cursive;
 }
 
@@ -164,12 +163,14 @@ body {
     font-weight: bold;
 }
 
-.box-right .box-right-hen h5 {
+
+.box-right h5 {
     padding: 10px 20px;
-    font-size: 14px;
+    /* font-size: 14px; */
     border-bottom: 1px solid #f1f1f1;
     text-transform: uppercase;
     font-weight: bold;
+    margin-left: 10px;
 }
 
 .box-right-hen {
@@ -230,11 +231,11 @@ body {
 }
 
 .cmt input[type="submit"] {
-    /* width: 100px;
+    width: 100px;
     line-height: 20px;
     color: beige;
     background-color: tomato;
-    border: 1px solid; */
+    border: 1px solid;
 }
 
 .cmt input[type="text"] {
@@ -380,6 +381,7 @@ body {
 .cart-item-tt{
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 16px;
 }
 .my-cart{
     display: grid;

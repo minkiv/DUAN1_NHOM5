@@ -19,7 +19,16 @@ function detailAction() {
     load_view('detail', $data);
 }
 
-function createAction() {
-    $data['categories'] = get_list_categories();
-    load_view('create', $data);
+
+function updateAction() {
+    $id = $_GET['id_prod'];
+    $tt = get_bill_production($id);
+    $data['tt']=$tt;
+    load_view('update', $data);
+}
+function saveupdatePostAction(){
+    $id = $_GET['id'];
+    $tt = $_POST['trangThai'];
+    update_bill($id,['trangThai'=>$tt]);
+    header("location: ?role=admin&mod=cart&action=detail&idDH=$id");
 }

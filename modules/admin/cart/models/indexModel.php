@@ -11,56 +11,10 @@ function get_list_bproducts($id) {
     $result = db_fetch_array(" SELECT * from bill_productions b inner join  productions p on b.idDT = p.id where b.idDH = $id");
     return $result;
 }
-
-
-function create_production($title, $description,$category_id,$price,$count,$status,$thumb) {
-    $user = get_auth();
-    $id = db_insert('productions', [
-        'title' => $title,
-        'description' => $description,
-        'category_id'=>$category_id,
-        'price'=>$price,
-        'count'=>$count,
-        'status'=>$status,
-        'thumb'=>$thumb,
-        'create_id' => $user['id'],
-        'created_at' => date('Y-m-d H:i:s')
-    ]);
-    return $id;
-}
-
-
-function update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb) {
-    if($thumb!=""){
-        db_update('productions', [
-            'title' => $title,
-            'description' => $description,
-            'category_id' => $category_id,
-            'price' => $price,
-            'count'=>$count,
-            'status' => $status,
-            'thumb' => $thumb
-        ], "id = $id");
-    }else{
-        db_update('productions', [
-            'title' => $title,
-            'description' => $description,
-            'category_id' => $category_id,
-            'price' => $price,
-            'count'=>$count,
-            'status' => $status,
-        ], "id = $id");
-    }
-    
-    return true;
-}
-
-function delete_production($id) {
-    db_delete('productions', "id = $id");
-    return true;
-}
-
-function get_list_production() {
-    $result = db_fetch_array("SELECT * FROM `production`");
+function get_bill_production($id){
+    $result = db_fetch_row(" SELECT * from bill_productions where idDH = $id");
     return $result;
+}
+function update_bill($id,$data){
+    return db_update('bill_productions',$data,"idDH=$id");
 }
