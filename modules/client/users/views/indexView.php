@@ -20,8 +20,8 @@
         </div>
         <div class="new">
             <div class="menu">
-                <div class="menu_new"><a href="#">Trang chủ</a></div>
-                <div class="menu_new"><a href="?role=client&mod=users&action=index" style="color: rgb(186, 115, 8);">Thông tin tài khoản</a></div>
+                <div class="menu_new"><a href="?role=client&mod=home">Trang chủ</a></div>
+                <div class="menu_new"><a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>" style="color: rgb(186, 115, 8);">Thông tin tài khoản</a></div>
                 <div class="menu_new"><a href="#">Đổi thông tin tài khoản</a></div>
                 <div class="menu_new"><a href="?role=client&mod=users&action=bill">Đơn hàng của tôi</a></div>
             </div>
@@ -31,25 +31,25 @@
                     <div class="th_ria">
                         <div class="th_form">
                             <label for="">Tên khách hàng</label> <br>
-                            <input type="text" disabled name="" id="">
+                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['full_name'] ?>" >
                         </div>
                         <div class="th_form">
                             <label for="">Mất khẩu</label> <br>
-                            <input type="text" disabled name="" id="">
+                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['password'] ?>">
                         </div>
                         <div class="th_form">
                             <label for="">Số điện thoại</label> <br>
-                            <input type="text" disabled name="" id="">
+                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['numberphone'] ?>">
                         </div>
                     </div>
                     <div class="th_let">
                         <div class="th_form">
                             <label for="">Email</label> <br>
-                            <input type="text" disabled name="" id="">
+                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['email'] ?>">
                         </div>
                         <div class="th_form">
                             <label for="">Địa chỉ</label> <br>
-                            <input type="text" disabled name="" id="">
+                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['address'] ?>">
                         </div>
                     </div>
                 </div>

@@ -36,7 +36,7 @@
                         
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
-                        <a href="?role=admin&mod=production" class="btn btn-default">Quay về</a>
+                        <a href="?role=admin&mod=cart" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->
