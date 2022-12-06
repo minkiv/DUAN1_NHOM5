@@ -39,7 +39,7 @@
                         </div>
                     <?php endif; ?>
                     <div class="sign-in">
-                                <a href="?role=client&mod=auth&action=update&id=<?php echo $_SESSION['auth']['id'] ?>"> Cập nhật tài khoản</a>
+                                <a href="?role=client&mod=users"> Cập nhật tài khoản</a>
                         </div>
                         <div class="sign-in">
                                 <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
