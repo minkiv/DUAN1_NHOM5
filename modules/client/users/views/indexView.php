@@ -21,7 +21,7 @@
         <div class="new">
             <div class="menu">
                 <div class="menu_new"><a href="#">Trang chủ</a></div>
-                <div class="menu_new"><a href="#" style="color: rgb(186, 115, 8);">Thông tin tài khoản</a></div>
+                <div class="menu_new"><a href="?role=client&mod=users&action=index" style="color: rgb(186, 115, 8);">Thông tin tài khoản</a></div>
                 <div class="menu_new"><a href="#">Đổi thông tin tài khoản</a></div>
                 <div class="menu_new"><a href="?role=client&mod=users&action=bill">Đơn hàng của tôi</a></div>
             </div>
