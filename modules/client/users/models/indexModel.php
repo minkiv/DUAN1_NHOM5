@@ -33,6 +33,10 @@ function create_production($title, $description,$category_id,$price,$count,$stat
     return $id;
 }
 
+function get_one_users($id) {
+    $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = {$id}");
+    return $result;
+}
 
 function update_users($id,$email,$full_name,$password,$address,$numberphone) {
     db_update('users', [
