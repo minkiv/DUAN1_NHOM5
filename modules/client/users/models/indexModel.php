@@ -34,29 +34,15 @@ function create_production($title, $description,$category_id,$price,$count,$stat
 }
 
 
-function update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb) {
-    if($thumb!=""){
-        db_update('productions', [
-            'title' => $title,
-            'description' => $description,
-            'category_id' => $category_id,
-            'price' => $price,
-            'count'=>$count,
-            'status' => $status,
-            'thumb' => $thumb
-        ], "id = $id");
-    }else{
-        db_update('productions', [
-            'title' => $title,
-            'description' => $description,
-            'category_id' => $category_id,
-            'price' => $price,
-            'count'=>$count,
-            'status' => $status,
-        ], "id = $id");
-    }
-    
-    return true;
+function update_users($id,$email,$full_name,$password,$address,$numberphone) {
+    db_update('users', [
+        'email' => $email,
+        'full_name' => $full_name,
+        'password' => $password,
+        'address' => $address,
+        'numberphone'=>$numberphone,
+    ], "id = $id");
+return true;
 }
 
 function delete_production($id) {

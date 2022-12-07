@@ -27,37 +27,40 @@
             </div>
             <div class="row">
                 <div class="bg-top-account"></div>
+
                 <div class="account-content-inner">
                     <div class="th_ria">
-                        <div class="th_form">
-                            <label for="">Tên khách hàng</label> <br>
-
-                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['full_name'] ?>" >
-
-                        </div>
-                        <div class="th_form">
-                            <label for="">Mất khẩu</label> <br>
-                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['password'] ?>">
-                        </div>
-                        <div class="th_form">
-                            <label for="">Số điện thoại</label> <br>
-                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['numberphone'] ?>">
-                        </div>
+                        <form action="" method="post">
+                            <div class="th_form">
+                                <label for="">Tên khách hàng</label> <br>
+                                <input type="text" name="full_name" id=""  value="<?php echo $_SESSION['auth']['full_name'] ?>">
+                            </div>
+                            <div class="th_form">
+                                <label for="">Mất khẩu</label> <br>
+                                <input type="text" name="password" id=""  value="<?php echo $_SESSION['auth']['password'] ?>">
+                            </div>
+                            <div class="th_form">
+                                <label for="">Số điện thoại</label> <br>
+                                <input type="text" name="numberphone" id=""  value="<?php echo $_SESSION['auth']['numberphone'] ?>">
+                            </div>
                     </div>
                     <div class="th_let">
                         <div class="th_form">
                             <label for="">Email</label> <br>
-                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['email'] ?>">
+                            <input type="text" name="email" id=""  value="<?php echo $_SESSION['auth']['email'] ?>">
                         </div>
                         <div class="th_form">
                             <label for="">Địa chỉ</label> <br>
-                            <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['address'] ?>">
+                            <input type="text" name="address" id=""  value="<?php echo $_SESSION['auth']['address'] ?>">
                         </div>
                     </div>
                 </div>
+                <div class="update">
+                    <input type="submit" value="Cập nhật">
+                </div>
+                </form>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
