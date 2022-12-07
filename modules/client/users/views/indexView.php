@@ -31,7 +31,7 @@
                     <div class="th_ria">
                         <div class="th_form">
                             <label for="">Tên khách hàng</label> <br>
-                            <input type="text" disabled name="" id="">
+                            <input type="text" disabled name="" id="" value ="">
                         </div>
                         <div class="th_form">
                             <label for="">Mất khẩu</label> <br>

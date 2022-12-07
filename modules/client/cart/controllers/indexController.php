@@ -67,6 +67,11 @@
       $address = trim(strip_tags($_POST['address']));
       $clientNote = trim(strip_tags($_POST['clientNote']));
       $adminNote = trim(strip_tags($_POST['adminNote']));
+      if (empty($name)) {
+        echo 'Vui lòng nhập tên!';
+        
+        header('Location: ?role=admin&mod=cart');
+    }
       luudonhangnhe($name,$email,$phone,$address,$clientNote,$adminNote);
       $donhang=laydonhang();
       foreach($_SESSION['cart']['buy'] as $item){
