@@ -25,11 +25,13 @@
                         <div class="product">
                             <img src="./public/uploads/<?=$bill['thumb']?>" alt="" srcset="">
                             <div class="pro-detail">
-                                <h5><?php echo ($bill['title']) ?></h5>
-                                <p class="p-price"><?php echo ($bill['price']) ?></p>
-                                <p class="p-count"><?php echo ($bill['soLuong'])?></p>
-                                <p class="p-total"><?php echo ($bill['sub_total'])?></p>
-                                <p class="p-tt"><?php echo $bill['trangThai']==0 ?'Đang giao hàng' :'Đã giao hàng' ?></p>
+                                <h5>Tên sản phẩm: <?php echo ($bill['title']) ?></h5>
+                                <p class="p-price">Giá: <?php echo ($bill['price']) ?></p>
+                                <p class="p-count">Số lượng: <?php echo ($bill['soLuong'])?></p>
+                                <p class="p-total">Tổng tiền: <?php echo ($bill['sub_total'])?></p>
+                            </div>
+                            <div class="tt">
+                            <p><?php echo $bill['trangThai']==0 ?'Đang giao hàng' :'Đã giao hàng' ?></p>
                             </div>
                         </div>
                     <?php endforeach; ?>

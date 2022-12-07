@@ -31,7 +31,9 @@
                     <div class="th_ria">
                         <div class="th_form">
                             <label for="">Tên khách hàng</label> <br>
+
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['full_name'] ?>" >
+
                         </div>
                         <div class="th_form">
                             <label for="">Mất khẩu</label> <br>

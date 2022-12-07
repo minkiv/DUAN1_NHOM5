@@ -51,6 +51,7 @@
             </div>
         </div>
         <div class="content">
+        <?php $notifications = get_notification(); ?>
         <form action="?mod=cart&action=luudonhang" method="post">
         <div class="information">
         <div class="information-users">
