@@ -22,7 +22,7 @@
             <div class="menu">
                 <div class="menu_new"><a href="?role=client&mod=home">Trang chủ</a></div>
                 <div class="menu_new"><a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>" style="color: rgb(186, 115, 8);">Thông tin tài khoản</a></div>
-                <div class="menu_new"><a href="#">Đổi thông tin tài khoản</a></div>
+                <div class="menu_new"><a href="?role=client&mod=users&action=update&idUS=<?php echo $_SESSION['auth']['id'] ?>">Đổi thông tin tài khoản</a></div>
                 <div class="menu_new"><a href="?role=client&mod=users&action=bill">Đơn hàng của tôi</a></div>
             </div>
             <div class="row">
