@@ -22,8 +22,19 @@ function createAction() {
     $data['categories'] = get_list_categories();
     load_view('create', $data);
 }
+function updateAction() {
+    $id = $_GET['id'];
+    $user = get_one_users($id);
+    $data['users'] = $user;
+    if ($user) {
+        load_view('update', $data);
+    } else {
+        header('Location: ?role=client&mod=users');
+    }
+}
+
 function updatePostAction() {
-    $id = $_GET['idUS'];
+    $id = $_GET['id'];
     $email = $_POST['email'];
     $full_name = $_POST['full_name'];
     $password = $_POST['password'];
@@ -31,13 +42,5 @@ function updatePostAction() {
     $numberphone = $_POST['numberphone'];
     update_users($id,$email,$full_name,$password,$address,$numberphone);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
-    header('Location: /DUAN1_NHOM5/?role=client&mod=users&id='.$id);
-} 
-
-function updateAction() {
-    $idUS = $_GET['idUS'];
-    $data['user']=get_user_by_id($idUS);
-    $list_users = get_list_users();
-    $data['list_users'] = $list_users;
-    load_view('update', $data);
-}
+    header('Location: /DUAN1_NHOM5/?role=client&mod=users&action=update&id='.$id);
+}    
