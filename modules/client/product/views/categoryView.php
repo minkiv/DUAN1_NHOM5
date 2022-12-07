@@ -32,7 +32,7 @@
             </div>
             <div class="dropdown" style="float:right;">
                 <?php if (is_auth()) : ?>
-                    <button class="dropbtn"><?php echo get_auth()['full_name'] ?></button>
+                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <?php echo get_auth()['full_name'] ?></button></a>
                     <div class="dropdown-content">
                     <?php if (is_admin()): ?>
                         <div class="sign-in">

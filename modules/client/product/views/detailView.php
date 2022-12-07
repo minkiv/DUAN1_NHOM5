@@ -28,24 +28,24 @@
                     <input type="text" placeholder="Tìm kiếm sản phẩm" >
                 </div>
                 <div class="dropdown" style="float:right;">
-                    <?php if (is_auth()) : ?>
-                        <button class="dropbtn"><?php echo get_auth()['full_name'] ?></button>
-                        <div class="dropdown-content">
-                        <?php if (is_admin()): ?>
-                            <div class="sign-in">
-                                <a href="?role=admin">Trang quản trị</a>
-                            </div>
-                        <?php endif; ?>
-                            <div class="sign-in">
-                                    <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
-                            </div>
-                        <?php else: ?>
-                            <div class="sign-in">
-                                <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
-                            </div>
-                        <?php endif; ?>
+                <?php if (is_auth()) : ?>
+                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <?php echo get_auth()['full_name'] ?></button></a>
+                    <div class="dropdown-content">
+                    <?php if (is_admin()): ?>
+                        <div class="sign-in">
+                            <a href="?role=admin">Trang quản trị</a>
                         </div>
-                </div>
+                    <?php endif; ?>
+                        <div class="sign-in">
+                                <a href="?role=client&mod=auth&action=logout">Đăng xuất</a>
+                        </div>
+                    <?php else: ?>
+                        <div class="sign-in">
+                            <a href="?role=client&mod=auth&action=index">Đăng nhập</a>
+                        </div>
+                    <?php endif; ?>
+                    </div>
+            </div>
             </div>
             <div class="content">
                 <div class="box-left">

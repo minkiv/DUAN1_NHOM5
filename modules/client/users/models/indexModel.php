@@ -1,6 +1,6 @@
 <?php
 function get_list_bills($id) {
-    $result = db_fetch_array("SELECT p.title , p.thumb, p.price, bi.soLuong, bi.sub_total, bi.trangThai FROM bills b inner join bill_productions bi on b.idDH = bi.idDH inner join productions p on bi.idDT = p.id where b.idUser = $id ");
+    $result = db_fetch_array("SELECT p.title , p.thumb, p.price, bi.soLuong, bi.sub_total, bi.trangThai,p.id FROM bills b inner join bill_productions bi on b.idDH = bi.idDH inner join productions p on bi.idDT = p.id where b.idUser = $id ");
     return $result;
 }
 function get_list_users() {
