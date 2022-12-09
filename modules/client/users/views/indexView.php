@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/bills.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 </head>
 
 <body>
@@ -31,22 +40,24 @@
                     <div class="th_ria">
                         <div class="th_form">
                             <label for="">Tên khách hàng</label> <br>
-
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['full_name'] ?>" >
-
                         </div>
                         <div class="th_form">
                             <label for="">Mất khẩu</label> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['password'] ?>">
                         </div>
                         <div class="th_form">
-                            <label for="">Số điện thoại</label> <br>
+                            <label for=""><span class="material-symbols-outlined icon">
+                                phone_in_talk_watchface_indicator
+                                </span>Số điện thoại</label> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['numberphone'] ?>">
                         </div>
                     </div>
                     <div class="th_let">
                         <div class="th_form">
-                            <label for="">Email</label> <br>
+                            <label for=""><span class="material-symbols-outlined icon">
+                                mail
+                                </span>Email</label> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['email'] ?>">
                         </div>
                         <div class="th_form">

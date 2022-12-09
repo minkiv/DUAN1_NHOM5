@@ -60,7 +60,7 @@
         </div>
         <div class="content">
             <div class="box-left">
-                <h5>Danh mục</h5>
+                <h4>Danh mục</h4>
                 <ul>
                 <?php
                     foreach ($categories as $cat ) {
@@ -71,7 +71,7 @@
             </div>
             <div class="box">
                      <div>
-                     <h5>Tất cả sản phẩm</h5>
+                     <h4>Tất cả sản phẩm</h4>
                      </div>
                      <div class="product">  
                         <?php
@@ -82,7 +82,7 @@
                               <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                               <h5><?php echo  $product['title'] ; ?></h5>
                               <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
-                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="Thêm vào rỏ hàng"></a></div>
+                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><button type="submit"><i class="bi bi-cart-plus-fill"></i></button></a></div>
                               </a>
                               </div>
                               </div>
@@ -91,11 +91,8 @@
             </div>
             <div class="box-right">
                 <div class="my-cart">
-                <h5>Giỏ hàng của tôi</h5> 
-                <a href="">Xóa tất cả</a>
+                <h4>Giỏ hàng của tôi</h4> 
                 </div>
-                
-                <hr>
                 <?php
                     if(isset($cart['buy'])){
                         foreach($cart['buy'] as $item){
@@ -119,7 +116,6 @@
             echo "<p>Chưa có sản phẩm nào</p>";
         }
     ?>
-    <hr>
     <div class="num-cup">
     <img src="./public/images/icon-glass-tea.png"  alt="">
     <p >x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
