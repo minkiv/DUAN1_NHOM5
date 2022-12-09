@@ -59,11 +59,8 @@
         </div>
         <div class="content">
             <div class="box-left">
-                
                 <h5>Danh mục</h5>
-                <br>
                 <ul>
-
                 <?php
                     foreach ($categories as $cat ) {
                         echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
@@ -83,8 +80,8 @@
                                   <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
                               <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                               <h5><?php echo  $product['title'] ; ?></h5>
-                              <p><?php echo  $product['price'] ; ?>,000 đ <del>48,000 đ</del></p>
-                              <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
+                              <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
+                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="Thêm vào rỏ hàng"></a></div>
                               </a>
                               </div>
                               </div>

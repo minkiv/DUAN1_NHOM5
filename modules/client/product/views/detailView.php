@@ -64,19 +64,15 @@
                 </div>
                 <div class="box">
                     <h5>Chi tiết sản phẩm</h5>
-                    <div class="product-view"> 
-                <div class="product-item-view">
+                    <div class="pro_row"> 
+                <div class="product-row_img">
                 <img src="./public/uploads/<?php echo $production['thumb'];?>" alt="Sản phẩm 1">
-                <h5>     
-                        <?php echo $production['title'] ; ?>
-                    </h5>
-                    <p><?php echo  $production['price'] ; ?>,000 đ <del>48,000 đ</del></p>
-                    <p><?php echo $production['description'] ; ?></p>
-                    
                 </div>
-                
-                    <div class="thantin">
-                    <a href="?mod=product&id=<?php echo $production['id']?>"><input type="submit" value="Đặt hàng" style="margin-left: 200px"></a>
+                <div class="pro_row_row">
+                    <h5><?php echo $production['title'] ; ?></h5>
+                    <p> Giá : <?php echo  $production['price'] ; ?>,000 đ </p>
+                    <p><?php echo $production['description'] ; ?></p>
+                    <div class="thanhtoan"><a href="?mod=product&id=<?php echo $production['id']?>"><input type="submit" value="Đặt hàng" ></a></div>
                     </div>
                     </div>
                     
@@ -92,8 +88,7 @@
                             </tr>
                             <?php endforeach; ?>
                         </table>
-                   
-                    </div>
+                </div>
                     
                         <?php if(is_auth()){?>
                     <div class="cmt">
