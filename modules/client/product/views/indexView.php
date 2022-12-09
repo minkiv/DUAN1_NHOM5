@@ -80,7 +80,7 @@
                               <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
                               <h5><?php echo  $product['title'] ; ?></h5>
                               <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
-                              <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
+                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="Thêm vào rỏ hàng"></a></div>
                               </a>
                               </div>
                               </div>
