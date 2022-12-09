@@ -73,16 +73,17 @@
                 <div class="product">  
                 <?php
                         foreach ($production as $product) { ?>
-                        <div class="product-item">
-                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
-                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5><?php echo  $product['title'] ; ?></h5>
-                    <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
-                    <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
-                    </a>
-                    </div>
-                      <?php  
-                    } ?>
+                            <div class="css">
+                            <div class="product-item">
+                                <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
+                            <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
+                            <h5><?php echo  $product['title'] ; ?></h5>
+                            <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
+                            <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><button type="submit"><i class="bi bi-cart-plus-fill"></i></button></a></div>
+                            </a>
+                            </div>
+                            </div>
+                      <?php  } ?>
                 </div>
             </div>
             <div class="box-right">

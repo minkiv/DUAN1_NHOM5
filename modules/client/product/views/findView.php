@@ -64,7 +64,6 @@
                 <h5>Danh mục</h5>
                 <br>
                 <ul>
-
                 <?php
                     foreach ($categories as $cat ) {
                         echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
@@ -84,8 +83,8 @@
                                   <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $row['id']?>">
                               <img src="./public/uploads/<?php echo $row['thumb'];?>" alt="Sản phẩm 1">
                               <h5><?php echo  $row['title'] ; ?></h5>
-                              <p><?php echo  $row['price'] ; ?>,000 đ <del>48,000 đ</del></p>
-                              <a href="?mod=product&id=<?php echo $row['id']?>"><input type="submit"  value="+"></a>
+                              <p><?php echo  $row['price'] ; ?>,000 đ </p>
+                              <a href="?mod=product&id=<?php echo $row['id']?>"><input type="submit"  value=""><i class="bi bi-cart-plus-fill"></i></a>
                               </a>
                               </div>
                               </div>
