@@ -26,7 +26,7 @@
                 <div class="menu_new"><a href="?role=client&mod=users&action=bill">Đơn hàng của tôi</a></div>
             </div>
             <div class="row">
-                <div class="bg-top-account"></div>
+                <div class="bg-top-account" style="background-image: url(./public/images/50ca1b3b1e97fa066a64c09f7cf0cc9f.jpg);"></div>
                 <div class="account-content-inner">
                     <div class="th_ria">
                         <div class="th_form">

@@ -1,8 +1,13 @@
 <?php
 //  echo "<pre>";
-//  print_r($production);
+//  print_r($rows);
 //  echo "</pre>";
 ?>
+<?php
+    // show_array($cart);
+    // die;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,18 +16,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/stylepro.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo">
-                <a href="?role=client&mod=product">
+            <a href="?role=client&mod=product">
                 <img src="./public/images/mainlogo.png" alt="Ảnh logo">
                 </a>
             </div>
@@ -60,7 +65,7 @@
                 <br>
                 <ul>
 
-                    <?php
+                <?php
                     foreach ($categories as $cat ) {
                         echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
                     }
@@ -68,21 +73,24 @@
                 </ul>
             </div>
             <div class="box">
-                     <h5><?php echo $category['name']; ?></h5>
-                <div class="product">  
-                <?php
-                        foreach ($production as $product) { ?>
-                        <div class="product-item">
-                        <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
-                        <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                    <h5><?php echo  $product['title'] ; ?></h5>
-                    <p><?php echo  $product['price'] ; ?> <del>48,000 đ</del></p>
-                    <a href="?mod=product&id=<?php echo $product['id']?>"><input type="submit"  value="+"></a>
-                    </a>
+                     <div>
+                     <h5>Tất cả sản phẩm</h5>
+                     </div>
+                     <div class="product">  
+                        <?php
+                        foreach ($rows as $row) { ?>
+                              <div class="css">
+                              <div class="product-item">
+                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $row['id']?>">
+                              <img src="./public/uploads/<?php echo $row['thumb'];?>" alt="Sản phẩm 1">
+                              <h5><?php echo  $row['title'] ; ?></h5>
+                              <p><?php echo  $row['price'] ; ?>,000 đ <del>48,000 đ</del></p>
+                              <a href="?mod=product&id=<?php echo $row['id']?>"><input type="submit"  value="+"></a>
+                              </a>
+                              </div>
+                              </div>
+                        <?php  } ?>
                     </div>
-                      <?php  
-                    } ?>
-                </div>
             </div>
             <div class="box-right">
                 <div class="my-cart">
@@ -92,7 +100,7 @@
                 
                 <hr>
                 <?php
-                    if(isset($cart)){
+                    if(isset($cart['buy'])){
                         foreach($cart['buy'] as $item){
                 ?>
                 <div class="cart-items">
@@ -116,13 +124,15 @@
     ?>
     <hr>
     <div class="num-cup">
-    <img src="./public/images/icon-glass-tea.png" alt="">
+    <img src="./public/images/icon-glass-tea.png"  alt="">
     <p >x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
     </div>
-    
-    
-                <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
-            </div>
+    <?php if($num_cup!=0){?>
+        <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }else{?>
+        <a href="?mod=product" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }?>
+    </div>
         </div>
     </div>
 </body>

@@ -45,7 +45,22 @@ body {
     font-family: Barlow;
     font-size: 14px;
 }
-
+.search button{
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: #D3B673;
+    color: white;
+}
+.search button:hover{
+    border-radius: 50%;
+    border: 1px solid #D3B673;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #D3B673;
+}
 .sign-in a {
     padding: 6px 10px;
     color: #ffffff;

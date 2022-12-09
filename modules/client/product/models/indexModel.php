@@ -31,7 +31,10 @@ function get_one_category($iddm) {
     $result = db_fetch_row("SELECT * FROM `categories` WHERE `categories`.`id` = $iddm");
     return $result;
 }
-
+function get_found_productions($key) {
+    $result = db_fetch_array("SELECT * FROM productions WHERE (LOWER (title) LIKE '%$key%' OR LOWER (price) LIKE '$key'  OR LOWER (description) LIKE '$key')");
+    return $result;
+}
 
 
  function get_pro_by_id($id){

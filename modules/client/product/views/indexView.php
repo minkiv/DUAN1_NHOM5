@@ -32,8 +32,9 @@
             </div>
 
             <div class="search">
-                <form action="" method="post">
-                <input type="text" placeholder="Tìm kiếm sản phẩm ..." name="kyw" >
+                <form action="?role=client&mod=product&action=find" method="post">
+                <input type="text" placeholder="Tìm kiếm sản phẩm ..." name="kyw" value="<?php echo (isset($_GET['kyw'])) ? $_GET['kyw'] : ''?>" >
+                <button type = "submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
             <div class="dropdown" style="float:right;">
