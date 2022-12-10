@@ -40,7 +40,9 @@
             </div>
             <div class="dropdown" style="float:right;">
                 <?php if (is_auth()) : ?>
-                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <?php echo get_auth()['full_name'] ?></button></a>
+                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <span class="material-symbols-outlined">
+sentiment_very_satisfied
+</span></button></a>
                     <div class="dropdown-content">
                     <?php if (is_admin()): ?>
                         <div class="sign-in">

@@ -40,7 +40,9 @@
             </div>
             <div class="dropdown" style="float:right;">
                 <?php if (is_auth()) : ?>
-                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <?php echo get_auth()['full_name'] ?></button></a>
+                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <span class="material-symbols-outlined">
+sentiment_very_satisfied
+</span></button></a>
                     <div class="dropdown-content">
                     <?php if (is_admin()): ?>
                         <div class="sign-in">
@@ -59,10 +61,8 @@
             </div>
         </div>
         <div class="content">
-            <div class="box-left">
-                
-                <h5>Danh mục</h5>
-                <br>
+        <div class="box-left">
+                <h4>Danh mục</h4>
                 <ul>
                 <?php
                     foreach ($categories as $cat ) {
@@ -73,18 +73,18 @@
             </div>
             <div class="box">
                      <div>
-                     <h5>Tất cả sản phẩm</h5>
+                     <h4>Tất cả sản phẩm</h4>
                      </div>
                      <div class="product">  
                         <?php
-                        foreach ($rows as $row) { ?>
+                        foreach ($production as $product) { ?>
                               <div class="css">
                               <div class="product-item">
-                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $row['id']?>">
-                              <img src="./public/uploads/<?php echo $row['thumb'];?>" alt="Sản phẩm 1">
-                              <h5><?php echo  $row['title'] ; ?></h5>
-                              <p><?php echo  $row['price'] ; ?>,000 đ </p>
-                              <a href="?mod=product&id=<?php echo $row['id']?>"><input type="submit"  value=""><i class="bi bi-cart-plus-fill"></i></a>
+                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
+                              <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
+                              <h5><?php echo  $product['title'] ; ?></h5>
+                              <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
+                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><button type="submit"><i class="bi bi-cart-plus-fill"></i></button></a></div>
                               </a>
                               </div>
                               </div>
@@ -93,11 +93,8 @@
             </div>
             <div class="box-right">
                 <div class="my-cart">
-                <h5>Giỏ hàng của tôi</h5> 
-                <a href="">Xóa tất cả</a>
+                <h4>Giỏ hàng của tôi</h4> 
                 </div>
-                
-                <hr>
                 <?php
                     if(isset($cart['buy'])){
                         foreach($cart['buy'] as $item){
@@ -121,7 +118,6 @@
             echo "<p>Chưa có sản phẩm nào</p>";
         }
     ?>
-    <hr>
     <div class="num-cup">
     <img src="./public/images/icon-glass-tea.png"  alt="">
     <p >x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>

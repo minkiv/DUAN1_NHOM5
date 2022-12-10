@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-size: 14px;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -20,6 +21,7 @@
     height: 80px;
     margin-left: 40px;
 }
+
 .new {
     display: flex;
     padding: 20px;
@@ -38,6 +40,7 @@
     margin-top: 10px;
     box-shadow: 3px 3px 2px rgb(220, 222, 222);
     line-height: 50px;
+    padding-left: 15px;
 }
 
 .menu_new a {
@@ -156,7 +159,8 @@
     text-decoration: none;
     margin-top: 20px;
 }
-.product{
+
+.product {
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
     border: 1px solid rgb(204, 202, 202);
@@ -165,14 +169,17 @@
     text-decoration: none;
     color: black;
 }
-.product h5{
+
+.product h5 {
     margin: 0;
     font-size: 16px;
     margin-top: 10px;
 }
-.product img{
+
+.product img {
     width: 135px;
 }
-.pro-detail{
+
+.pro-detail {
     margin-left: 40px;
 }

@@ -70,67 +70,66 @@ body {
     text-decoration: none;
     font-size: 16px;
     border-radius: 25px;
+    background-color: #c39a3b;
+}
+
+.sign-in a:hover {
+    background-color: #fdfbf5;
+    color: #c39a3b;
+    border: 1px solid #c39a3b;
 }
 
 .dropbtn {
     background-color: #D3B673;
     color: white;
-    padding: 16px;
+    border-radius: 50px;
+    text-align: center;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .dropdown {
-    padding: 6px 15px;
-    background: #d8b979;
-    font-size: 14px;
-    border-radius: 25px;
-    margin-right: 40px
-}
-
-.dropdown:hover {
-    border: 1px solid #d8b979;
-    background-color: #ffffff;
-}
-
-.dropdown:hover a {
-    color: #d8b979;
+    margin-right: 80px
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* right: 0; */
+    min-width: 120px;
     z-index: 1;
+    border-radius: 30px;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    color: white;
+    padding-left: 12px;
     text-decoration: none;
     display: block;
+    background-color: #c39a3b;
+    ;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #fdfbf5;
+    color: #c39a3b;
+    border: 1px solid #c39a3b;
 }
 
 .dropdown:hover .dropdown-content {
+    background-color: #fdfbf5;
+    background-color: #c39a3b;
     display: block;
 }
 
 .dropdown:hover .dropbtn {
     background: #d8b979;
 }
-
-
-/* .buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-} */
 
 .content {
     display: flex;
@@ -238,6 +237,21 @@ body {
     padding-bottom: 12px;
 }
 
+.show_connent h4 {
+    margin-top: 30px;
+    box-shadow: none;
+    border-top: 1px solid #c39a3b;
+}
+
+.show_connent table {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.show_connent table tr td {
+    text-align: center;
+}
+
 .show_connent textarea {
     background: #ffffff;
     border: none;
@@ -249,8 +263,11 @@ body {
     transition: height 2s ease;
     font-size: 14px;
     padding: 10px 20px 4px;
-    border-top: 1px solid #f1f1f1;
-    box-shadow: 3px 3px 2px rgb(220, 222, 222);
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.cmt {
     margin-top: 20px;
 }
 
@@ -258,19 +275,26 @@ body {
     width: 100px;
     line-height: 20px;
     color: beige;
-    background-color: tomato;
-    border: 1px solid;
+    background-color: #c39a3b;
+    border: 1px solid #c39a3b;
+    margin-left: 10px;
+}
+
+.cmt input[type="submit"]:hover {
+    color: #c39a3b;
+    background-color: beige;
 }
 
 .cmt input[type="text"] {
     background: 0 0;
     border: none;
-    padding: 10px 0;
+    border-bottom: 1px solid #c39a3b;
+    line-height: 20px;
     font-size: 14px;
-    border-bottom: 1px solid #d6cdbc;
-    width: 100%;
     outline: 0 !important;
     box-shadow: none;
+    margin-left: 10px;
+    width: 80%;
 }
 
 .box {
@@ -312,7 +336,7 @@ body {
 
 .product-item {
     width: 200px;
-    height: 400px;
+    height: 330px;
     border: 1px solid rgb(204, 202, 202);
     box-shadow: 0 2px 4px rgb(116, 115, 115);
     overflow: hidden;
@@ -331,9 +355,13 @@ body {
     box-shadow: 2px 3px 3px 2px rgb(220, 222, 222);
 }
 
-.product-item h4,
-h5 {
+.product-item h4 {
     color: black;
+}
+
+.product-item h5 {
+    color: black;
+    height: 20px;
 }
 
 .product a {
@@ -411,6 +439,8 @@ h5 {
     margin-left: 12px;
     box-shadow: 2px 3px 3px 2px rgb(220, 222, 222);
     margin-top: 12px;
+    padding-left: 12px;
+    padding-top: 10px;
 }
 
 .cart-items p {
@@ -434,17 +464,20 @@ h5 {
 }
 
 .bt-bill button {
-    width: 250px;
+    width: 80%;
     height: 40px;
     border: none;
     border-radius: 50px;
     background-color: #D3B673;
     color: white;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 .num-cup {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    padding-left: 16px;
 }
 
 .num-cup p {
@@ -525,8 +558,4 @@ h5 {
 .thanhtoan a input:hover {
     background-color: white;
     color: #e7b45a;
-}
-
-.thanhtoan {
-    margin-left: 15px;
 }

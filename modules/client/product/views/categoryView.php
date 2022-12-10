@@ -36,7 +36,9 @@
             </div>
             <div class="dropdown" style="float:right;">
                 <?php if (is_auth()) : ?>
-                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <?php echo get_auth()['full_name'] ?></button></a>
+                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <span class="material-symbols-outlined">
+sentiment_very_satisfied
+</span></button></a>
                     <div class="dropdown-content">
                     <?php if (is_admin()): ?>
                         <div class="sign-in">
@@ -55,13 +57,10 @@
             </div>
         </div>
         <div class="content">
-            <div class="box-left">
-                
-                <h5>Danh mục</h5>
-                <br>
+        <div class="box-left">
+                <h4>Danh mục</h4>
                 <ul>
-
-                    <?php
+                <?php
                     foreach ($categories as $cat ) {
                         echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
                     }
@@ -69,32 +68,31 @@
                 </ul>
             </div>
             <div class="box">
-                     <h5><?php echo $category['name']; ?></h5>
-                <div class="product">  
-                <?php
+                     <div>
+                     <h4>Tất cả sản phẩm</h4>
+                     </div>
+                     <div class="product">  
+                        <?php
                         foreach ($production as $product) { ?>
-                            <div class="css">
-                            <div class="product-item">
-                                <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
-                            <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                            <h5><?php echo  $product['title'] ; ?></h5>
-                            <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
-                            <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><button type="submit"><i class="bi bi-cart-plus-fill"></i></button></a></div>
-                            </a>
-                            </div>
-                            </div>
-                      <?php  } ?>
-                </div>
+                              <div class="css">
+                              <div class="product-item">
+                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
+                              <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
+                              <h5><?php echo  $product['title'] ; ?></h5>
+                              <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
+                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><button type="submit"><i class="bi bi-cart-plus-fill"></i></button></a></div>
+                              </a>
+                              </div>
+                              </div>
+                        <?php  } ?>
+                    </div>
             </div>
             <div class="box-right">
                 <div class="my-cart">
-                <h5>Giỏ hàng của tôi</h5> 
-                <a href="">Xóa tất cả</a>
+                <h4>Giỏ hàng của tôi</h4> 
                 </div>
-                
-                <hr>
                 <?php
-                    if(isset($cart)){
+                    if(isset($cart['buy'])){
                         foreach($cart['buy'] as $item){
                 ?>
                 <div class="cart-items">
@@ -116,15 +114,16 @@
             echo "<p>Chưa có sản phẩm nào</p>";
         }
     ?>
-    <hr>
     <div class="num-cup">
-    <img src="./public/images/icon-glass-tea.png" alt="">
+    <img src="./public/images/icon-glass-tea.png"  alt="">
     <p >x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
     </div>
-    
-    
-                <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
-            </div>
+    <?php if($num_cup!=0){?>
+        <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }else{?>
+        <a href="?mod=product" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }?>
+    </div>
         </div>
     </div>
 </body>

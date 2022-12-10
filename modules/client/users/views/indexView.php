@@ -39,29 +39,35 @@
                 <div class="account-content-inner">
                     <div class="th_ria">
                         <div class="th_form">
-                            <label for="">Tên khách hàng</label> <br>
+                        <span class="material-symbols-outlined">
+                                person_filled
+                                </span><label for="">Tên khách hàng</label> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['full_name'] ?>" >
                         </div>
                         <div class="th_form">
-                            <label for="">Mất khẩu</label> <br>
+                        <span class="material-symbols-outlined">
+                                        no_encryption
+                                        </span><label for="">Mất khẩu</label> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['password'] ?>">
                         </div>
                         <div class="th_form">
-                            <label for=""><span class="material-symbols-outlined icon">
+                        <span class="material-symbols-outlined icon">
                                 phone_in_talk_watchface_indicator
-                                </span>Số điện thoại</label> <br>
+                                </span><label for="">Số điện thoại</label> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['numberphone'] ?>">
                         </div>
                     </div>
                     <div class="th_let">
                         <div class="th_form">
-                            <label for=""><span class="material-symbols-outlined icon">
+                        <span class="material-symbols-outlined icon">
                                 mail
-                                </span>Email</label> <br>
+                                </span>Email</label><label for=""> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['email'] ?>">
                         </div>
                         <div class="th_form">
-                            <label for="">Địa chỉ</label> <br>
+                        <span class="material-symbols-outlined">
+                                        home
+                                        </span>Địa chỉ</label><label for=""> <br>
                             <input type="text" disabled name="" id="" value="<?php echo $_SESSION['auth']['address'] ?>">
                         </div>
                     </div>

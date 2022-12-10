@@ -17,22 +17,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+<div class="header">
             <div class="logo">
             <a href="?role=client&mod=product">
                 <img src="./public/images/mainlogo.png" alt="Ảnh logo">
                 </a>
             </div>
-
             <div class="search">
-                <form action="" method="post">
-                <input type="text" placeholder="Tìm kiếm sản phẩm ..." name="kyw" >
+                <form action="?role=client&mod=product&action=find" method="post">
+                <input type="text" placeholder="Tìm kiếm sản phẩm ..." name="kyw" value="<?php echo (isset($_GET['kyw'])) ? $_GET['kyw'] : ''?>" >
+                <button type = "submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
             <div class="dropdown" style="float:right;">
                 <?php if (is_auth()) : ?>
-                    <button class="dropbtn"><?php echo get_auth()['full_name'] ?></button>
+                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <span class="material-symbols-outlined">
+sentiment_very_satisfied
+</span></button></a>
                     <div class="dropdown-content">
                     <?php if (is_admin()): ?>
                         <div class="sign-in">
@@ -92,9 +93,9 @@
                     <img src="./public/images/<?php echo $item['thumb']?>" alt="">
                 </div>
                 <div>
-                    <h5><?php echo $item['title']?></h5> Giá: <?php echo $item['price']?>
+                    <h5><?php echo $item['title']?></h5> Giá: <?php echo $item['price']?>000đ
                     <p>Số lượng:<?php echo $item['qty']?></p>
-                    <p>Giá tiền : <b><?php echo $item['sub_total']?></b>đ</p>
+                    <p>Giá tiền : <b><?php echo $item['sub_total']?></b>000đ</p>
                 </div>
             </div>
             <?php
@@ -107,9 +108,7 @@
                         <b><?php echo $num_order;?></b>cốc</p>
                 </div>
                 <div class="row_tong">
-                    <p>Tổng : <b><?php echo currency_format($total); ?></b> đ</p>
-                    <p>Phí vẫn chuyển : <b>##</b>đ</p>
-                    <p>Khuyến mãi : <b>##</b>đ</p>
+                    <p>Tổng : <b><?php echo currency_format($total); ?></b></p>
                     <p><b>Tổng cộng :<?php echo currency_format($total); ?> </b></p>
                 </div>
             </div>

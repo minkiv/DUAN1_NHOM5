@@ -33,7 +33,9 @@
                 </div>
                 <div class="dropdown" style="float:right;">
                 <?php if (is_auth()) : ?>
-                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <?php echo get_auth()['full_name'] ?></button></a>
+                    <a href="?role=client&mod=users&idUS=<?php echo $_SESSION['auth']['id'] ?>"><button class="dropbtn"> <span class="material-symbols-outlined">
+sentiment_very_satisfied
+</span></button></a>
                     <div class="dropdown-content">
                     <?php if (is_admin()): ?>
                         <div class="sign-in">
@@ -52,19 +54,18 @@
             </div>
             </div>
             <div class="content">
-                <div class="box-left">
-                    <h5>Danh mục</h5>
-                    <br>
-                    <ul>
-                        <?php
-                        foreach ($categories as $cat ) {
-                            echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
-                        }
-                        ?>
-                    </ul>
-                </div>
+            <div class="box-left">
+                <h4>Danh mục</h4>
+                <ul>
+                <?php
+                    foreach ($categories as $cat ) {
+                        echo '<li><a href="?role=client&mod=product&action=category&id_cat='.$cat['id'].'">'.$cat['name'].'</a></li>';
+                    }
+                    ?>
+                </ul>
+            </div>
                 <div class="box">
-                    <h5>Chi tiết sản phẩm</h5>
+                    <h4>Chi tiết sản phẩm</h4>
                     <div class="pro_row"> 
                 <div class="product-row_img">
                 <img src="./public/uploads/<?php echo $production['thumb'];?>" alt="Sản phẩm 1">
@@ -78,12 +79,13 @@
                     </div>
                     
                     <div class="show_connent">
-                        <h4>Bình luận</h4>
-                        <table>
+                        <table >
+                            <th>Nội dung bình luận</th>
+                            <th>ID người bình luận</th>
+                            <th>Thời gian bình luận</th>
                         <?php foreach ($comments as $comment) : ?>
                             <tr>
                             <td><?php echo ($comment['content']) ?></td>
-                            <td><?php echo ($comment['id_pro']) ?></td>
                             <td><?php echo ($comment['id_users']) ?></td>
                             <td><?php echo ($comment['created_at']) ?></td>
                             </tr>
@@ -105,13 +107,12 @@
             <?php } ?>
                 </div>
                 
-                <dv class="box-right">
-            <div class="box-right-hen">
-                    <h5>Giỏ hàng của tôi</h5>
-                    <div class="dele"><a href="">Xóa tất cả</a></div>
+                <div class="box-right">
+                <div class="my-cart">
+                <h4>Giỏ hàng của tôi</h4> 
                 </div>
                 <?php
-                    if(isset($cart)){
+                    if(isset($cart['buy'])){
                         foreach($cart['buy'] as $item){
                 ?>
                 <div class="cart-items">
@@ -133,14 +134,16 @@
             echo "<p>Chưa có sản phẩm nào</p>";
         }
     ?>
-    <hr>
     <div class="num-cup">
     <img src="./public/images/icon-glass-tea.png"  alt="">
-    <p style="">x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
+    <p >x <?php echo  $num_cup;?> = <?php echo  $total;?>,000đ</p>
     </div>
-    
-    
-                <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
+    <?php if($num_cup!=0){?>
+        <a href="?mod=cart" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }else{?>
+        <a href="?mod=product" class="bt-bill"><button>Thanh toán</button></a>
+    <?php }?>
+    </div>
             </div>
         </div>
     </body>
