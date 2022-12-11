@@ -5,7 +5,7 @@ function get_list_productions() {
 }
 
 function get_list_comments() {
-    $result = db_fetch_array("SELECT * FROM `comments`");
+    $result = db_fetch_array("SELECT * FROM `comments` ");
     return $result;
 }
 
@@ -15,7 +15,7 @@ function get_list_categories() {
 }
 
 function get_one_comments($id) {
-    $result = db_fetch_array("SELECT * FROM `comments` WHERE `comments`.`id_pro` = $id");
+    $result = db_fetch_array("SELECT c.*,u.full_name FROM `comments` c inner join `users` u on c.id_users=u.id WHERE c.`id_pro` = $id");
     return $result;
 }
 

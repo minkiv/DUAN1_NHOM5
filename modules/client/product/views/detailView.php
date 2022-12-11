@@ -80,13 +80,15 @@ sentiment_very_satisfied
                     
                     <div class="show_connent">
                         <table >
+                        <th>Người bình luận</th>
                             <th>Nội dung bình luận</th>
-                            <th>ID người bình luận</th>
+                            
                             <th>Thời gian bình luận</th>
                         <?php foreach ($comments as $comment) : ?>
                             <tr>
+                            <td><?php echo ($comment['full_name']) ?></td>
                             <td><?php echo ($comment['content']) ?></td>
-                            <td><?php echo ($comment['id_users']) ?></td>
+                            
                             <td><?php echo ($comment['created_at']) ?></td>
                             </tr>
                             <?php endforeach; ?>
