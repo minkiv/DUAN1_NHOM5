@@ -42,12 +42,12 @@
                                 </div>
                             </li>
                             <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">Tin tức<span class="material-symbols-outlined">
+                                <a href="?role=client&mod=home&action=news&id_n=1" class="dropbtn">Tin tức<span class="material-symbols-outlined">
                                     expand_more
                                     </span></a>
                                     <div class="dropdown-content">
                                 <?php foreach ($news as $tt) {
-                                    echo '<a href="?role=client&mod=home&action=news&id='.$tt['id'].'">'.$tt['title'].'</a>';
+                                    echo '<a href="?role=client&mod=home&action=news&id_n='.$tt['id'].'">'.$tt['title'].'</a>';
                                 }
                                   ?>
                                 </div>
@@ -61,12 +61,12 @@
                         </span>
                     </div> 
                 </div>
-                <h1> <?php $new['title'] ?></h1>
+                <h1> <?php echo $new['title'] ?></h1>
             </div>
             <div class="body">
                 <div class="gioithieu-ct">
-                    <h1> <?php $new['title'] ?></h1>
-                    <p> <?php $new['content'] ?></p>
+                    <h1> <?php echo $new['title'] ?></h1>
+                    <p> <?php echo $new['content'] ?></p>
                 </div>
             </div>
             <div class="footer">

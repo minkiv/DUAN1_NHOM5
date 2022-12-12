@@ -77,14 +77,14 @@ sentiment_very_satisfied
                      </div>
                      <div class="product">  
                         <?php
-                        foreach ($production as $product) { ?>
+                        foreach ($rows as $row) { ?>
                               <div class="css">
                               <div class="product-item">
-                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $product['id']?>">
-                              <img src="./public/uploads/<?php echo $product['thumb'];?>" alt="Sản phẩm 1">
-                              <h5><?php echo  $product['title'] ; ?></h5>
-                              <p>Giá : <?php echo  $product['price'] ; ?>,000 đ </p>
-                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $product['id']?>"><button type="submit"><i class="bi bi-cart-plus-fill"></i></button></a></div>
+                                  <a href="?role=client&mod=product&action=detail&id_prod=<?php echo $row['id']?>">
+                              <img src="./public/uploads/<?php echo $row['thumb'];?>" alt="Sản phẩm 1">
+                              <h5><?php echo  $row['title'] ; ?></h5>
+                              <p>Giá : <?php echo  $row['price'] ; ?>,000 đ </p>
+                              <div class="thanhtoan"><a href="?mod=product&id=<?php echo $row['id']?>"><button type="submit"><i class="bi bi-cart-plus-fill"></i></button></a></div>
                               </a>
                               </div>
                               </div>

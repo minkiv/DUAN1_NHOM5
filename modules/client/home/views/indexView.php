@@ -48,13 +48,14 @@
                                 </div>
                             </li>
                             <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">Tin tức<span class="material-symbols-outlined">
+                                <a href="?role=client&mod=home&action=news&id_n=1" class="dropbtn">Tin tức<span class="material-symbols-outlined">
                                     expand_more
                                     </span></a>
-                                <div class="dropdown-content">
-                                  <a href="#">Tin tức khuyến mại</a>
-                                  <a href="#">Câu chuyện thương hiệu</a>
-                                  <a href="#">Sự kiện</a>
+                                    <div class="dropdown-content">
+                                <?php foreach ($news as $tt) {
+                                    echo '<a href="?role=client&mod=home&action=news&id_n='.$tt['id'].'">'.$tt['title'].'</a>';
+                                }
+                                  ?>
                                 </div>
                             </li>
                             
