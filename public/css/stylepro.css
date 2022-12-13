@@ -94,7 +94,8 @@ body {
 }
 
 .dropdown {
-    margin-right: 80px
+    margin-right: 80px;
+    border: 1px solid #f1f0ef;
 }
 
 .dropdown-content {

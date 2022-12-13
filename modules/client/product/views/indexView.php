@@ -31,7 +31,6 @@
                 <img src="./public/images/mainlogo.png" alt="Ảnh logo">
                 </a>
             </div>
-
             <div class="search">
                 <form action="?role=client&mod=product&action=find" method="post">
                 <input type="text" placeholder="Tìm kiếm sản phẩm ..." name="kyw" value="<?php echo (isset($_GET['kyw'])) ? $_GET['kyw'] : ''?>" >
