@@ -67,12 +67,12 @@
       $address = trim(strip_tags($_POST['address']));
       $clientNote = trim(strip_tags($_POST['clientNote']));
       $adminNote = trim(strip_tags($_POST['adminNote']));
-      if (empty($name)) {
-        push_notification('errors', [
-            'title' => 'Vui lòng nhập vào tên sản phẩm'
-        ]);
-        header('Location: ?role=client&mod=cart');
-    }
+    //   if (empty($name)) {
+    //     push_notification('errors', [
+    //         'title' => 'Vui lòng nhập vào tên sản phẩm'
+    //     ]);
+    //     header('Location: ?role=client&mod=cart');
+    // }
       luudonhangnhe($name,$email,$phone,$address,$clientNote,$adminNote);
       $donhang=laydonhang();
       foreach($_SESSION['cart']['buy'] as $item){

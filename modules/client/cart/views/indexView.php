@@ -59,16 +59,16 @@ sentiment_very_satisfied
             <div class="information-user">
                 <h3>Thông tin giao hàng</h3>
                 <div class="form_user">
-                    <input type="text" name="name" id="" placeholder="Tên người nhận"> <br>
-                    <input type="text" name="phone" id="" placeholder="Số điện thoại người nhận">
+                    <input type="text" name="name" id="" required placeholder="Tên người nhận"> <br>
+                    <input type="text" name="phone" id="" required placeholder="Số điện thoại người nhận">
                 </div>
                 <div class="form_user">
                     <h4>Giao đến</h4>
-                    <input type="text" name="address" id="" placeholder="Địa chỉ người nhận"> <br>
-                    <input type="text" name="clientNote" id="" placeholder="Ghi chú">
+                    <input type="text" name="address" id="" required placeholder="Địa chỉ người nhận"> <br>
+                    <input type="text" name="clientNote" id="" required placeholder="Ghi chú">
                 </div>
                 <div class="form_user">
-                    <input type="text" name="email" id="" placeholder="Email"> <br>
+                    <input type="text" name="email" id="" required placeholder="Email"> <br>
                 </div>
                 <div>
                     <p>Thời gian : </p>

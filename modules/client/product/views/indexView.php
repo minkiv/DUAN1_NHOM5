@@ -27,7 +27,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-            <a href="?role=client&mod=product">
+            <a href="?role=client&mod=home">
                 <img src="./public/images/mainlogo.png" alt="Ảnh logo">
                 </a>
             </div>
