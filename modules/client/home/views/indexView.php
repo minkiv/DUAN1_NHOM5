@@ -110,7 +110,7 @@
                     </div>
                     <div class="third-ctmain">
                         <div class="thirdct-left">
-                            <a class="first-blocka" href="">
+                            <a class="first-blocka" href="?role=client&mod=home&action=news&id_n=1">
                                 <div class="first-block">
                                     <img src="./public/images/Hinh-thumb-2-scaled.jpg" alt="" class="first-blockimg">
                                     <h5>BỐN LON NƯỚC "CHÁY" CÙNG HÀNG TRĂM HỌC SINH AMSTERDAM VÀ CHUYÊN NGOẠI NGỮ TRONG CHƯƠNG TRÌNH CAMP ALETHEIA</h5>
@@ -121,20 +121,28 @@
                             
                             <div class="second-block">
                                 <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    <a href="?role=client&mod=home&action=news&id_n=1">
+                                        <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
+                                        <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    </a>
                                 </div>
                                 <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    <a href="?role=client&mod=home&action=news&id_n=1">
+                                        <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
+                                        <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    </a>
                                 </div>
                                 <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    <a href="?role=client&mod=home&action=news&id_n=1">
+                                        <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
+                                        <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    </a>
                                 </div>
                                 <div class="secondbl-item">
-                                    <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
-                                    <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    <a href="?role=client&mod=home&action=news&id_n=1">
+                                        <img src="./public/images/SPM_CHOCO_zalo.png" alt="">
+                                        <h5>CÙNG BỐN LON NƯỚC NHÂN ĐÔI SỰ NGỌT NGÀO MÙA LỄ HỘI</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
