@@ -65,7 +65,7 @@ sentiment_very_satisfied
                 <div class="form_user">
                     <h4>Giao đến</h4>
                     <input type="text" name="address" id="" required placeholder="Địa chỉ người nhận"> <br>
-                    <input type="text" name="clientNote" id="" required placeholder="Ghi chú">
+                    <input type="text" name="clientNote" id=""  placeholder="Ghi chú">
                 </div>
                 <div class="form_user">
                     <input type="text" name="email" id="" required placeholder="Email"> <br>

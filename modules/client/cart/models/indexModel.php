@@ -3,19 +3,8 @@
     $result=db_fetch_row("SELECT * FROM `productions` WHERE id={$id}");
     return $result;
  }
-  function get_total_cart(){
-      if(isset($_SESSION['cart'])){
-         return $_SESSION['cart']['infor']['total'];
-      }
-      return FALSE;
-  }
-  function get_total_cup(){
-   if(isset($_SESSION['cart'])){
-      return $_SESSION['cart']['infor']['num_order'];
-   }
-   return FALSE;
-}
-  function update_info_cart(){
+ 
+function update_info_cart(){
          $num_order=0;
          $total=0;
          foreach($_SESSION['cart']['buy'] as $item){
@@ -26,14 +15,29 @@
             'num_order'=>$num_order,
             'total'=>$total,
          );
-  }
-  function update_cart($qty){
+}
+
+function get_total_cart(){
+   if(isset($_SESSION['cart'])){
+      return $_SESSION['cart']['infor']['total'];
+   }
+   return FALSE;
+}
+
+function get_total_cup(){
+   if(isset($_SESSION['cart'])){
+      return $_SESSION['cart']['infor']['num_order'];
+   }
+   return FALSE;
+}
+
+function update_cart($qty){
       foreach($qty as $id=>$new_qty){
          $qty=$_SESSION['cart']['buy'][$id]['qty']=$new_qty;
          $_SESSION['cart']['buy'][$id]['sub_total']=$new_qty*$_SESSION['cart']['buy'][$id]['price'];
       }
       update_info_cart();
-  }
+}
   
   function luudonhangnhe( $name,$email,$phone,$address,$clientNote,$adminNote){            
    

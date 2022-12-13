@@ -69,7 +69,7 @@ sentiment_very_satisfied
             </div>
             <div class="box">
                      <div>
-                     <h4>Tất cả sản phẩm</h4>
+                     <h4><?php echo $category['name']?></h4>
                      </div>
                      <div class="product">  
                         <?php
