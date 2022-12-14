@@ -35,12 +35,12 @@ function indexAction() {
         load_view('index',$data);
       }
 }
-function indexView() {
-    $data['production']=get_list_productions();
-    $data['categories'] = get_list_categories();
-    $data['comments'] = get_list_comments();
-    load_view('index',$data);
-}
+// function indexView() {
+//     $data['production']=get_list_productions();
+//     $data['categories'] = get_list_categories();
+//     $data['comments'] = get_list_comments();
+//     load_view('index',$data);
+// }
 function detailAction(){
     $id = $_GET['id_prod'];
     $prod = get_one_production($id);
@@ -154,15 +154,11 @@ function findPostAction(){
     $data['categories'] = get_list_categories();
   if(isset($_POST['kyw'])){
     $key =addslashes($_POST['kyw']);
-    // $num=mysql_num_rows($kq);
     if(empty($key)){
       $er="Vui lòng nhập dữ liệu!";
     }else{
         $rows=get_found_productions($key);
-        // echo '<pre>';
-        // var_dump($rows);die;
         $data['rows']=$rows;
-        // load_view('find',$data);
   if(isset($_GET['id'])){
     $id=$_GET['id'];
     $pro=get_pro_by_id($id);

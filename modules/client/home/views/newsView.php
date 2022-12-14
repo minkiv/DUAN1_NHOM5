@@ -65,6 +65,7 @@
             </div>
             <div class="body">
                 <div class="gioithieu-ct">
+                    <em>Ngày đăng: <?php echo $new['created_at']?></em>
                     <h1> <?php echo $new['title'] ?></h1>
                     <p> <?php echo $new['content'] ?></p>
                 </div>

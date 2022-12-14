@@ -27,11 +27,10 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-            <a href="?role=client&mod=product">
+            <a href="?role=client&mod=home">
                 <img src="./public/images/mainlogo.png" alt="Ảnh logo">
                 </a>
             </div>
-
             <div class="search">
                 <form action="?role=client&mod=product&action=find" method="post">
                 <input type="text" placeholder="Tìm kiếm sản phẩm ..." name="kyw" value="<?php echo (isset($_GET['kyw'])) ? $_GET['kyw'] : ''?>" >

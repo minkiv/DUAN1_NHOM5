@@ -11,6 +11,7 @@ function indexAction() {
     load_view('index',$data);
 }
 function gioithieuAction(){
+    $data['news']= get_list_news();
     $data['categories'] = get_list_categories();
     load_view('gioithieu',$data);
 }
