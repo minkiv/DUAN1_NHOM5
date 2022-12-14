@@ -36,7 +36,7 @@
                             </div>
                         <div class="form-group">
                             <label>Tên sản phẩm</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['title'] ?>" />
+                            <input type="text" required name="name" class="form-control" placeholder="Nhập vào tên sản phẩm" value="<?php echo $production['title'] ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Giá sản phẩm</label>
-                            <textarea name="price" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['price'] ?></textarea>
+                            <textarea name="price" required class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['price'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Hình sản phẩm</label>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Số lượng sản phẩm</label>
-                            <textarea name="count" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['count'] ?></textarea>
+                            <textarea required name="count" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['count'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="descriptionCategoryInput">Trạng thái sản phẩm</label>

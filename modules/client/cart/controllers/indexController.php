@@ -30,7 +30,7 @@
       $total=get_total_cart();
       $data['total']=$total;
       $num_order=get_total_cup();
-      $data['num_order']=$num_order;     
+      $data['num_order']=$num_order;  
       load_view('index',$data);
     }
     

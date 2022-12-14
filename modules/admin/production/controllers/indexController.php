@@ -87,7 +87,8 @@ function updatePostAction() {
         push_notification('errors', [
             'title' => 'Vui lòng nhập vào tên sản phẩm'
         ]);
-        header('Location: ?role=admin&mod=production&action=update&id_prod='.$id);
+        header('Location: ?role=admin&mod=production&action=create');
+        die();
     }
     update_production($id,$title, $description,$category_id,$price,$count,$status,$thumb);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);

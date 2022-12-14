@@ -67,6 +67,7 @@
                 <div class="gioithieu-ct">
                     <em>Ngày đăng: <?php echo $new['created_at']?></em>
                     <h1> <?php echo $new['title'] ?></h1>
+                    <img src="<?php echo $new['images']?>" alt="">
                     <p> <?php echo $new['content'] ?></p>
                 </div>
             </div>

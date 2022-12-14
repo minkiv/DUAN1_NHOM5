@@ -108,8 +108,8 @@ sentiment_very_satisfied
                         <b><?php echo $num_order;?></b>cốc</p>
                 </div>
                 <div class="row_tong">
-                    <p>Tổng : <b><?php echo currency_format($total); ?></b></p>
-                    <p><b>Tổng cộng :<?php echo currency_format($total); ?> </b></p>
+                    <p>Tổng : <b><?php echo $total; ?>,000đ</b></p>
+                    <p><b>Tổng cộng :<?php echo $total; ?>,000đ </b></p>
                 </div>
             </div>
             <?php

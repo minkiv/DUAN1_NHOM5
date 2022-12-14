@@ -30,7 +30,7 @@
                         <div class="col col-12">
                             <div class="form-group">
                                 <label>Tiêu đề sản phẩm</label>
-                                <input type="text" name="name" class="form-control" placeholder="Nhập vào tiêu đề sản phẩm" />
+                                <input type="text" required name="name" class="form-control" placeholder="Nhập vào tiêu đề sản phẩm" />
                             </div>
                             <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
@@ -48,14 +48,14 @@
                         <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Số lượng trong kho</label>
-                                <input type="number" name="count" class="form-control" placeholder="Nhập vào số lượng" />
+                                <input required type="number" name="count" class="form-control" placeholder="Nhập vào số lượng" />
                             </div>
                         </div>
                         <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Giá cho mỗi sản phẩm</label>
                                 <div class="input-group">
-                                    <input type="text" name="price" class="form-control" placeholder="Giá cho mỗi sản phẩm" aria-describedby="basic-addon2" />
+                                    <input type="text" required name="price" class="form-control" placeholder="Giá cho mỗi sản phẩm" aria-describedby="basic-addon2" />
                                     <div class="input-group-append"><span class="input-group-text">VND</span></div>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
 
                                     <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Thay đổi">
                                         <i class="fa fa-pen icon-sm text-muted"></i>
-                                        <input type="file" name="thumb1" accept=".png, .jpg, .jpeg" />
+                                        <input  type="file" name="thumb1" accept=".png, .jpg, .jpeg" />
                                         <input type="hidden" name="thumb_remove" />
                                     </label>
 
@@ -89,7 +89,7 @@
                         </div>
                         <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
-                            <input type="file" name="thumb" accept=".png, .jpg, .jpeg" />
+                            <input required type="file" name="thumb" accept=".png, .jpg, .jpeg" />
                         </div>
                     </div>
                 </div>
