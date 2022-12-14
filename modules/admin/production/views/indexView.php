@@ -84,7 +84,6 @@
                                     <td><?php echo ($production['category_id']) ?></td>
                                     <td><?php echo ($production['price']) ?></td>
                                     <td><?php echo ($production['count']) ?></td>
-
                                     <td><?php echo ("<img src='./public/uploads/".$production['thumb']."'height='100'>") ?></td>
                                     <td>
                                         <span style="overflow: visible; position: relative; width: 125px;">
