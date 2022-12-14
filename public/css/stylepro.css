@@ -372,8 +372,11 @@ body {
 
 .tonbao {
     color: beige;
-    background-color: red;
-    width: 100%;
+    background-color: #c39a3b;
+    padding-top: 1px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    width: 99%;
 }
 
 .product-item input {
