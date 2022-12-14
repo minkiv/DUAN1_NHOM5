@@ -64,8 +64,8 @@
                             <div class="form-group">
                                 <label>Trạng thái sản phẩm</label>
                                 <select class="form-control select2" name="status">
-                                    <option value="1">Nháp</option>
-                                    <option value="2">Công khai</option>
+                                    <option value="1">Còn</option>
+                                    <option value="2">Hết</option>
                                 </select>
                             </div>
                         </div>
